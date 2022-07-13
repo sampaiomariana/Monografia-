@@ -1,0 +1,54 @@
+Este capítulo aborda processo de definição de arquitetura de software. Entre os elementos deste capítulo, é possível destacar os seguintes: ciclo de vida de software, processos em ciclo de vida de software, processos técnicos em ciclo de vida de software e processo de definição de arquitetura de software.
+
+\section{Ciclo de vida de software}
+
+Existem diversos possíveis estágios em ciclo de vida de software. Cada estágio tem determinados propósitos e características. Estágios podem ser interdependentes, podem se sobrepor, podem ter diferentes durações etc. A seguir, são relacionados possíveis termos para designar estágios de ciclo de vida de software~\cite{ISO_247483}. 
+
+\begin{itemize}
+    \item Conceito;
+    \item Desenvolvimento;
+    \item Produção;
+    \item Utilização;
+    \item Suporte;
+    \item Aposentadoria;
+\end{itemize}
+
+O conceito é o primeiro estágio do ciclo de vida do sistema de software, nesse estágio é realizada a contextualização, ou seja, devem ser definido qual é o principal serviço do sistema de software irá oferecer, quem serão os seus usuários finais, entre outras especificações. Após esse estágio tem-se o momento de desenvolvimento do sistema de software e para verificar a sua funcionalidade é passado para o estágio de produção. O sistema de software passando por todos os testes de usabilidade pode ser liberado para utilização dos usuários finais. Tendo o sistema de software divulgado o estágio pode ser alterado, passando para o estágio de suporte, momento no qual pode ser necessária alguma modificação no sistema de software que deve ser sanado nesse estágio. Essa modificação pode ser de visualização, de uma nova atualização que permita uma melhor usabilidade do sistema de software, entre outras possibilidades. Por fim, quando o sistema de software não tiver mais uso, ele pode ser passado para o estágio de aposentadoria, sendo assim encerrado o ciclo de vida do software~\cite{ISO_247483}.
+
+\section{Processos em ciclo de vida de software}
+
+Ao longo de ciclo de vida de software, a definição de arquitetura de software pode ser realizada por meio de processos. Segundo ~\cite{Sommerville_2011_texbook},o processo inclui atividades que envolvem mudanças. Segundo ~\cite{Sevocab} , diferentes processos podem apresentar diferentes pontos de início e diferentes pontos de término. As especificações de processos podem apresentar diferentes níveis de detalhamento de fluxos de trabalho.
+
+Processos diversos podem ser adotados em ciclo de vida de software. Processo para construir protótipo com o propósito de ajudar a evitar más decisões sobre requisitos de software, processo para levantamento e especificação de requisitos de software etc. Processos podem estruturar o trabalho de diversos modos. Por exemplo, o processo pode estruturar o trabalho para desenvolvimento de software por meio de entregas iterativas, de modo que, conforme mudanças ocorram, possam ser integradas ao sistema.
+
+No contexto deste trabalho, é adotada a definição apresentada em ~\cite{ISO_247483}. Segundo essa definição, processo é um conjunto integrado de atividades que transforma entradas em saídas desejadas. Segundo~\cite{ISO_247483}, cada processo possui objetivo final a ser alcançado, possui propósito. Cada processo provê resultado distinto. Cada resultado tem como função fornecer benefício que motive a seleção e o uso do processo. A partir do momento em que é obtido o resultado esperado, o processo cumpriu o seu propósito.
+
+\section{Processos técnicos em ciclo de vida de software}
+
+O sistema de software deve atender necessidades de partes interessadas (\emph{stakeholders}) no mesmo. Por exemplo, necessidades de usuários. Necessidades são atendidas por meio de processos em ciclo de vida de software. Por exemplo, por meio de processos técnicos. Por meio de processos técnicos, necessidades de partes interessadas são transformadas em produto. Os processos técnicos podem ser implementados para criar ou usar sistema de software, e podem ser aplicados em diferentes estágios de ciclo de vida de software. A seguir, são relacionados nomes de possíveis processos técnicos~\cite{ISO_12207}.
+
+\begin{itemize}
+    \item Processo de análise de negócios ou missão;
+    \item Processo de definição de necessidades e requisitos das partes interessadas;
+    \item Processo de definição de requisitos de sistema de software;
+    \item Processo de definição de arquitetura;
+    \item Processo de definição de projeto;
+    \item Processo de análise;
+    \item Processo de implementação;
+    \item Processo de integração;
+    \item Processo de verificação;
+    \item Processo de transição;
+    \item Processo de validação;
+    \item Processo de operação;
+    \item Processo de manutenção;
+    \item Processo de descarte. 
+\end{itemize}
+      
+\section{Processo de definição de arquitetura de software}
+
+Dentre os processos técnicos que podem ser implementados em ciclo de vida de software, tem-se o processo de definição de arquitetura (\emph{architecture definition process}). Esse processo tem como objetivo gerar opções de arquitetura que possam ser implementadas no desenvolvimento do sistema de software. As opções de arquitetura geradas devem englobar demandas solicitadas pelas partes interessadas (\emph{stakeholders}) e funcionalidades a serem providas pelo sistema de software. As opções de arquitetura geradas são analisadas levando-se em consideração pontos de vista (\emph{viewpoints}) e visões (\emph{views}) de arquitetura~\cite{ISO_12207}. 
+
+A fim de verificar se as opções de arquitetura que foram propostas são adequadas, são analisadas interações entre processo de definição de arquitetura de software, processo de análise de negócios ou missão, processo de definição de requisitos de sistema de software, processo de definição de projeto e processo de definição de necessidades e requisitos de partes interessadas (\emph{stakeholders}). Dessa forma é possível analisar formas de suprir demandas quanto ao software, e encontrar assim a melhor solução~\cite{ISO_12207}. 
+
+A seguir, são relacionados resultados desejáveis de processo de definição de arquitetura de software: demandas identificadas por partes interessadas no sistema de software são abordadas pela arquitetura escolhida; pontos de vista da arquitetura são desenvolvidos; são definidos contexto, limites e interfaces externas do sistema de software; são desenvolvidas visões e modelos do sistema de software; conceitos, propriedades, características, comportamentos, funções ou restrições significativas para decisões de arquitetura são alocados a entidades arquiteturais; elementos do sistema e suas interfaces são identificadas; opções de arquitetura são avaliadas; base arquitetônica para processos ao longo de ciclo de vida é alcançada; alinhamento da arquitetura com requisitos e características de projeto é alcançado; sistemas ou serviços necessários para definição da arquitetura estão disponíveis; é definida rastreabilidade entre elementos da arquitetura e requisitos das partes interessadas (\emph{stakeholders}) no sistema de software~\cite{ISO_12207}. 
+

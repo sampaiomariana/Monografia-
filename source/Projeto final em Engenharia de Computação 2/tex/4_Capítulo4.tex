@@ -1,0 +1,185 @@
+Este capítulo aborda métodos para avaliação de arquitetura de software. Entre os elementos que integram este capítulo, é possível destacar os seguintes: avaliação de arquitetura de software, métodos para avaliação de arquitetura de software, software architecture comparasion analysis method, architecture tradeoff analysis method, software architecture analysis method.
+
+\section{Avaliação de arquitetura de software}
+
+No contexto do processo de definição de arquitetura, tem-se atividade realizada com propósito de avaliar arquiteturas candidatas.Essa atividade é composta pelas seguintes tarefas ~\cite{ISO_12207} :
+\begin{itemize}
+    \item Avaliar cada arquitetura candidata em relação às restrições e requisitos;
+    \item Avaliar cada arquitetura candidata em relação às demandas das partes interessadas(\emph{stakeholders}) no sistema de software usando critérios de avaliação;
+    \item Selecionar as arquiteturas preferidas e capturar decisões e justificativas para eleger as candidatas;
+    \item Estabelecer uma linha de base para arquitetura selecionada, essa linha de base deve conter modelos, visualizações e demais especificações referentes à arquitetura de software escolhida.
+\end{itemize}
+
+Entre os processos técnicos em projeto de software,tem-se processo voltado à definição de arquitetura de software.No contexto desse processo, as seguintes atividades devem ser realizadas~\cite{ISO_12207}:
+
+\begin{itemize}
+    \item Preparar para definição arquitetura;
+    \item Desenvolver  pontos de vista da arquitetura;
+    \item Desenvolver pontos de vista e visões de arquiteturas candidatas;
+    \item Relacionar a arquitetura ao projeto (\emph{design});
+    \item Avaliar arquiteturas candidatas;
+    \item Gerenciar a arquitetura candidata.
+\end{itemize}
+
+\section{Métodos para avaliação de arquitetura de software}
+
+Para avaliar arquitetura de software, pode ser adotado o método desenvolvido com esse propósito.Por meio de método para avaliação de arquitetura de software,procura-se eliminar arquiteturas que não sejam adequadas ao sistema de software sendo desenvolvido.A seguir,são descritos elemtnos dos seguintes métodos~\cite{survey_methods}: 
+
+\begin{itemize}
+    \item Software Architecture Analysis Method (SAAM);
+    \item The Software Architecture Comparison Analysis Method (SACAM);
+    \item Architecture Tradeoff Analysis Method (ATAM).
+  \end{itemize}
+
+\section{Software Architecture Comparison Analysis Method}
+
+O \acrfull{SACAM} tem como objetivo fornecer justificativas para escolha de determinada arquitetura de software. 
+Para isso são comparadas arquiteturas candidatas sendo para o sistema de software.Para essa comparação ser realizada, as seguintes atividades são executadas~\cite{SACAM}:
+
+\begin{itemize}
+    \item Extrair visões de arquitetura;
+    \item Compilar critérios de avaliação das arquiteturas candidatas.
+\end{itemize}
+
+Para alcançar os objetivos necessários, esse  método possui algumas etapas que devem ser seguidas a fim de eleger a  arquitetura de software mais adequada, essa escolha varia de acordo com o sistema de software. Dentre as etapas que devem ser seguidas, as seguintes~\cite{SACAM}:
+
+\begin{itemize}
+    \item Preparação;
+    \item Coleção de critérios;
+    \item Determinação de diretrizes de extração;
+    \item Exibição e extração de indicadores;
+    \item Pontuação;
+    \item Resumo.
+\end{itemize}
+
+Na etapa Preparação são identificados os objetivos de negócios que são relevantes para a avaliação entre as arquiteturas candidatas e avalia a documentação para cada arquitetura candidata. Na etapa Coleção de critérios são agrupados os critérios de classificação de acordo com os objetivos de negócio.Na etapa Determinação de diretrizes de extração são determinadas as visões arquitetônicas, táticas, estilos e padrões que são necessários na construção dos cenários. Na etapa de exibição e extração de indicadores são extraídas as visualizações de arquitetura para cada arquitetura candidata de acordo com as diretrizes que foram definidas na etapa de determinação de diretrizes de extração.Também são analisados os indicadores que permitem que os cenários sejam projetados seguindo os critérios que foram estabelecidos na etapa de coleção de critérios.E por fim, nessa etapa também devem ser implementadas técnicas de recuperação da arquitetura de software.Na etapa de Pontuação a arquitetura candidata é avaliada e recebe uma pontuação. Essa pontuação avalia se a arquitetura candidata consegue dar suporte aos critérios que foram estabelecidos para a arquitetura de software.Por fim, na etapa de resumo é realizado um resumo que contém os resultados e análises das arquiteturas candidatas que foram avaliadas e fornece uma recomendação para a escolha da arquitetura de software dentre as arquiteturas candidatas que foram avaliadas.
+
+No método SACAM é obtida, como resultado da avaliação da arquitetura e informação acerca da pontuação de cada arquitetura candidata com as suas respectivas justificativas pelo motivo da pontuação que cada arquitetura candidata irá receber. Além disso são gerados artefatos que documentam a arquitetura. A fim de obter esses resultados existem técnicas que que o arquiteto de software pode adotar. Dentre as técnicas que podem ser adotadas,tem-se as seguintes~\cite{SACAM}:
+
+\begin{itemize}
+    \item Geração de cenários;
+    \item Táticas;
+    \item Métricas;
+    \item Padrões de documentação arquitetônica;
+    \item Reconstrução da arquitetura.
+\end{itemize}
+
+A técnica de geração de cenário permite capturar  os atributos de qualidade que são estabelecidos de acordo com o objetivo do sistema de software  e refina esses atributos em cenários de atributos de qualidade. A técnica de táticas tem como finalidade  obter as qualidades particulares que foram solicitas o \acrfull{SACAM} utiliza as táticas nas avaliações da arquitetura de software como indicador para avaliar se as visões extraídas suportam o critério que está sendo avaliado.A técnica de métricas permite realizar análises quantitativas que fornecem indicadores úteis de complexidade geral e aponta aonde a mudança na arquitetura de software pode ser mais difícil ou mais provável. Nesse método as métricas são utilizadas no nível de código, se disponível, ou em um nível de design detalhado.Na técnica de padrões de documentação arquitetônica o \acrfull{SACAM} exige a disponibilidade de documentação arquitetônica para realizar a análise de critérios e a avaliação de comparação entre as arquiteturas candidatas. Por fim, na técnica de reconstrução de arquitetura, caso a documentação da arquitetura esteja desatualizada ou indisponível a arquitetura precisa ser reconstruída. 
+
+\figuraBib{sacam}{Técnicas de arquitetura utilizadas pelo SACAM}{SACAM}{sacam}{width=.60\textwidth}%
+
+Na \refFig{sacam} são mostradas  técnicas que podem ser utilizadas. A partir dessas técnicas são gerados os artefatos necessários para que seja possível avaliar as arquiteturas candidatas e atribuir pontuações a cada arquitetura. Dessa forma é possível obter informação que possibilite comparar as arquiteturas candidatas e eleger a mais adequada para o sistema de software. 
+
+Sendo assim, esse método auxilia no processo de seleção da arquitetura de software fornecendo resultados da análise da arquitetura de software. Para fornecer esses resultados o SACAM compara as arquiteturas com base em um conjunto de critérios que são estabelecidos de acordo com os objetivos de negócio da empresa que está interessada na arquitetura de software~\cite{SACAM}. 
+
+\section{Architecture Tradeoff Analysis Method}
+
+O método \acrfull{ATAM} tem como objetivo entender as consequências das decisões arquiteturais que foram tomadas tendo como ponto de partida os requisitos de atributos de qualidade do sistema de software. Sendo assim, é possível determinar se os objetivos do sistema de software poderão ser atendidos pela arquitetura de software que será escolhida~\cite{ATAM}. 
+
+Esse método orienta os usuários interessados a procurar pontos problemáticos e soluções para esses pontos na arquitetura de software. Além disso, esse método também pode ser utilizado para analisar sistemas legados. Esses sistemas legados são sistemas antigos, mas que continuam em operação. Sendo assim, esse método tem as seguintes características~\cite{ATAM}:
+
+\begin{itemize}
+    \item Pode ser implementado no início do ciclo de vida de desenvolvimento de software;
+    \item Pode produzir análises compatíveis com o nível de detalhamento em relação a especificação do projeto arquitetônico.  
+\end{itemize}
+
+O ATAM é um método de análise que é organizado como o modelo arquitetônico são determinados, verificando se no modelo arquitetônico estão presentes os atributos de qualidade que foram demandados pelas partes interessadas no sistema de software. Para realizar esse método, são  seguidos os passos a seguir descritos~\cite{ATAM}:
+
+No passo de apresentação, tem-se~\cite{ATAM}:
+\begin{itemize}
+    \item Apresentação;
+    \item Impulsionadores dos negócios atuais;
+    \item Arquitetura atual.
+\end{itemize}
+
+Na fase de apresentação é realizada a descrição do método para as partes interessadas no sistema de software. Na fase de impulsionadores dos negócios atuais o gerente de projeto descreve quais são os objetivos do negócio e quais serão os principais impulsionadores arquitetônicos. Na fase de arquitetura atual o arquiteto de softwares deve descrever a arquitetura candidata e foca em como devem ser abordados os objetivos do negócio.
+
+No passo de investigação e análise, tem-se~\cite{ATAM}:
+
+\begin{itemize}
+    \item Identificar as abordagens arquitetônicas;
+    \item Gerar uma árvore de utilidades de atributos de qualidade;
+    \item Analisar as abordagens arquitetônicas. 
+    
+\end{itemize}
+
+No passo de identificar as abordagens arquitetônicas  as abordagens devem ser identificadas, mas não analisadas. No passo de gerar uma árvore de utilidades de atributos de qualidade deve ser realizada a elicitação de fatores de qualidade  que compõem as características do sistema de software tendo como exemplo o desempenho,segurança, entre outras características do sistema de software. Esses fatores de qualidade devem ser especificados de acordo com o nível de cenário que será analisado. Também devem conter as respostas que são geradas a cada estímulo no sistema de software. Com isso  devem ser priorizadas as utilidades de atributos de qualidade nesse passo.
+No passo de analisar as abordagens arquitetônicas tem-se que de acordo com os fatores de qualidade que foram priorizado no passo anterior devem ser analisadas as abordagens arquitetônicas que possuem esses fatores. Sendo assim, nesse passo devem ser identificados os riscos arquitetônicos, os pontos frágeis e os pontos aonde podem ocorrer mudanças na arquitetura de software.
+    
+No passo de teste, tem-se~\cite{ATAM}:
+
+\begin{itemize}
+    \item Realizar \emph{brainstorming} e priorizar cenários;
+    \item Analisar as abordagens arquitetônicas. 
+\end{itemize}
+
+No passo de realizar \emph{brainstorming} e priorizar cenários tem-se que de acordo com os cenários que foram analisados no passo anterior devem ser priorizados os cenários que forem mais bem votados dentro desse passo. Essa votação deve incluir todas as partes interessadas no sistema de software. No passo de analisar as abordagens arquitetônicas deve ser realizada  a análise das visões arquitetônicas que foram aprovadas pelos passos anteriores. Nesse passo, os cenários avaliados são considerados para teste. No entanto esses cenários ainda podem revelar a necessidade de novas estruturas na arquitetura, novos riscos e até mesmo outros pontos na arquitetura de software.
+    
+
+O último passo é dedicado ao de comunicação, nesse passo tem-se~\cite{ATAM}:
+
+\begin{itemize}
+    \item Apresentação de resultados.
+\end{itemize}
+
+Como último passo tem-se a apresentação de resultados, nesse passo devem ser apresentadas as descobertas realizadas para as partes interessadas . Deve ser feito  um relatório com o detalhamento das informações que foram obtidas e as estratégias propostas para a arquitetura de software.
+    
+Por fim, pode-se perceber que o método \acrfull{ATAM} depende da comunicação entre todas as partes interessadas no sistema de software. Essa comunicação é o que permite a evolução da arquitetura de software. Com isso, as técnicas têm como objetivo garantir que as necessidades do sistema de software sejam supridas pela arquitetura de software projetada~\cite{ATAM}.
+
+\section{Software Architecture Analysis Method}
+
+O \acrfull{SAAM} consiste de método embasado em cenários, os cenários representam as necessidades que o sistema de software deve possuir. Sendo assim, cada cenário permite ilustrar as atividades que o sistema de software pode suportar e quais as mudanças que podem ocorrer durante o uso do sistema de software. 
+
+Logo , nessa avaliação também é determinado se o cenário precisa de modificações na sua arquitetura ou não. Caso o cenário precise de modificações são chamados de indiretos e caso o cenário não precise de modificações são chamados de diretos ~\cite{survey_methods}.
+
+No contexto desse trabalho é adotado o método de arquitetura baseado em cenários, este é um método que analisa as propriedades da arquitetura de software\acrfull{SAAM}.
+Esse método tem como principal objetivo analisar a arquitetura de software de maneira geral, ou seja, tendo o entendimento de como o sistema de software deve funcionar de acordo com a arquitetura de software. Esse método guia o arquiteto de softwares a identificar os possíveis pontos problemáticos da arquitetura~\cite{survey_methods}~\cite{scenario_methods}.
+
+Para exemplificar esses possíveis pontos problemáticos tem-se o ponto de conflito entre os requisitos ou o ponto em que  arquitetura candidata pode possuir uma demanda não implementada ou incompleta, demanda essa que foi solicitada por uma das partes interessadas no sistema de software no momento das especificações da arquitetura de software~\cite{survey_methods}.
+O \acrfull{SAAM} permite que seja realizada a comparação entre os cenários das arquiteturas candidatas e a partir dessa comparação pode ser escolhida a arquitetura que se alinhe melhor com o sistema de software~\cite{survey_methods}.
+
+\figuraBib{saamtwo}{Etapas integrantes do SAAM}{scenario_methods}{saamtwo}{width=.70\textwidth}%
+
+
+Na \refFig{saamtwo} tem-se as seguintes etapas do SAAM~\cite{scenario_methods}:
+\begin{itemize}
+    \item Descrição de arquitetura;
+    \item Desenvolvimento de cenário;
+    \item Avaliação individual de cenário;
+    \item Avaliação de interação de cenário;
+    \item Avaliação geral.
+\end{itemize}
+
+Sendo assim, o método SAAM ao comparar os cenários permite que seja realizada a comparação entre as arquiteturas candidatas a fim de eleger a arquitetura de software mais adequada para o sistema de software. Ele permite que sejam integrados os diversos interesses  das partes interessadas no sistema de software e estabelece um cenário que entregue todas as demandas solicitadas pelas partes interessadas através de uma arquitetura de software consistente para o sistema de software~\cite{survey_methods}.
+
+\subsection{Descrição de arquitetura}
+
+A descrição da arquitetura candidata corresponde à primeira etapa do método SAAM. Nessa etapa a arquitetura candidata deve ser descrita em uma notação que seja compreendida por todas as partes interessadas no sistema de software~\cite{scenario_methods}.
+
+As descrições arquitetônicas devem indicar os componentes que serão necessários para a arquitetura candidata e os seus respectivos relacionamentos~\cite{scenario_methods}.
+
+\subsection{Desenvolvimento de cenário}
+
+Na segunda etapa tem-se o desenvolvimento de cenários, nesse caso devem ser desenvolvidas as tarefas que descrevam os tipos de atividades que o sistema deve suportar e quais as mudanças que serão feitas no sistema ao longo do tempo~\cite{scenario_methods}. 
+
+No momento em que forem desenvolvidos os cenários, deve-se dar relevância à captura das necessidades a serem atendidadas pelo sistema de software. Visto que dessa forma o cenário deve representar as tarefas relevantes do sistema de software para diferentes usuários~\cite{scenario_methods}.
+
+\subsection{Avaliação individual de cenário}
+
+Na terceira etapa é realizada a avaliação dos cenários que foram desenvolvidos na etapa anterior. Inicialmente deve ser avaliado se com a arquitetura candidata que se tem é possível desenvolver o cenário proposto ou se é necessária alguma alteração na arquitetura candidata. Caso seja necessária alteração,o cenário em questão é chamado de cenário indireto~\cite{scenario_methods}.
+
+Sendo necessária as alteração na arquitetura para executar o cenário indireto, devem ser listadas as alterações necessárias e também deve ser estimado o custo para realizar a alteração. Visto que uma alteração na arquitetura implicar que  novo componente ou novo relacionamento seja introduzido na arquitetura candidata~\cite{scenario_methods}.
+
+Ao final dessa avaliação, deve ser feito um quadro-resumo contendo todos os cenários (diretos e indiretos) e para cada cenário indireto, ou seja, cenário que precise de modificação na arquitetura candidata para executa-lo, é necessário descrever qual o impacto que essa modificação causa no sistema de software. Esse quadro-resumo permite que seja possível comparar as arquiteturas candidatas visto que é determinado se o cenário precisa de modificações ou não~\cite{scenario_methods}.
+
+\subsection{Avaliação de interação de cenário}
+
+Na quarta etapa tem-se a avaliação de interações entre cenários. Os cenários indiretos podem precisar de alterações em componentes ou em relacionamentos. Para determinar a interação do cenário é preciso identificar os cenários que afetam um conjunto comum de componentes~\cite{scenario_methods}. 
+
+Identificar essa interação é relevante pois ela identifica até que ponto a arquitetura candidata consegue suportar os cenários que estão sendo estabelecidos para o sistema de software~\cite{scenario_methods}.
+
+\subsection{Avaliação geral}
+
+Na quinta e última etapa deve ser realizada uma avaliação geral da arquitetura candidata. Sendo assim, é necessário analisar de forma ponderada cada cenário e as interações do cenário em termos de sua relevância na arquitetura. Através dessa ponderação deve ser possível fazer uma classificação geral dos cenários~\cite{scenario_methods}.
+
+Esse processo deve envolver as partes interessadas no sistema. Com essa ponderação, será refletida a relevância relativa dos fatores de qualidade que os cenários manifestam na arquitetura~\cite{scenario_methods}.

@@ -1,0 +1,125 @@
+Este capítulo aborda arquitetura de software. Entre os elementos deste capítulo, é possível destacar os seguintes: arquitetura de software,descrição de arquitetura de software,possíveis usos para a descrição da arquitetura de software, ponto de vista e visão de arquitetura de software,práticas para descrição de arquitetura de software e arcabouços de arquitetura.
+
+\section{Arquitetura de software}
+
+Um sistema de software é um sistema onde software consiste de elemento de importância primária para as partes interessadas (\emph{stakeholders}) no sistema. Entre os elementos de software, tem-se programas de computador. Programas de computador são compostos por instruções de computador e dados que capacitam hardware de computador a realizar funções computacionais e de controle com o propósito de atender necessidades de partes interessadas (\emph{stakeholders}) no sistema. Em processo de desenvolvimento de sistema de software, os participantes podem assumir diversos papéis. Por exemplo, desenvolvedor ou usuário~\cite{Sevocab}~\cite{ISO_24765}.
+
+Para desenvolver um sistema de software existe um processo que deve ser seguindo, sendo esse o processo de desenvolvimento de sistema de software. Dentro desse processo, existem diversas atividades que devem ser relaizadas.Por exemplo, atividades responsáveis por projeto de software (\emph{software design}). Algumas dessas atividades  são responsáveis por projeto de arquitetura de software (\emph{architectural design})~\cite{Sommerville_2011_texbook}. Existem diversas definições para o termo arquitetura de software (\emph{software architecture}). Segundo definição em ~\cite{arq_01}, arquitetura de software corresponde à estrutura de sistema software ou às estruturas de sistema de software. Segundo essa definição, sistema de software pode ser composto por uma estrutura ou por mais de uma estrutura. Essas estruturas são compostas por elementos responsáveis por atribuições do sistema de software. Um mesmo elemento pode estar alocado em mais de uma estrutura do sistema de software ~\cite{arq_01}~\cite{Carnegie_textbook}.
+
+Os elementos integrantes de sistema de software são responsáveis por atender necessidades de partes interessadas (\emph{stakeholders}) no sistema. Essas necessidades podem variar entre sistemas de software. Os elementos integrantes de sistema de software estão associados a serviços prestados pelo sistema, características do sistema e funções do sistema. A arquitetura de software é composta por elementos integrantes do sistema de software e por relacionamentos entre os mesmos. Ou seja, a arquitetura de software é uma abstração do sistema de software.Na arquitetura de software certos aspectos dos elementos integrantes do sistema são abstraídos ~\cite{arq_01}~\cite{Carnegie_textbook}.
+
+Segundo definição em ~\cite{arq_01},todo sistema de software possui uma arquitetura, pois todo sistema de software é composto por elementos e por relacionamentos entre elementos. Embora todo sistema de software tenha uma arquitetura de software, nem todo sistema de software tem informação acerca da sua arquitetura de software registrada em documento que facilite acesso a essa informação. Por diversos motivos, é relevante documentar arquitetura de software em ciclo de vida de sistema de software ~\cite{arq_01}~\cite{Carnegie_textbook}.
+
+Uma outra definição para o termo arquitetura de software é encontrada em ~\cite{arq_02}.Segundo essa definição, arquitetura de software consiste de conjunto de estruturas relevantes ao entendimento de como os elementos integrantes de software estão relacionados e como ocorrem esses relacionamentos. Essas estruturas são compostas por elementos integrantes do software e por relacionamentos entre esses elementos~\cite{Carnegie_textbook}~\cite{arq_02}.
+
+No contexto deste trabalho, é adotada a definição apresentada pelo ~\cite{ISO_1471}.Nessa definição, arquitetura é organização fundamental de sistema incorporada em seus componentes, relacionamentos um com o outro, e com o ambiente, e os princípios que guiam seu projeto e evolução. A seguir, se encontra a definição no idioma original: \emph{“The fundamental organization of a system embodied in its components, their relationships to each other, and to the environment, and the principles guiding its design and evolution”.}~\cite{Carnegie_textbook}~\cite{ISO_1471}
+
+Em desenvolvimento de sistema de software, o desenvolvimento de arquitetura de software se faz de acordo com o ambiente de desenvolvimento, são consideradas necessidades das partes interessadas (\emph{stakeholders}) no sistema de software. Tendo esse ambiente sido definido, é estruturado o sistema de software. Esse compreende conjunto de componentes organizados de acordo com as suas funções no sistema de software. A fim de obter a conexão entre os componentes são estabelecidos relacionamentos entre os mesmos. Dessa forma são obtidas as funcionalidades que o sistema precisa prover para atingir os seus objetivos~\cite{Carnegie_textbook}~\cite{ISO_1471}. 
+
+
+\section{Descrição de arquitetura de software}
+
+Ao longo do ciclo de vida de sistema de software, é relevante definir, documentar, realizar manutenção, melhorar e certificar a implementação de arquitetura de software. Sendo assim, a descrição de arquitetura de software expressa sistema de software durante ciclo de vida do mesmo.A informação acerca de arquitetura pode ser registrada por meio de descrição da mesma. 
+A descrição de arquitetura é produto de trabalho resultante de definição, documentação, manutenção, melhoria e certificação de implementação de  arquitetura. A descrição de arquitetura pode consistir de coleção de artefatos, resultar da agregação de produtos de trabalho resultante de atividades executadas ao longo de ciclo de vida de sistema de software  ~\cite{ISO_1471}~\cite{ISO_42010}. 
+
+\figuraBib{contextarchdesc}{Contexto da descrição da arquitetura de software}{ISO_42010}{contextarchdesc}{width=.60\textwidth}%
+
+Por fim, o diagrama presente na \refFig{contextarchdesc} representa o contexto no qual ocorre descrição de arquitetura. Segundo esse diagrama, a parte interessada (\emph{stakeholder}) possui interesse no sistema de software, esse sistema trata de necessidades que são apontadas como o propósito do sistema de software.Este sistema está situado em um ambiente em que permite o seu desenvolvimento. Com isso, o sistema exibe a arquitetura que é necessária para o sistema ter seu funcionamento. Tendo essas definições é possível descrever a arquitetura do software~\cite{ISO_1471}~\cite{ISO_42010}. 
+
+Descrição de arquitetura de software contém informação relevante ao desenvolvimento de software. A seguir, informação que pode estar presente em descrição de arquitetura de software: concepção fundamental de sistema de interesse em termos de seu propósito, qualidades de sistema (viabilidade, desempenho, segurança, usabilidade, interoperabilidade etc.), restrições, decisões e fundamentação; identificação de partes interessadas (\emph{stakeholders}) no sistema de software, por exemplo, cliente ou usuário; identificação de demandas de partes interessadas no sistema de software; definições de pontos de vista (\emph{viewpoints}) para documentar procedimentos para criar, interpretar, analisar e avaliar dados arquitetônicos; uma ou mais visualizações do sistema, tendo em consideração que cada visão (\emph{view}) de arquitetura aborda um ponto de vista, e que ponto de vista pode ser originado em parte interessada no sistema, que cada parte interessada pode ter demanda que deve ser abordada na descrição de arquitetura de software~\cite{ISO_15289}. 
+
+Tendo em vista que cada visão da arquitetura de software aborda um ponto de vista do sistema e esse ponto de vista pode vir de uma parte interessada do sistema, podendo ser o usuário final, o stakeholder , o cliente entre outras partes interessadas. E cada parte interessada pode possuir uma demanda que deve ser abordada  na descrição da arquitetura de software. 
+
+Na descrição de arquitetura de software pode ser registrada informação por meio da qual seja possível  fornecer fundamentação para decisões arquiteturais, com informação de rastreabilidade aos requisitos do sistema; estabelecer os princípios para particionar o sistema em elementos do sistema (hardware, software, operações etc.) e elementos de projeto; registrar as propriedades importantes e os relacionamentos entre esses elementos de maneira consistente com a estrutura analítica do trabalho; demonstrar que requisitos arquitetonicamente significativos são atendidos e alocados para fornecer uma estrutura para especificação e refino do projeto~\cite{ISO_15289}. 
+
+Por fim, a descrição de arquitetura de software deve fornecer informação que descreva a arquitetura de software por meio de seus componentes, apresentar a arquitetura a ser adotada na implementação do sistema de software. A descrição de arquitetura de software pode ser considerada uma especificação do sistema de software~\cite{ISO_15289}.
+
+\subsection{Possíveis usos para a descrição da arquitetura de software}
+
+Existem diversos usos para descrição de arquitetura de software. Por exemplo, os seguintes: base para projeto (\emph{design}) e desenvolvimento de sistema; base para análise e avaliação de implementação de arquitetura; documentação de sistema; entrada para ferramenta automatizada; especificação de sistemas que compartilham características; comunicação durante desenvolvimento, produção, implantação, operação e manutenção de sistema; documentação de características e de projeto (\emph{design}) de sistema; planejamento de transição de arquitetura legada para nova arquitetura; gerenciamento de configuração; suporte ao planejamento, definição de cronograma e definição de orçamento; estabelecimento de critérios para avaliar conformidade com arquitetura; embasamento de revisão, análise e avaliação de sistema; embasamento de análise e avaliação de arquiteturas alternativas; reuso de conhecimento acerca de arquitetura; treinamento e educação ~\cite{ISO_42010}.
+
+A descrição de arquitetura de software pode promover a comunicação entre desenvolvedores do sistema de software e partes interessadas (\emph{stakeholders}) no sistema de software. Ela permite  facilitar o entendimento de funcionalidades do sistema de software e estrutura do mesmoe também facilita a avaliação da capacidade da arquitetura de software atender às necessidades das partes interessadas (\emph{stakeholders}) no sistema de software~\cite{ISO_42010}. 
+
+\section{Ponto de vista e visão de arquitetura de software}
+
+A arquitetura de software pode ser projetada considerando-se visões (\emph{views}) de arquitetura. A informação acerca de visões de arquitetura pode ser incluída em descrição de arquitetura de software. O acesso à essa informação pode, por exemplo, facilitar a identificação da presença ou da ausência de componentes necessários, facilitar a avaliação da capacidade da arquitetura atender demandas relacionadas ao sistema de software ~\cite{ISO_42010}.
+
+Uma visão de arquitetura expressa a arquitetura segundo determinado ponto de vista (\emph{viewpoint}). Portanto, uma visão de arquitetura representa a arquitetura segundo determinada perspectiva. Perspectiva essa que considera determinados interesses. Informação acerca de visão de arquitetura pode ser registrada em modelos de arquitetura. Cada modelo de arquitetura pode integrar mais de uma visão de arquitetura e pode ser construído levando-se em consideração convenções adequadas aos interesses enfocados pela visão~\cite{ISO_42010}. 
+
+Por sua vez, um ponto de vista (\emph{viewpoint}) define audiência e propósito de visão de arquitetura. Um ponto de vista estabelece convenções para construção e uso de visão de arquitetura. As convenções definidas por um ponto de vista podem ser diversas. Por exemplo, podem ser definidas linguagens, notações, tipos de modelos, regras de projeto (\emph{design}), métodos de modelagem e técnicas de análise~\cite{ISO_1471}~\cite{ISO_42010}. 
+
+Considerando-se, por exemplo, requisitos relacionados ao sistema de software sendo desenvolvido, arquitetura de software pode ser projetada levando-se em consideração diferentes visões. As visões são construídas e usadas considerando-se convenções que se encontram definidas em pontos de vista. Em projeto de arquitetura de software, é relevante considerar possíveis pontos de vista e visões de arquitetura.
+
+
+\section{Práticas para descrição de arquitetura de software}
+
+Na norma IEEE 1471-2000 IEEE Recommended Practice for Architectural Description of Software-Intensive Systems, proposta pelo The Institute of Electrical and Electronics Engineers (IEEE), são sugeridas práticas para a descrição de arquiteturas de sistemas intensivos em software. Uma descrição que seja realizada levando em consideração as práticas propostas nessa norma, inclui os seguintes elementos~\cite{ISO_1471}:
+
+\begin{itemize}
+    \item Identificação, versão e informação geral;
+    \item Identificação de partes interessadas (\emph{stakeholders}) e interesses dessas partes que sejam considerados relevantes à arquitetura;
+    \item Especificações de cada ponto de vista (\emph{viewpoint}) selecionado para organizar a representação da arquitetura e razão para essa seleção;
+    \item Uma ou mais visões;
+    \item Registros de inconsistências entre elementos  constituintes requeridos pela descrição da arquitetura;
+    \item Razão para seleção da arquitetura.
+\end{itemize}
+
+Acerca da descrição de arquitetura como um todo, a norma IEEE 1471-2000 recomenda que a seguinte informação esteja presente na descrição da arquitetura~\cite{ISO_1471}:
+
+\begin{itemize}
+    \item Data de emissão e estado;
+    \item Organização emissora;
+    \item Histórico de modificações;
+    \item Sumário;
+    \item Escopo;
+    \item Contexto;
+    \item Glossário;
+    \item Referências.
+\end{itemize}
+
+Em seguida, devem ser identificadas as partes interessadas (\emph{stakeholders}) no sistema de software. A seguir, são relacionadas classes de possíveis partes interessadas (\emph{stakeholders}) a serem identificadas: usuário de sistema, adquirente de sistema, desenvolvedor de sistema e responsável por manutenção de sistema ~\cite{ISO_1471}.
+
+Após serem identificadas as partes interessadas (\emph{stakeholders}) no sistema e ser registrada informação acerca das mesmas, a norma IEEE 1471-2000  recomenda que a seguinte informação seja registrada acerca do sistema~\cite{ISO_1471}:
+
+\begin{itemize}
+    \item Propósitos ou missões do sistema;
+    \item Adequação do sistema no atendimento das suas missões;
+    \item Riscos de desenvolvimento;
+    \item Riscos de operção do sistema;
+    \item Manutenibilidade, implementação e capacidade de otimização do sistema.
+\end{itemize}
+
+Em seguida, tem-se o registro de informação acerca dos pontos de vista (\emph{viewpoint}) de arquitetura considerados. A norma IEEE 1471-2000 sugere que seja registrada a seguinte informação acerca de cada ponto de vista~\cite{ISO_1471}:
+
+\begin{itemize}
+    \item Nome do ponto de vista;
+    \item Partes interessadas(\emph{stakeholders}) a serem abordadas pelo ponto de vista;
+    \item Demandas a serem contempladas pelo ponto de vista;
+    \item Linguagens, técnicas ou métodos a serem usados na construção de visão;
+    \item Referência.
+\end{itemize}
+
+A especificação de cada ponto de vista (\emph{viewpoint}) pode incluir informação sobre  práticas associadas ao ponto de vista. Por exemplo, informação acerca de testes formais ou informais de consistência e completude que podem ser aplicados ao modelo presente na visão analisada; informação acerca de técnicas para avaliar ou analisar o que será implementado no sistema; informação acerca de padrões que podem auxiliar na construção da visão~\cite{ISO_1471}. 
+
+Em seguida, tem-se registro de informação acerca das visões (\emph{views}) de arquitetura. Essas visões de arquitetura variam de acordo com o ponto de vista e cada visão de arquitetura corresponde a um ponto de vista. A norma IEEE 1471-2000 sugere que seja registrada a seguinte informação acerca de cada visão de arquitetura~\cite{ISO_1471}:
+
+\begin{itemize}
+    \item Identificador;
+    \item Informação introdutória;
+    \item Representação do sistema construído segundo as recomendações do ponto de vista associado;
+    \item Informação de configuração.
+\end{itemize}
+
+Deve ser analisada a consistência entre visões (\emph{views}) de arquitetura e ser registrada informação acerca de inconsistências que sejam identificadas. O registro dessa informação pode, por exemplo, minimizar a ocorrência de erros e a presença de defeitos; facilitar o alinhamento entre desenvolvedores; facilitar o acompanhamento da evolução das visões de arquitetura. Por fim, é necessário informar a razão para os conceitos escolhidos acerca de arquitetura e prover evidência de que conceitos alternativos foram considerados. Essa informação é relevante, pois pode facilitar o entendimento de motivos de decisões de projeto (\emph{design})~\cite{ISO_1471}.
+
+\section{Arcabouços de arquitetura}
+
+Um arcabouço de arquitetura (\emph{architecture framework}) tipicamente estabelece estruturas e práticas para criar, interpretar, analisar e usar descrições de arquitetura. Existem diversos arcabouços de arquitetura. Por exemplo, os seguintes: \emph{\acrfull{TOGAF}} e \emph{The “4+1” View Model of Software Architecture}. O TOGAF consiste de arcabouço para arquitetura organizacional (\emph{enterprise architecture}). Esse arcabouço, que é desenvolvido e mantido pelo The Open Group, provê métodos e ferramentas para aceitação, produção, uso e manutenção de arquiteturas organizacionais. O TOGAF inclui o \acrfull{ADM}, um método que é composto por fases e que se destina ao desenvolvimento e ao gerenciamento de ciclo de vida de arquitetura organizacional~\cite{ISO_42010}~\cite{Togaf}. 
+
+Essa metodologia tem como principal objetivo garantir uma melhor eficiência do negócio a partir de uma estrutura de arquitetura de software consistente. Essa consistência é obtida através da aplicação de métodos e padrões entre os arquitetos de software envolvidos. Como principais funcionalidades, tem-se que o \acrfull{TOGAF} permite que sejam abordadas padronizações que permitem a correção de erros, a documentação da estrutura e remoção de conteúdos que não são relevantes para a arquitetura de software~\cite{Togaf}.
+
+Por sua vez, o arcabouço (\emph{framework}) \emph{The “4+1” View Model of Software Architecture} sugere modelo para descrever arquitetura de software em visões (\emph{views}). Esse modelo prescreve as seguintes visões: visão lógica, visão de processo, visão de desenvolvimento e visão física. A descrição da arquitetura de software pode ser organizada segundo essas visões e ilustrada por casos de usos ou por cenários. A visão lógica provê suporte primariamente a requisitos funcionais. Segundo essa visão, o sistema é decomposto em um conjunto de abstrações identificadas principalmente no domínio do problema. Caso seja adotado o paradigma de desenvolvimento orientado a objetos (\emph{object oriented development}), essas abstrações são representadas por classes e objetos. A visão lógica pode ser descrita por diagramas de classes, diagramas de objetos e diagramas por meio dos quais sejam representados estados e transições. A visão de processo considera requisitos não funcionais, enfoca aspectos de projeto relacionados a concorrência, distribuição, integridade, tolerância a falhas, e como abstrações identificadas na visão lógica são mapeadas para a visão de processos. Nesse contexto, o termo processo designa agrupamento de tarefas (\emph{tasks})~\cite{4plus1}. 
+
+A arquitetura de processos pode ser descrita segundo diferentes níveis de abstração usando-se diagramas onde sejam representados elementos como processos, tarefas e mensagens. A visão de desenvolvimento descreve organização estática do software no seu ambiente de desenvolvimento. A arquitetura é descrita por meio de diagramas onde podem ser representados módulos, subsistemas e seus relacionamentos. A visão física descreve mapeamento do software no hardware~\cite{4plus1}.
+
+Por fim, tem-se que diversos \emph{frameworks} estão disponíveis para uso no desenvolvimento de software. Eles têm grande relevância pois tornam o processo de compreender e detalhar a estrutura da arquitetura de software mais simples para o arquiteto. Permitindo assim, uma padronização no conteúdo e no processo de arquitetura de software~\cite{ISO_42010}.
