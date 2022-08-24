@@ -968,5 +968,6 @@
 	\tabelaBib{#1}{}{#2}{#3}{#4}%
 }%
 
-
+%% --- Não separar sílabas  ---%
+\usepackage[none]{hyphenat}
 \endinput
