@@ -1,54 +1,35 @@
-Este capítulo aborda configuração de processo de desenvolvimento. Entre os elementos que integram este capítulo, é possível destacar os seguintes: open unified process, atividades, tarefas e artefatos relacionados à arquitetura de software no OpenUp, atividades relacionadas à arquitetura de software e configuração do processo de definição de arquitetura de software.
+Este capítulo aborda configuração de processo de desenvolvimento.Entre os elementos que integram este capítulo,é possível destacar os seguintes:\emph{\acrfull{OpenUp}},elementos do OpenUP relacionados à arquitetura de software e configuração de processo de desenvolvimento de software.
 
 \section{Open Unified Process}
 
-O processo de desenvolvimento de software, a ser consfigurado no contexto deste trabalho,é denominado \acrfull{OpenUp}.Na configuração desse processo de desenvolvimento serão adicionadas atividades, tarefas e artefatos descritos nas seguintes normas: ISO 12207 - Systems and software engineering - Software life cycle processes, ISO 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems, ISO 15289-2027 - Systems and software engineering - Content of life-cycle information items (documentation) e ISO 42010-2021 - Systems and software engineering - Architecture description.A configuração do processo de desenvolvimento terá o propósito de melhor prover suporte ao projeto (design) de software. Particularmente, à definição de arquitetura de software.
+O processo de desenvolvimento de software, a ser consfigurado no contexto deste trabalho,é denominado \emph{\acrfull{OpenUp}}.O OpenUp sugere que o desenvolvimento de software seja realizado em incrementos, dessa forma unidades pequenas de trabalho podem produzir trabalho contínuo que demonstre métrica que permita mensurar o progresso do projeto. Sendo assim, é possível acompanhar e documentar o desenvolvimento do software de forma incremental, artefatos são construídos na medida que progride o desenvolvimento do software~\cite{openup}. 
 
-
-O \acrfull{OpenUp} sugere que o desenvolvimento de software seja organizado em incrementos, dessa forma unidades pequenas de trabalho podem produzir um trabalho contínuo que demonstre uma métrica que permita mensurar o progresso do projeto. Sendo assim, é possível acompanhar e documentar o desenvolvimento do \emph{software} de forma incremental, sendo artefatos construídos na medida em que progride o desenvolvimento do software. Essa forma de trabalho promove realimentação (\emph{feedback}) que permite a adequação do projeto quando necessário além de prover suporte à tomada de decisão durante o desenvolvimento de software~\cite{openup}.
-
-A partir da interação entre as equipes é possível determinar para qual fase o projeto pode seguir, visto que a partir da interação entre as equipes tem-se uma estimativa do quanto o projeto teve andamento durante o período analisado~\cite{openup}.
+Essa forma de trabalho promove realimentação (\emph{feedback}) que permite a adequação do projeto quando necessário, além de prover suporte à tomada de decisão durante o desenvolvimento de software. A partir da interação entre as equipes é possível determinar para qual fase o projeto seguir, visto que a partir da interação entre as equipes tem-se uma estimativa do quanto o projeto teve andamento no período analisado~\cite{openup}. A \refFig{openup} ilustra o ciclo de vida de projeto no OpenUP.
 
 \figuraBib{openup}{Ciclo de vida de projeto segundo o OpenUp}{openup}{openup}{width=.60\textwidth}%
 
-O ciclo de vida de projeto é composto pelas seguintes fases: iniciação, elaboração, construção e transição. A fase de iniciação tem o propósito de alcançar concordância entre os interessados (\emph{stakeholders}) sobre os objetivos do ciclo de vida do projeto. A fase de elaboração tem o propósito de estabelecer uma arquitetura (\emph{baseline architecture}) e prover uma base estável para o esforço de desenvolvimento a ser realizado. A fase de construção tem o propósito de completar o desenvolvimento do sistema com base na arquitetura (\emph{baseline architecture}) definida. A fase de transição tem o propósito de garantir que o software está pronto para entrega aos usuários.
+No processo OpenUp, o ciclo de vida de projeto é composto pelas seguintes fases: iniciação (\emph{Inception}), elaboração (\emph{Elaboration}), construção (\emph{Construction}) e transição (\emph{Transition}). A fase de iniciação tem o propósito de alcançar concordância entre os interessados (\emph{stakeholders}) sobre os objetivos do ciclo de vida do projeto. A fase de elaboração tem o propósito de estabelecer uma arquitetura (\emph{baseline architecture}) e prover uma base estável para o esforço de desenvolvimento a ser realizado. A fase de construção tem o propósito de completar o desenvolvimento do sistema com base na arquitetura (\emph{baseline architecture}) definida. Por fim, a fase de transição tem o propósito de garantir que o software está pronto para entrega aos usuários.
 
-Com isso, no OpenUp é possível fornecer para as equipes e para as partes interessadas (\emph{stakeholder}) no projeto os pontos em que são tomadas decisões de projeto a fim de definir qual plano seguir. Dessa forma, o plano de projeto permite definir o ciclo de vida do projeto. O \acrfull{OpenUp} provê informação acerca de como produto de software pode ser documentado e implementado de forma incremental.O processo provê informação acerca de fases em ciclo de vida de projeto, por exemplo, acerca de responsáveis por cada fase~\cite{openup}.
+No OpenUp é possível fornecer para as equipes e para as partes interessadas (\emph{stakeholders}) no projeto, os pontos em que são tomadas decisões de projeto a fim de definir qual plano seguir. O plano de projeto permite definir o ciclo de vida do projeto. O OpenUp provê informação acerca de como produto de software pode ser documentado e implementado. A descrição desse processo contém informação acerca de fases integrantes de ciclo de vida de projeto, processos de entrega (\emph{delivery processes}), práticas (\emph{practices}), papéis (\emph{roles}), produtos do trabalho (\emph{work products}), tarefas (\emph{tasks}), orientação (\emph{guidance}) e ferramentas (\emph{tools})~\cite{openup}.
 
-No processo de configuração do OpenUP, será incluída informação acerca de processo de definição de arquitetura de software, seguindo-se recomentações em normas anteriormente relacionadas. Sendo assim, a informação apresentada ao longo do capítulo 03 e do capítulo 04 deste trabalho será usada a fim de projetar  arquiteturas candidatas para o sistema de software que será apresentado como exemplo de uso neste trabalho. As arquiteturas candidatas serão avaliadas através do \acrfull{SAAM} a fim de eleger a melhor arquitetura para o sistema de software.Nesse processo de configuração serão determinadas atividades, tarefas e artefatos.
+\subsection{Elementos relacionados à arquitetura de software}
 
+No OpenUp, existem atividades (\emph{activity}), tarefas (\emph{task}), artefatos (\emph{work product}) e papéis (\emph{role}) relacionados à arquitetura de software. Entre as atividades, tem-se as atividades Concordar com uma abordagem técnica (\emph{Agree on a Technical Approach}) e Desenvolver a arquitetura (\emph{Develop the Architecture}).A atividade Concordar com uma abordagem técnica visa definir abordagem técnica que suporte requisitos do projeto, considerando restrições impostas ao sistema e à equipe de desenvolvimento. Por sua vez, a atividade Desenvolver a arquitetura visa refinar a arquitetura inicial em software funcional, produzir software estável que contemple os riscos técnicos~\cite{openup}.
 
-\section{Atividades, tarefas e artefatos relacionados à arquitetura de software no OpenUp}
+No OpenUP, tarefas têm finalidades como detalhar requisitos, realizar a especificação da interface e da arquitetura do sistema de software. Tarefas são realizadas para concretizar atividade. Para cada tarefa são relacionados passos (\emph{steps}).Para cada atividade existem tarefas a serem realizadas [7]. No OpenUp, arquiteto (\emph{architect}) é responsável por conceber e refinar arquitetura de software, isso inclui tomar decisões que restringem o projeto (\emph{design}) e a implementação do sistema. Na \refFig{arquiteto} tem-se tarefas e artefatos relacionados a arquiteto. A seguir, são relacionadas tarefas realizadas por arquiteto e artefato sob sua responsabilidade~\cite{openup}: 
 
-A fim de definir as atividades, tarefas e artefatos que serão configurados neste projeto para desenvolver a arquitetura de software tem-se um responsável por definir o processo que deve ser seguido. Tendo como base o \acrfull{OpenUp}, tem-se  que o arquiteto é responsável por refinar a arquitetura de software, o que inclui tomar as principais decisões técnicas que restringem o projeto geral e a implementação do sistema. 
- 
-
-\figuraBib{arquiteto}{Tarefas e artefatos relacionados a arquiteto segundo o OpenUp}{openup}{arquiteto}{width=.60\textwidth}%
-
-Na \refFig{arquiteto} tem-se que o arquiteto tem como tarefas~\cite{openup}:
 
 \begin{itemize}
-    \item Projetar a arquitetura de software;
-    \item Refinar a arquitetura de software
-\end{itemize}  
-
-Como artefato que deve ser produzido pelo arquiteto de softwares tem-se o~\cite{openup}:
-
-\begin{itemize}
+    \item Conceber a arquitetura;
+    \item Refinar a arquitetura;
     \item Caderno de arquitetura.
-\end{itemize}
-
-As tarefas têm como finalidade detalhar os requisitos e realizar a especificação da interface e da arquitetura do sistema de software. As tarefas são realizadas a fim de concretizar a atividade que será abordada. Sendo assim, para cada atividade existe uma lista de tarefas que devem ser realizadas\cite{ISO_1471}. 
+\end{itemize} 
 
 
-Como tarefas, serão executadas as tarefas do \acrfull{OpenUp}:
+\figuraBib{arquiteto}{Tarefas e artefatos relacionados a arquiteto}{openup}{arquiteto}{width=.60\textwidth}%
 
-\begin{itemize}
-    \item Projetar a arquitetura de software;
-    \item Refinar a arquitetura de software.
-\end{itemize}
 
-Na tarefa de Projetar a arquitetura de software enfoca a visualização da arquitetura inicial e delimitar as decisões da arquitetura de software. Esse detalhamento guiará o desenvolvimento e o teste do sistema de software. Ele é baseado na coleta de experiência que é obtida ao utilizar sistemas de softwares semelhantes ao que será apresentado no exemplo de uso. Os resultados que são obtidos são utilizados como referências futuras para realizar a comunição entre as equipes. Para essa tarefa devem ser seguidos os seguintes passos\cite{openup}:
+A tarefa Conceber a arquitetura (\emph{Envision the Architecture}) integra a atividade Concordar com uma abordagem técnica. A tarefa Conceber a arquitetura enfoca a visualização da arquitetura e a delimitação das decisões acerca da arquitetura de software. Esse detalhamento guiará o desenvolvimento e o teste do sistema de software. Os resultados obtidos são utilizados como referências futuras na comunição entre equipes. A seguir, são relacionados passos nessa tarefa segundo o OpenUp~\cite{openup}:
 
 \begin{itemize}
     \item Identificar objetivos arquitetônicos;
@@ -64,9 +45,7 @@ Na tarefa de Projetar a arquitetura de software enfoca a visualização da arqui
     \item Capturar e comunicar as decisões arquitetônicas.
 \end{itemize}
 
-A tarefa de Refinar a arquitetura de software tem o propósito de delinear e definir as decisões arquitetônicas. Sendo assim, a partir da implementação do sistema de software  e  das suas modificações a  arquitetura de software evolui. Isso ocorre pois apenas a partir da implementação é possível avaliar se a arquitetura de software é viável e fornece o suporte que o sistema de software necessita ao longo do ciclo de vida\cite{openup}.
-
-Dentre os passos que devem ser executados nessa tarefa, tem-se\cite{openup}:
+A tarefa Refinar a arquitetura (\emph{Refine the architecture}) integra a atividade Desenvolver a arquitetura. A tarefa Refinar a arquitetura tem o propósito de delinear e definir decisões arquitetônicas. Sendo assim, a partir da implementação do sistema de software e das suas modificações, a arquitetura de software evolui. Isso ocorre pois, por meio da implementação, é possível avaliar se a arquitetura de software é viável e se fornece o suporte que o sistema de software necessita ao longo do ciclo de vida~\cite{openup}.A seguir, são relacionados passos nessa tarefa segundo o OpenUp ~\cite{openup}:
 
 \begin{itemize}
     \item Refinar os objetivos arquiteturais e os requisitos arquitetonicamente significativos;
@@ -79,124 +58,100 @@ Dentre os passos que devem ser executados nessa tarefa, tem-se\cite{openup}:
     \item Comunicar as decisões.
 \end{itemize}
 
-\section{Atividades relacionadas à arquitetura de software}
+O artefato Caderno de arquitetura (\emph{Architecture notebook}) descreve decisões  tomadas acerca da arquitetura. No OpenUP, é sugerido que por meio desse artefato seja possível descrever mecanismos arquiteturalmente significativos e onde devem esse mecanismos serem aplicados. A seguinte informação pode ser registrada nesse artefato~\cite{openup}:
 
-A configuração do processo de desenvolvimento de software considera a definição de arquitetura de software no cenário de arquitetura de novos sistemas de software. Esse cenário foi escolhido pois através dele será possível acompanhar a arquitetura de software ao longo de vida do sistema de software\cite{ISO_1471}.
-
-A arquitetura de software contribui para o desenvolvimento, operação e manutenção do sistema de software. Por isso realizar a configuração de um processo para determinar a arquitetura é relevante para o desenvolvimento do sistema de software. Com isso, as atividades, tarefas e artefatos que serão implementados têm como finalidade garantir as seguintes características na arquitetura de software\cite{ISO_1471}:
 \begin{itemize}
-    \item Manter a integridade dos conceitos do sistema por meio do seu desenvolvimento;
-    \item Certificar os sistemas que foram construídos  assegurando-os conceitos de sistema através de fases operacionais e evolutivas.
+    \item Objetivos e filosofia da arquitetura;
+    \item Suposições arquiteturais e dependências;
+    \item Referências para requisitos arquiteturalmente significativos;
+    \item Referências para elementos de projeto (\emph{design}) arquiteturalmente significativos;
+    \item Interfaces de sistema críticas;
+    \item Instruções de empacotamento para subsistemas e componentes;
+    \item Camadas e subsistemas críticos;
+    \item Abstrações chave;
+    \item Cenários chave que descrevem comportamento crítico do sistema.
+
 \end{itemize}
 
-Para seguir com o processo de arquitetura de software também serão feitos artefatos. Esses artefatos têm como objetivo apresentar através de uma documentação as decisões que foram realizadas durante o ciclo de vida do sistema de software que afetam na definição da arquitetura de software~\cite{ISO_1471}.
+\section{Configuração de processo de desenvolvimento de software}
 
-Os artefatos sugeridos estão entre aqueles relacionados nas seguintes normas:ISO 12207 - Systems and software engineering - Software life cycle processes, ISO 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems, ISO 15289-2027 - Systems and software engineering - Content of life-cycle information items (documentation) e ISO 42010-2021 - Systems and software engineering - Architecture description.Como foi abordado serão aplicados os seguintes artefatos~\cite{ISO_1471}:
+A configuração do OpenUP proposta neste trabalho, considera a definição de arquitetura de software no cenário de arquitetura de novo sistema de software. A descrição que será realizada para a arquitetura de software poderá ser utilizada ao longo de ciclo de vida do sistema de software. Dessa forma é possível acompanhar alterações de acordo com o uso do sistema de software. A descrição pode também ser usada para avaliar mudanças que podem acontecer ao longo de ciclo de vida de software~\cite{ISO_1471}.
+
+A configuração do processo de desenvolvimento OpenUP proposta neste trabalho consiste em incluir prática para descrever arquitetura de software recomendada em \emph{ISO 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems}, e incluir, em tarefas integrantes do OpenUP, passos (\emph{steps}) com o propósito de analisar arquitetura de software por meio do método de análise de arquitetura \emph{\acrfull{SAAM}}.
+
+\subsection{Prática para descrição de arquitetura}
+
+A prática a ser incluída no OpenUP consiste naquela descrita na norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems}. Descrição de arquitetura que seja construída considerando-se a prática que é descrita nessa norma, deve conter os elementos  relacionados a seguir~\cite{ISO_1471}:
 
 \begin{itemize}
-    \item Documentação da arquitetura;
-    \item Identificação das partes interessadas;
-    \item Selecionar os pontos de vista arquitetônicos;
-    \item Visões da arquitetura;
-    \item Consistência entre as visões arquitetônicas.
+    \item Identificação, versão e informação geral;
+    \item Identificação de partes interessadas (\emph{stakeholders}) e interesses dessas partes que sejam considerados relevantes à arquitetura;
+    \item Especificações de cada ponto de vista (\emph{viewpoint}) selecionado para organizar a representação da arquitetura e razão para essa seleção;
+    \item Uma ou mais visões;
+    \item Registros de inconsistências entre elementos constituintes requeridos pela descrição da arquitetura;
+    \item Razão para seleção da arquitetura.
+
 \end{itemize}
 
-Cada artefato possui uma especificação em sua documentação que deve ser seguida. Na documentação da arquitetura devem ser especificadas as seguintes informações sobre a arquitetura de software\cite{ISO_1471}:
+A norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} sugere incluir a seguinte informação em descrição de arquitetura~\cite{ISO_1471}: 
 
 \begin{itemize}
-    \item Data de atualização da arquitetura de software e o versionamento da arquitetura;
-    \item Organização que solicitou o sistema de software;
-    \item Histórico de alterações da arquitetura de software;
+    \item Data de emissão e estado;
+    \item Organização emissora;
+    \item Histórico de modificações;
     \item Sumário;
     \item Escopo;
-    \item Contexto da arquitetura de software;
+    \item Contexto;
     \item Glossário;
-    \item Referências da arquitetura de software.
+    \item Referências.
+
 \end{itemize}
 
-Na identificação das partes interessadas devem ser especificados os\cite{ISO_1471}:
+A norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} recomenda que sejam identificadas as partes interessadas (\emph{stakeholders}) no sistema e que seja registrada informação acerca delas. São classes de partes interessadas (\emph{stakeholders}) no sistema: usuário de sistema, adquirente de sistema, desenvolvedor de sistema e responsável por manutenção de sistema. Acerca do sistema, a norma sugere registrar a seguinte informação~\cite{ISO_1471}: 
 
 \begin{itemize}
-    \item Usuários do sistema de software;
-    \item Desenvolvedores do sistema de software.
-\end{itemize}
-
-Nesse artefato também devem ser específicas algumas necessidades que o sistema de software possui. Para isso, devem ser especificados os seguintes itens\cite{ISO_1471}:
-
-\begin{itemize}
-    \item Propósito do sistema;
-    \item Adequar o sistema de software para que o propósito seja atingido com sucesso;
-    \item Viabilidade para construir o sistema;
-    \item Identificar quais os riscos que o sistema de software pode apresentar de acordo com o ponto de vista do usuário final, das organizações interessadas e para os desenvolvedores do sistema de software;
+    \item Propósitos ou missões do sistema;
+    \item Adequação do sistema no atendimento das suas missões;
+    \item  Riscos de desenvolvimento;
+    \item  Riscos de operção do sistema;
     \item Manutenibilidade, implementação e capacidade de otimização do sistema.
+
 \end{itemize}
 
-Ao selecionar os pontos de vista do sistema de software deve ser pensado nas necessidades que as partes interessadas querem no sistema, sendo assim, nesse artefato devem ser especificados os seguintes itens\cite{ISO_1471}:
+A especificação de cada ponto de vista (\emph{viewpoint}) pode incluir informação sobre práticas associadas ao ponto de vista. Por exemplo, informação acerca de testes formais ou informais de consistência e completude que podem ser aplicados ao modelo presente na visão analisada; informação acerca de técnicas para avaliar ou analisar o que será implementado no sistema; informação acerca de padrões que podem auxiliar na construção da visão. Acerca de cada ponto de vista de arquitetura, a norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} sugere registro da seguinte informação~\cite{ISO_1471}:
 
 \begin{itemize}
     \item Nome do ponto de vista;
-    \item Partes interessadas a serem abordadas pelo ponto de vista;
-    \item Demandas a serem abordadas pelo ponto de vista;
-    \item Linguagens, técnicas de modelagem ou métodos analíticos que devem ser implementados na construção que será desenvolvida de acordo com o ponto de vista escolhido;
-    \item  Referência para escolher o ponto de vista.
+    \item Partes interessadas (\emph{stakeholders}) a serem abordadas pelo ponto de vista;
+    \item Demandas a serem contempladas pelo ponto de vista;
+    \item Linguagens, técnicas ou métodos a serem usados na construção de visão;
+    \item Referência.
+
 \end{itemize}
 
-No artefato que contém as visões arquitetônicas devem ser especificados os seguintes itens\cite{ISO_1471}:
+Em seguida, tem-se registro de informação acerca das visões (\emph{views}) de arquitetura. As visões de arquitetura variam de acordo com o ponto de vista e cada visão de arquitetura corresponde a um ponto de vista. A norma \emph{ IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} sugere que seja registrada a seguinte informação acerca de cada visão de arquitetura~\cite{ISO_1471}: 
 
 \begin{itemize}
-    \item Identificador e demais informações introdutórias do sistema;
-    \item Representante do sistema construído com as linguagens, métodos e modelagem ou análise técnicas do ponto de vista que está sendo analisado;
-    \item Informações de configuração sendo definido de acordo com a organização do usuário.
+    \item Identificador;
+    \item Informação introdutória;
+    \item Representação do sistema construído segundo as recomendações do ponto de vista associado;
+    \item Informação de configuração.
+
 \end{itemize}
 
-Para o  artefato relacionado a consistência entre as visões arquitetônicas devem ser documentadas as inconsistências que foram encontradas. E caso a inconsistência tenha sido resolvida deve ser especificado como essa inconsistência foi solucionada, pois, dessa forma pode ser mantida uma consistência na documentação do sistema de software\cite{ISO_1471}.
+Deve ser analisada a consistência entre visões (\emph{views}) de arquitetura e ser registrada informação acerca de inconsistências identificadas. O registro dessa informação pode minimizar erros e a presença de defeitos; facilitar o alinhamento entre desenvolvedores; facilitar o acompanhamento da evolução das visões de arquitetura. Caso a inconsistência tenha sido solucionada deve ser informado como foi solucionada. É necessário informar a razão para os conceitos escolhidos acerca de arquitetura e prover evidência de que conceitos alternativos foram considerados. Essa informação pode facilitar o entendimento de decisões de projeto (\emph{design}) tomadas~\cite{ISO_1471}.
 
-As atividades, tarefas e artefatos que foram escolhidos para configurar o processo têm como finalidade permitir integrar diferentes abordagens a fim de tornar o projeto mais documentado. E para demonstrar a configuração desse processo será implementado em um exemplo de uso.
+\subsection{Passos para análise de arquitetura}
 
-\section{Configuração do processo de definição de arquitetura de software}
-
-No contexto deste trabalho serão adicionadas atividades, tarefas e artefatos que são sugeridos pelo \acrfull{IEEE}.Para isso, serão abordadas atividades que são descritas pelo ISO/IEC/IEEE 12207-2017.Dentre essas atividades tem-se\cite{ISO_12207}:
+Quanto aos passos (\emph{steps}) a serem incluídos em tarefas integrantes do OpenUp com o propósito de analisar a arquitetura de software por meio do método de análise de arquitetura de software denominado \emph{\acrfull{SAAM}}, são sugeridos os seguintes passos considerando as etapas do método~\cite{survey_methods}~\cite{scenario_methods}:
 
 \begin{itemize}
-    \item Preparar-se para a definição da arquitetura de software;
-    \item Desenvolver pontos de vista de arquitetura;
-    \item Desenvolver modelos e visualizações de arquiteturas candidatas;
-    \item  Relacionar a arquitetura com o design;
-    \item Avaliar as arquiteturas candidatas;
-    \item Gerenciar a arquitetura selecionada.
+    \item Descrever arquitetura candidata;
+    \item Desenvolver cenários;
+    \item Classificar cenários;
+    \item Realizar avaliação individual de cenário;
+    \item Realizar avaliação de interação de cenário;
+    \item Realizar avaliação geral.
+
+
 \end{itemize}
-
-Além dessa abordagem de atividades que são abordadas na ISO/IEC/IEEE 12207-2017, existem outras atividades que são relevantes dentro do contexto deste trabalho. Na ISO/IEC/IEEE 1471-2000 também são abordadas sugestões de atividades que podem ser realizadas. A abordagem utilizada é relacionada aos diferentes cenários em que o sistema de software será desenvolvido. Dentre as possíveis atividades, tem-se\cite{ISO_1471}: 
-
-\begin{itemize}
-    \item Cenário: Arquitetura de sistemas únicos;
-    \item Cenário: Arquitetura iterativa para sistemas evolutivos;
-    \item Cenário: Arquitetura de sistemas existentes.
-\end{itemize}
-
-Cada atividade aborda uma sequência de tarefas a serem desenvolvidas, isso ocorre tanto na ISO/IEC/IEEE 12207-2017 como na ISO/IEC/IEEE 1471-2000. A escolha das atividades a serem desenvolvidas devem ser escolhidas de acordo com o sistema de software que será desenvolvido. Sendo assim, para o contexto deste trabalho foram escolhidas atividades que têm origem tanto do \acrfull{OpenUp} como no \acrfull{IEEE}.
-
-Para configurar o processo que será implementado neste trabalho, serão abordadas as seguintes atividades\cite{ISO_1471}:
-
-\begin{itemize}
-    \item  Cenário: Arquitetura de sistemas únicos.
-\end{itemize}
-
-Essa atividade foi escolhida pois, o exemplo de uso que será apresentado neste trabalho é um sistema novo. Nesse cenário a projeção da arquitetura do sistema de software será voltado a uma  resposta em relação a visão do usuário final. Sendo assim, respeitada as necessidades em relação a funcionalidade e as limitações do sistema de software. Nesse caso, tem-se que as partes interessadas no sistema de software, serão\cite{ISO_1471}:
-\begin{itemize}
-    \item Usuário final;
-    \item Desenvolvedor.
-\end{itemize}
-
-A descrição que será realizada para a  arquitetura de software poderá ser utilizada ao longo do ciclo de vida do sistema de software. Dessa forma é possível acompanhar eventuais necessidades de alterações de acordo com o uso do sistema de software e também pode ser utilizado como meio para avaliar eventuais mudanças que podem acontecer ao longo do ciclo de vida\cite{ISO_1471}.
-
-Como artefatos, serão desenvolvidas as que são sugeridas pela ISO/IEC/IEEE 1471-2000\cite{ISO_1471}:
-
-\begin{itemize}
-    \item Documentação da arquitetura;
-    \item Identificação das partes interessadas;
-    \item Selecionar os pontos de vista arquitetônicos;
-    \item Visões da arquitetura;
-    \item Consistência entre as visões arquitetônicas.
-\end{itemize}
-
