@@ -969,5 +969,11 @@
 }%
 
 %% --- Não separar sílabas  ---%
-\usepackage[none]{hyphenat}
+\usepackage{hyphenat}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\hyphenchar\font=-1
+\sloppy
 \endinput
