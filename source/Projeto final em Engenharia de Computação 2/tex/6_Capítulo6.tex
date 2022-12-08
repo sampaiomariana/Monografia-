@@ -118,5 +118,13 @@ Caso o medicamento pare de ser disponibilizado pelo posto de saúde, o gestor po
 O gestor do posto de saúde ao analisar que algum medicamento está em falta e precisa de reposição de medicamento, ou quer solicitar novos medicamentos para o posto de saúde, deve preencher o formulário de solicitação de medicamentos. Isso permite que o posto de saúde tenha o controle do estoque de forma pode ser prevenida a falta de medicamento no posto de saúde.
 
 \section{Projeto de banco de dados}
-\section{Arquitetura candidata}
+\section{Desenvolvimento da arquitetura}
 
+Para desenvolver a arquitetura, foi utilizado como referência, o caderno de arquitetura apresentado na fase de iniciação,\refApendice{Apendice_cadarquitetura}.Dessa forma, seguindo as necessidades e especificações que a arquitetura do sistema deve suprir, tem-se que, de maneira abstrata o sistema de software que é fornecido, possui um sistema de visão, este sistema busca realizar a autenticação do usuário, de forma que é possível verificar se o usuário é um cidadão ou um gestor do posto de saúde. Cada usuário tem acesso a um cenário do sistema, visto que a funcionalidade do sistema varia de acordo com o usuário. 
+
+Dessa forma, caso o usuário seja um cidadão, este tem acesso à área de sistema de gestão para o cidadão, essa área permite a consulta de medicamentos, verificação de o medicamento está disponível e a visualização do seu perfil. 
+
+Caso o usuário seja o gestor do posto de saúde, ele tem acesso à área de sistema de gestão para o gestor, essa área permite acesso a gestão de estoque de medicamentos, sendo possível realizar o \acrfull{CRUD} no sistema. As operações permitem realizar o controle do estoque de forma síncrona com o banco de dados do sistema. Também se tem acesso ao perfil do gestor de saúde.
+
+
+\figuraBib{logical view of architecture}{Visão lógica da arquitetura do sistema}{}{logical view of architecture}{width=.80\textwidth}%
