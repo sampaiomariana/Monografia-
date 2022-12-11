@@ -9,7 +9,7 @@ Para realizar a implementação do estudo de caso que será abordado neste capí
     \item Fase de transição.
 \end{itemize}
 
-\figuraBib{ciclodevida}{Fases do ciclo de vida do OpenUp}{openup}{ciclodevida}{width=.80\textwidth}%
+\figuraBib{ciclodevida}{Fases do ciclo de vida do OpenUp}{openup}{ciclodevida}{width=.70\textwidth}%
 
 O fluxo de trabalho para esse ciclo de vida é apresentado na \refFig{ciclodevida}.Em cada fase existem atividades e tarefas que devem ser executadas para seguir a configuração proposta pelo OpenUp e em cada capítulo, caso tenha sido desenvolvido um artefato o mesmo será referenciado e apresentado no apêndice deste trabalho. No contexto deste trabalho serão enfocadas as fases de iniciação e a fase de elaboração.
 
@@ -50,7 +50,7 @@ O sistema tem como atores envolvidos no sistema os seguintes:
 
 Os cidadãos são usuários que querem consultar informações sobre medicamentos que ele utilize ou que precise utilizar e verificar se esse medicamento é disponibilizado ou não pelo seu posto de saúde. Quem realiza a atualização de medicamentos do posto de saúde é o gestor do posto, que através desse sistema realiza um controle de estoque de medicamentos no posto em que ele está alocado. A \refFig{atores} mostra o relacionamento entre os atores do sistema.
 
-\figuraBib{atores}{Relacionamento entre atores}{}{atores}{width=.70\textwidth}%
+\figuraBib{atores}{Relacionamento entre atores}{}{atores}{width=.60\textwidth}%
 
 A solução proposta é que utilizando a configuração proposta a implementação do sistema de software seja mais fluída e evite retrabalho, visto que a projeção da arquitetura do software só é realizada após selecionar a arquitetura candidata seguindo o método do \acrfull{SAAM}.Este método explora os possíveis cenários que podem resultar em um problema no futuro, ao analisar utilizando o método ele é evitado desde o início da implementação, além de permitir que se tenha uma documentação que apresenta todas as decisões que foram tomadas. O artefato que apresenta a visão do sistema foi adicionado no \refApendice{Apendice_docvisao}.
 
@@ -95,9 +95,20 @@ Nessa página, o cidadão pode acessar seu perfil e visualizar seus dados pessoa
 
 O perfil do gestor pode visualizar seu perfil, seu perfil dá acesso ao sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde do qual ele é responsável.
 
+Na \refFig{perfil_usecase} tem-se o diagrama de caso de uso que demonstra o relacionamento entre os atores e os casos de uso no contexto das funcionalidades do sistema.
+
+
+\figuraBib{perfil_usecase}{Diagrama de caso de uso para visualização do perfil}{}{perfil_usecase}{width=.60\textwidth}%
+
 \subsection{Consultar medicamentos registrados no sistema}
 
 O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema, caso esteja ele pode obter informações, como para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde, caso contrário é listado se esse medicamento está disponibilizado na farmácia.
+
+Na \refFig{cidadao_usecase} tem o diagrama de caso de uso no contexto desta funcionalidade no sistema.
+
+
+\figuraBib{cidadao_usecase}{Diagrama de caso de uso para consultar de medicamentos}{}{cidadao_usecase}{width=.60\textwidth}%
+
 
 \subsection{Realizar controle do estoque de medicamentos no posto de saúde}
 
@@ -113,9 +124,13 @@ O gestor do posto de saúde pode realizar alterações no registro do medicament
 \subsubsection{Apagar registro do medicamento}
 Caso o medicamento pare de ser disponibilizado pelo posto de saúde, o gestor pode apagar o registro do medicamento do sistema.
 
-\subsection{Solicitar reposição de medicamentos para o posto de saúde}
+\subsubsection{Solicitar reposição de medicamentos para o posto de saúde}
 
 O gestor do posto de saúde ao analisar que algum medicamento está em falta e precisa de reposição de medicamento, ou quer solicitar novos medicamentos para o posto de saúde, deve preencher o formulário de solicitação de medicamentos. Isso permite que o posto de saúde tenha o controle do estoque de forma pode ser prevenida a falta de medicamento no posto de saúde.
+
+Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque que deve ser realizado pelo gestor do posto de saúde.
+
+\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.60\textwidth}%
 
 \section{Projeto de banco de dados}
 \section{Desenvolvimento da arquitetura}
@@ -127,4 +142,4 @@ Dessa forma, caso o usuário seja um cidadão, este tem acesso à área de siste
 Caso o usuário seja o gestor do posto de saúde, ele tem acesso à área de sistema de gestão para o gestor, essa área permite acesso a gestão de estoque de medicamentos, sendo possível realizar o \acrfull{CRUD} no sistema. As operações permitem realizar o controle do estoque de forma síncrona com o banco de dados do sistema. Também se tem acesso ao perfil do gestor de saúde.
 
 
-\figuraBib{logical view of architecture}{Visão lógica da arquitetura do sistema}{}{logical view of architecture}{width=.80\textwidth}%
+\figuraBib{logical view of architecture}{Visão lógica da arquitetura do sistema}{}{logical view of architecture}{width=.60\textwidth}%
