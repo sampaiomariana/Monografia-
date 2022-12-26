@@ -133,6 +133,15 @@ Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque 
 \figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.60\textwidth}%
 
 \section{Projeto de banco de dados}
+
+Antes de realizar a implementação foi desenvolvido o modelo relacional do banco de dados. Esse modelo permite que seja abordado quais são os componentes que devem compor o banco de dados do sistema de software em questão. Esse modelo apresenta as entidades e os seus respectivos atributos. Cada entidade é descrita como uma tabela e tem os seus relacionamentos evidenciados por meio de ligações.
+
+O modelo relacional do GSUS auxiliou na implementação do sistema de software visto que ele evidencia quais as informações que devem ficar armazenadas no banco e quais informações devem ser apresentadas no sistema de software. Esse modelo relacional foi desenvolvido na ferramenta do MySQL Workbench, conforme exibida na \refFig{diagrama_mockup}.
+
+
+\figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.60\textwidth}%
+
+
 \section{Desenvolvimento da arquitetura}
 
 Para desenvolver a arquitetura, foi utilizado como referência, o caderno de arquitetura apresentado na fase de iniciação,\refApendice{Apendice_cadarquitetura}.Dessa forma, seguindo as necessidades e especificações que a arquitetura do sistema deve suprir, tem-se que, de maneira abstrata o sistema de software que é fornecido, possui um sistema de visão, este sistema busca realizar a autenticação do usuário, de forma que é possível verificar se o usuário é um cidadão ou um gestor do posto de saúde. Cada usuário tem acesso a um cenário do sistema, visto que a funcionalidade do sistema varia de acordo com o usuário. 
@@ -143,3 +152,4 @@ Caso o usuário seja o gestor do posto de saúde, ele tem acesso à área de sis
 
 
 \figuraBib{logical view of architecture}{Visão lógica da arquitetura do sistema}{}{logical view of architecture}{width=.60\textwidth}%
+
