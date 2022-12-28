@@ -142,14 +142,11 @@ O modelo relacional do GSUS auxiliou na implementação do sistema de software v
 \figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.60\textwidth}%
 
 
-\section{Implementação do projeto}
+\section{Implementação do projeto seguindo configuração proposta}
+\label{sec:implementação}
+Para realizar a implementação desde projeto, foram seguidas as etapas apresentadas anteriormente, a fim de determinar uma configuração e uso do processo de desenvolvimento de software.
+Sendo assim, tendo como referência o capítulo  ~\ref{sec:5.1.1} foi realizado um levantamento em relação à atividades e tarefas relevantes para o desenvolvimento da arquitetura de software do \acrfull{OpenUp}. Tendo esse levantamento foi realizada uma configuração do processo e nesta configuração foi elaborada uma descrição prática para a descrição da arquitetura que foi descrito no capítulo ~\ref{sec:5.2.1} e foi sugerida a adoção do método \acrfull{SAAM} com passos a serem incluídos em tarefas do \acrfull{OpenUp} no capítulo ~\ref{sec:5.2.2}. 
 
-Para desenvolver a arquitetura, foi utilizado como referência, o caderno de arquitetura apresentado na fase de iniciação,\refApendice{Apendice_cadarquitetura}.Dessa forma, seguindo as necessidades e especificações que a arquitetura do sistema deve suprir, tem-se que, de maneira abstrata o sistema de software que é fornecido, possui um sistema de visão, este sistema busca realizar a autenticação do usuário, de forma que é possível verificar se o usuário é um cidadão ou um gestor do posto de saúde. Cada usuário tem acesso a um cenário do sistema, visto que a funcionalidade do sistema varia de acordo com o usuário. 
+Tendo essas referências como embasamento, neste capítulo ~\ref{sec:implementação} será apresentado como foi realizada a configuração apresentada durante a implementação deste sistema de software.
 
-Dessa forma, caso o usuário seja um cidadão, este tem acesso à área de sistema de gestão para o cidadão, essa área permite a consulta de medicamentos, verificação de o medicamento está disponível e a visualização do seu perfil. 
-
-Caso o usuário seja o gestor do posto de saúde, ele tem acesso à área de sistema de gestão para o gestor, essa área permite acesso a gestão de estoque de medicamentos, sendo possível realizar o \acrfull{CRUD} no sistema. As operações permitem realizar o controle do estoque de forma síncrona com o banco de dados do sistema. Também se tem acesso ao perfil do gestor de saúde.
-
-
-\figuraBib{logical view of architecture}{Visão lógica da arquitetura do sistema}{}{logical view of architecture}{width=.60\textwidth}%
-
+O \acrfull{OpenUp} possui um artefato que possui um artefato que foi desenvolvido que é o caderno de arquitetura. Este artefato tem como objetivo realizar a descrição lógica,as suposições e a explicação e as implicações das decisões que foram tomadas na projeção da arquitetura\cite{openup}.Para esta configuração é sugerido que seja incluído a prática que é descrita na norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} conforme abordado no capítulo ~\ref{sec:5.2.1}. Dessa forma, a configuração proposta para este trabalho sugere inserir um novo artefato, sendo ele referente a abordagem prática da arquitetura além do caderno de arquitetura. Sendo assim, foi inserido um novo artefato ao projeto.
