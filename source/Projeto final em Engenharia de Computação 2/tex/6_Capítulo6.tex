@@ -40,6 +40,7 @@ Como neste trabalho a projeção da arquitetura está atrelada ao uso do método
 Sendo assim, na fase de elaboração, tem-se o refinamento do artefato do caderno de arquitetura, que está detalhado em \refApendice{Apendice_cadarquiteturaproposto} e o artefato de análise da arquitetura, que refere-se ao artefato proposto neste trabalho,\refApendice{Apendice_analisearquitetura_proposta}, visto que ele utiliza as definições do método de análise do \acrfull{SAAM}.Para realizar o acompanhamento de atualizações em relação ao desenvolvimento do projeto, foi seguido o plano de iteração \refApendice{Apendice_planoiteracao}, documento este desenvolvido na fase de elaboração do projeto.
 
 \section{Visão do sistema}
+\label{sec:visão do sistema}
 O sistema de software desenvolvido para apresentar a configuração exemplificada no capítulo anterior tem como
 objetivo permitir que sejam realizadas consultas nos medicamentos que são disponibilizados ou não pelo posto de saúde, além de permitir o controle de estoque dos medicamentos do posto de saúde.
 O sistema tem como atores envolvidos no sistema os seguintes:
@@ -150,3 +151,52 @@ Sendo assim, tendo como referência o capítulo  ~\ref{sec:5.1.1} foi realizado 
 Tendo essas referências como embasamento, neste capítulo ~\ref{sec:implementação} será apresentado como foi realizada a configuração apresentada durante a implementação deste sistema de software.
 
 O \acrfull{OpenUp} possui um artefato que possui um artefato que foi desenvolvido que é o caderno de arquitetura. Este artefato tem como objetivo realizar a descrição lógica,as suposições e a explicação e as implicações das decisões que foram tomadas na projeção da arquitetura\cite{openup}.Para esta configuração é sugerido que seja incluído a prática que é descrita na norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} conforme abordado no capítulo ~\ref{sec:5.2.1}. Dessa forma, a configuração proposta para este trabalho sugere inserir um novo artefato, sendo ele referente a abordagem prática da arquitetura além do caderno de arquitetura. Sendo assim, foi inserido um novo artefato ao projeto.
+
+\subsection{Abordagem prática}
+No desenvolvimento do artefato de abordagem prática, tem-se em uma das suas análises realizar a especificação em relação aos pontos de vista \emph{(viewpoint)} que devem ser realizados no sistema de software. Para isso, seguindo as especificações realizadas, tem-se que esse sistema terá sua arquitetura baseada no ponto de vista de dois atores, sendo eles possíveis usuários do sistema, o primeiro é o cidadão e em seguida o gestor do posto de saúde, conforme foi evidenciado no capítulo  ~\ref{sec:visão do sistema}.
+
+\subsubsection{Demandas a serem contempladas pelo ponto de vista}
+
+Tendo essa abordagem como embasamento, o sistema tem como objetivo abordar cenários de acordo com cada ponto de vista a ser estabelecido. Sendo assim, para a visão do cidadão, foram ser desenvolvidos os seguintes cenários:
+\begin{itemize}
+    \item Área de login;
+    \item Área de cadastro;
+    \item Área do perfil;
+    \item Área de busca dos medicamentos.
+\end{itemize}
+
+Para a visão do gestor do posto de saúde, foram desenvolvidos os seguintes cenários:
+
+\begin{itemize}
+    \item Área de login;
+    \item Área de cadastro;
+    \item Área do perfil;
+    \item Área de busca dos medicamentos;
+    \item Área de cadastro do medicamento;
+    \item Área de atualização do medicamento;
+    \item Área de deleção do medicamento;
+    \item Área de solicitação do medicamento;
+    \item Área de Relatório Mensal;
+    \item Área de Relatório Gerencial.
+\end{itemize}
+
+\subsubsection{Representação do sistema construído segundo as recomendações do ponto de vista associado}
+
+Para realizar essa representação foram desenvolvido um modelo de navegação a fim de apresentar o que contém em cada cenário e também a partir dele é possível determinar um fluxo de ações que o usuário pode realizar no sistema. 
+
+Sendo assim, seguindo a visão do cidadão, tem-se que levando em consideração as sessões e como o usuário deve navegar pelo sistema, o usuário ao acessar tem acesso direto a tela com a consulta pelos medicamentos.
+O cidadão tem a opção de realizar o cadastro caso queira se registrar no sistema, para isso ele tem acesso a tela de cadastro e ao ter o seu cadastro realizado ele pode seguir para o login.
+A sessão do login do sistema pode ser feita apenas por usuários cadastrados no sistema. 
+O usuário que tem cadastro no sistema, pode acessar diretamente o seu perfil. Funcionalidade apenas para aqueles usuários cadastrados.
+
+Já para a visão do gestor, tem-se que a visão do gestor é diferente da visão do usuário visto que ele tem um controle em relação ao estoque de medicamentos do posto de saúde. Para ter acesso esse usuário precisa estar cadastrado no sistema.O gestor estando cadastrado pode realizar login no sistema, tendo esse login realizado o gestor tem acesso a tela de busca de medicamentos. A diferença é que esse usuário também possui acesso ao controle destes medicamentos.
+Na sessão de controle dos medicamentos ele pode cadastrar um novo medicamento, editar ou excluir esse registro. Como essas ações são ações distintas, cada ação tem uma tela e uma configuração a ser feita.
+Caso o estoque de medicamentos esteja com uma quantidade de medicamentos abaixo do necessário ele pode solicitar medicamentos para o posto a fim de evitar que o posto fique com estoque abaixo do necessário.
+Além disso o gestor tem acesso à sessão de relatório mensal referente aos medicamentos do posto de saúde em questão.
+Além desse relatório mensal ele possui um relatório gerencial para manter os registros do posto de saúde.
+
+\subsubsection{Razão para seleção da arquitetura}
+
+Essa arquitetura foi selecionada pois nela é possível identificar a necessidade de cada cenário a ser tratado. Visto que para cada ação o sistema tem uma ação associada e em diversos casos a consulta ao banco de dados está associada. Sendo assim, a arquitetura apresentada para essa configuração se torna interessante na descrição do sistema. 
+
+Com isso, para realizar a avaliação da arquitetura seguindo o método do \acrfull{SAAM}. Método este que tem suas atividades evidenciadas no capítulo ~\ref{sec:5.2.2}. A fim de seguir o padrão de organização utilizado até o momento foi desenvolvido um artefato para essa avaliação.
