@@ -152,10 +152,10 @@ Tendo essas referências como embasamento, neste capítulo ~\ref{sec:implementa�
 
 O \acrfull{OpenUp} possui um artefato que possui um artefato que foi desenvolvido que é o caderno de arquitetura. Este artefato tem como objetivo realizar a descrição lógica,as suposições e a explicação e as implicações das decisões que foram tomadas na projeção da arquitetura\cite{openup}.Para esta configuração é sugerido que seja incluído a prática que é descrita na norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} conforme abordado no capítulo ~\ref{sec:5.2.1}. Dessa forma, a configuração proposta para este trabalho sugere inserir um novo artefato, sendo ele referente a abordagem prática da arquitetura além do caderno de arquitetura. Sendo assim, foi inserido um novo artefato ao projeto.
 
-\subsection{Abordagem prática}
+\section{Abordagem prática}
 No desenvolvimento do artefato de abordagem prática, tem-se em uma das suas análises realizar a especificação em relação aos pontos de vista \emph{(viewpoint)} que devem ser realizados no sistema de software. Para isso, seguindo as especificações realizadas, tem-se que esse sistema terá sua arquitetura baseada no ponto de vista de dois atores, sendo eles possíveis usuários do sistema, o primeiro é o cidadão e em seguida o gestor do posto de saúde, conforme foi evidenciado no capítulo  ~\ref{sec:visão do sistema}.
 
-\subsubsection{Demandas a serem contempladas pelo ponto de vista}
+\subsection{Demandas a serem contempladas pelo ponto de vista}
 
 Tendo essa abordagem como embasamento, o sistema tem como objetivo abordar cenários de acordo com cada ponto de vista a ser estabelecido. Sendo assim, para a visão do cidadão, foram ser desenvolvidos os seguintes cenários:
 \begin{itemize}
@@ -180,7 +180,7 @@ Para a visão do gestor do posto de saúde, foram desenvolvidos os seguintes cen
     \item Área de Relatório Gerencial.
 \end{itemize}
 
-\subsubsection{Representação do sistema construído segundo as recomendações do ponto de vista associado}
+\subsection{Representação do sistema construído segundo as recomendações do ponto de vista associado}
 
 Para realizar essa representação foram desenvolvido um modelo de navegação a fim de apresentar o que contém em cada cenário e também a partir dele é possível determinar um fluxo de ações que o usuário pode realizar no sistema. 
 
@@ -195,8 +195,51 @@ Caso o estoque de medicamentos esteja com uma quantidade de medicamentos abaixo 
 Além disso o gestor tem acesso à sessão de relatório mensal referente aos medicamentos do posto de saúde em questão.
 Além desse relatório mensal ele possui um relatório gerencial para manter os registros do posto de saúde.
 
-\subsubsection{Razão para seleção da arquitetura}
+\subsection{Razão para seleção da arquitetura}
 
 Essa arquitetura foi selecionada pois nela é possível identificar a necessidade de cada cenário a ser tratado. Visto que para cada ação o sistema tem uma ação associada e em diversos casos a consulta ao banco de dados está associada. Sendo assim, a arquitetura apresentada para essa configuração se torna interessante na descrição do sistema. 
 
 Com isso, para realizar a avaliação da arquitetura seguindo o método do \acrfull{SAAM}. Método este que tem suas atividades evidenciadas no capítulo ~\ref{sec:5.2.2}. A fim de seguir o padrão de organização utilizado até o momento foi desenvolvido um artefato para essa avaliação.
+
+\section{Elementos da configuração para implementação do sistema de software}
+
+Para realizar o desenvolvimento do sistema de software foi utilizada uma liguagem de programação que é amplamente utilizada, sendo ela realizada em PHP. Justamente com PHP foi utilizada a \acrfull{HTML}, JavaScript e \acrfull{CSS} para desenvolver o \emph{frontend} do sistema de software. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code.
+
+O \acrfull{SGBD} utilizado para o desenvolvimento do sistema de software foi o MySQL sendo acessado pela ferramenta do PhpMyAdmin. Para desenvolver o modelo relacional foi utilizado o MySQL Workbench. 
+
+Para realizar o acesso dessas tecnologias foi configurado um servidor local, sendo ele o XAMPP. O XAMPP possui um pacote que permite realizar a integração das tecnologias que foram necessárias para desenvolver o sistema de software.
+Ao inicar o XAMPP são iniciados os serviços do Apache e do MySQL. Tendo esses seviços iniciados para acessar o sistema de software desenvolvido ele é acessado por meio do endereço http://localhost:8080/GSUS. O navegador web utilizado para realizar a navegação no sistema de software foi o Google Chrome.
+
+O projeto foi desenvolvido e executado em um notebook com sistema operacional Windows 10, contendo processador \newcommand{\azinho}{$^{\mathrm a}$} 5$^{\mathrm a}$ geração Intel Core i5 com 8 GB de memória RAM.
+
+\subsection{Elementos da implementação do sistema de software}
+
+Para realizar o desenvolvimento desse sistema de software foi necessário realizar a integração entre o phpmyadmin com o sistema de software. Para isso, foi necessário primeiro realizar a configuração do banco de dados no phpmyadmin e posteriormente foi criado um código em PHP a fim de realizar a conexão do banco com o sistema ~\refFig{connection}.
+
+\figuraBib{connection}{Código para realizar conexão com banco de dados}{}{connection}{width=.60\textwidth}%
+
+Para realizar o login no sistema de software é necessário informar o e-mail e a senha, para ser realizado o login no sistema, esse login só vai acontecer caso o e-mail e a senha estejam cadastrados no sistema de software. Para isso, foi desenvolvido um código que realiza a validação do e-mail e da senha no banco de dados, caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema, caso contrário o usuário recebe uma mensagem alertando que foi encontrado um erro ~\refFig{validation}.
+
+
+\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.60\textwidth}%
+
+Dessa forma, apenas o usuário que tem cadastro pode acessar informações mais sensíveis do sistema de software.
+Para dar sequência ao desenvolvimento da aplicação para as demais telas,após a integração com o banco foi desenvolvido o template para tela que seria acessada em seguida pelo usuário. Dessa forma , foi desenvolvido um código em \acrfull{HTML} para o \emph{frontend} ~\refFig{login} e para o desenvolvimento do layout foi desenvolvido um código em \acrfull{CSS} ~\refFig{login_css}. 
+
+\figuraBib{login}{Código para \emph{frontend} do login}{}{login}{width=.60\textwidth}%
+
+
+
+\subsection{Elementos para interface do sistema de software}
+
+Para realizar o teste de funcionalidade entre o banco de dados e o sistema de software foi necessário realizar testes no sistema de software. Sendo assim, de acordo com a funcionalidade que o usuário queira acessar existe um \emph{layout} que deve ser exibido. Este \emph{layout} varia de acordo com a funcinalidade que é selecionada pelo usuário.
+
+\subsubsection{Login}
+
+Para realizar o login no sistema, foi realizado o teste com o usuário caso ele já tivesse cadastrado no banco de dados, dessa forma, tem-se que foi utilizado para esta implementação o ~\refFig{connection} para realizar a integração com o banco de dados, como \emph{frontend} tem-se o ~\refFig{validation} que está implementado na tela de ~\refFig{login} e como \emph{layout} tem-se o ~\refFig{login_css}. Tendo essas funcionalidades implementadas e integradas é possível se conectar a interface do sistema de software~\refFig{login_tela}.
+
+\figuraBib{login_css}{Código para \emph{layout} do login}{}{login_css}{width=.40\textwidth}%
+
+
+\figuraBib{login_tela}{Teste de funcionalidade do login}{}{login_tela}{width=.60\textwidth}%
+
