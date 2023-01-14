@@ -83,7 +83,7 @@ Por fim, tem-se a atividade de concordar com a abordagem técnica, essa atividad
     \begin{itemize}
         \item Artefato: Caderno de arquitetura;
         \item Artefato proposto: Abordagem prática para descrição da arquitetura;
-        \item Artefato proposto:Passos para análise de arquitetura.
+        \item Artefato proposto: Passos para análise de arquitetura.
     \end{itemize}
 \end{itemize}
 
@@ -99,16 +99,35 @@ Esse fluxo pode ser evidenciado na ~\refFig{atvarquitetura}.
 Dessa forma, pode ser observado na ~\refFig{fluxogeral} que na fase de concepção foram seguidas uma série de atividades, tarefas e artefatos a fim de seguir implementar um processo de configuração para o sistema de software.
 
 \section{Fase de elaboração}
-Na fase de elaboração foram executadas atividades descritas no \acrfull{OpenUp}. Seguindo dessa forma o ciclo de vida do projeto. A seguir, relação de atividades executadas ~\cite{openup}:
+Na fase de elaboração foram executadas atividades descritas no \acrfull{OpenUp}. Seguindo dessa forma o ciclo de vida do projeto. O fluxo de trabalho que é proposto pelo \acrfull{OpenUp} pode ser observado na ~\refFig{elaboracao}.
+
+\figuraBib{elaboracao}{Fluxo de trabalho proposto pelo OpenUp para fase de elaboração.}{openup}{elaboracao}{width=.70\textwidth}%
+
+A seguir, relação de atividades executadas ~\cite{openup}:
 
 \begin{itemize}
-    \item Planejamento e gerenciamento de iteração;
     \item Desenvolvimento de arquitetura;
     \item Desenvolvimento da solução incremental;
-    \item Testar a solução.
+    \item Planejamento e gerenciamento de iteração.
 \end{itemize}
 
-No desenvolvimento da arquitetura foi adotado o método \acrfull{SAAM}. O caderno de arquitetura desenvolvido na fase de iniciação foi refinado na fase de elaboração aplicando-se proposta presente neste trabalho. Na fase de elaboração ocorreu o refino do artefato caderno de arquitetura e do artefato de análise da arquitetura, que refere-se ao artefato proposto neste trabalho visto que ele utiliza as definições do método de análise de arquitetura \acrfull{SAAM}. Para realizar o acompanhamento de atualizações em relação ao desenvolvimento do projeto, foi seguido o plano de iteração, documento esse desenvolvido na fase de elaboração do projeto.
+Para realizar o desenvolvimento dessa fase, tem-se uma série de atividades e tarefas que são executadas e que geram um artefato ao final. 
+A atividade de desenvolvimento da arquitetura tem como objetivo desenvolver os requisitos que são considerados significativos mediante a arquitetura do sistema de software. Como tarefa executada dessa atividade, tem-se o refinamento da arquitetura.
+Essa tarefa permite que a arquitetura seja refinada a um nível apropriado de detalhe para dar suporte ao desenvolvimento. Como artefato dessa tarefa tem-se o caderno de arquitetura.
+
+No desenvolvimento da arquitetura foi adotado o método \acrfull{SAAM} para realizar a avaliação da arquitetura escolhida para a implementação. O caderno de arquitetura desenvolvido na fase de concepção foi refinado na fase de elaboração aplicando-se proposta presente neste trabalho. Na fase de elaboração ocorreu o refino do artefato caderno de arquitetura e consequentemente dos artefatos propostos neste trabalho, o artefato de abordagem prática para a descrição da arquitetura e  do artefato de passos para análise da arquitetura. Esse fluxo de trabalho pode ser evidenciado na ~\refFig{devarq}.
+
+\figuraBib{devarq}{Fluxo de trabalho para atividade de desenvolver a arquitetura}{openup}{devarq}{width=.70\textwidth}%
+
+
+\figuraBib{devsolucao}{Fluxo de trabalho para atividade de desenvolver a solução incremental.}{openup}{devsolucao}{width=.70\textwidth}%
+
+A atividade de desenvolver a solução incremental consiste em realizar a projeção, implementação, teste e integração da solução para os requisitos do sistema de software de acordo com o projeto. Como tarefa desenvolvida tem-se a implementação da solução, essa tarefa tem como finalidade implementar o código fonte a fim de fornecer novas funcionalidades para o sistema de software ou corrigir defeitos que foram encontrados no sistema de software. Como artefato produzido, tem-se os códigos desenvolvidos, arquivos de dados e arquivos de suporte que foram utilizados no desenvolvimento do sistema de software. Esse fluxo de trabalho pode ser evidenciado na ~\refFig{devsolucao}.
+
+
+\figuraBib{plngerenciar}{Fluxo de trabalho para atividade de planejar e gerenciar a iteração.}{openup}{plngerenciar}{width=.70\textwidth}%
+
+A atividade de planejar e gerenciar a iteração consiste em uma atividade que permite que exista uma comunicação em relação as atividades que estão sendo executadas. Além de permitir que o status do projeto seja atualizado para as partes interessadas do sistema. Como tarefa dessa atividade tem-se o plano de iteração que permite identificar o que será incrementado no sistema de software. Como produto desta atividade tem o artefato de plano de iteração que foi criado na fase de concepção e que conforme foi a implementação do projeto foi evoluindo ele foi sendo implementado. Esse fluxo de trabalho deve ser evidenciado na ~\refFig{plngerenciar}.
 
 \section{Gerenciamento de projetos}
 
@@ -118,7 +137,7 @@ A fim de realizar o gerenciamento do andamento do projeto durante a sua execuç�
     \item Plano de projeto.
 \end{itemize}
 
-O artefato de plano de projeto foi densenvolvido inicialmente na fase de iniciação do projeto, conforme apresentado na ~\refFig{iniciarprojeto}. Já o artefato de plano de iteração foi desenvolvido na fase de planejar e gerenciar a iteração conforme apresentado na ~\refFig{plniteracao}.
+O artefato de plano de projeto foi desenvolvido inicialmente na fase de iniciação do projeto, conforme apresentado na ~\refFig{iniciarprojeto}. Já o artefato de plano de iteração foi desenvolvido na fase de planejar e gerenciar a iteração conforme apresentado na ~\refFig{plniteracao}.
 
 \section{Arquitetura}
 
@@ -215,7 +234,7 @@ Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque 
 
 \section{Desenvolvimento}
 
-Seguindo a estruturação de domínio de desenvolvimetno proposto pelo \acrfull{OpenUp}, nesta seção tem-se a seguinte lista de produtos que foram desenvolvidos para este projeto:
+Seguindo a estruturação de domínio de desenvolvimento proposto pelo \acrfull{OpenUp}, nesta seção tem-se a seguinte lista de produtos que foram desenvolvidos para este projeto:
 
 \begin{itemize}
     \item Implementação.
@@ -288,7 +307,7 @@ Com isso, para realizar a avaliação da arquitetura foi seguido o método do \a
 
 \subsection{Elementos da configuração para implementação do sistema de software}
 
-Para realizar o desenvolvimento do sistema de software foi utilizada uma linguagem de programação que é amplamente utilizada, sendo ela realizada em PHP. Justamente com PHP foi utilizada a \acrfull{HTML}, Javascript ,\acrfull{CSS} e para desenvolver o \emph{frontend} do sistema de software.A fim de tornar a interface do sistema mais amigável foi utilizado o framework \emph{Bootstrap}. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code.
+Para realizar o desenvolvimento do sistema de software foi utilizada uma linguagem de programação que é amplamente utilizada, sendo ela realizada em PHP. Justamente com PHP foi utilizada a \acrfull{HTML}, Javascript ,\acrfull{CSS} e para desenvolver o \emph{frontend} do sistema de software. A fim de tornar a interface do sistema mais amigável foi utilizado o framework \emph{Bootstrap}. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code.
 
 O \acrfull{SGBD} utilizado para o desenvolvimento do sistema de software foi o MySQL sendo acessado pela ferramenta do Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o MySQL Workbench. 
 
@@ -331,7 +350,7 @@ De acordo com a permissão que o usuário tenha ele pode acessar o seu sistema c
 
 \figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.70\textwidth}%
 
-Sendo assim,para o cidadão tem-se a tela conforme apresentada na ~\refFig{dashcidadao}.
+Sendo assim, para o cidadão tem-se a tela conforme apresentada na ~\refFig{dashcidadao}.
 
 
 \figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.70\textwidth}%
@@ -341,7 +360,7 @@ Já para o gestor, como são apresentadas diferentes funcionalidades, a sua tela
 
 \subsubsection{Consulta de estoque}
 
-A consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma para que o gestor tenha acesso à essa área o gestor precisa estar cadastro.Dentre as funcionalidades que o gestor  tem-se que ele pode realizar as ações de cadastro do medicamento, atualização do medicamento e deleção do medicamento conforme evidenciado na ~\refFig{estoque}. 
+A consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma para que o gestor tenha acesso à essa área o gestor precisa estar cadastro. Dentre as funcionalidades que o gestor  tem-se que ele pode realizar as ações de cadastro do medicamento, atualização do medicamento e deleção do medicamento conforme evidenciado na ~\refFig{estoque}. 
 
 \figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.70\textwidth}%
 
