@@ -110,77 +110,42 @@ Na fase de elaboração foram executadas atividades descritas no \acrfull{OpenUp
 
 No desenvolvimento da arquitetura foi adotado o método \acrfull{SAAM}. O caderno de arquitetura desenvolvido na fase de iniciação foi refinado na fase de elaboração aplicando-se proposta presente neste trabalho. Na fase de elaboração ocorreu o refino do artefato caderno de arquitetura e do artefato de análise da arquitetura, que refere-se ao artefato proposto neste trabalho visto que ele utiliza as definições do método de análise de arquitetura \acrfull{SAAM}. Para realizar o acompanhamento de atualizações em relação ao desenvolvimento do projeto, foi seguido o plano de iteração, documento esse desenvolvido na fase de elaboração do projeto.
 
+\section{Arquitetura}
 
-\section{Visão do sistema}
-\label{sec:visão do sistema}
+Seguindo a estrutura do \acrfull{OpenUp} para este domínio tem-se  o produto que foi gerado para obter a arquitetura deste projeto. Para este domínio foi desenvolvido o artefato de caderno de arquitetura, artefato este do \acrfull{OpenUp} e também foram desenvolvidos dois artefatos que foram propostos na seção ~\ref{sec:5.2.1} e na seção ~\ref{sec:5.2.2}, artefatos estes relacionados a abordagem prática e aos passos de avaliação da arquitetura utilizada.
 
-O sistema de software desenvolvido com o propósito de  exemplificar o uso do processo de desenvolvimento configurado no capítulo anterior, tem como objetivo permitir que sejam realizadas consultas acerca de medicamentos disponibilizados ou não em posto de saúde; além de permitir o controle de estoque dos medicamentos em posto de saúde. A seguir, se encontra relação de nomes de atores que foram identificados:
+\subsection{Avaliação do projeto prático}
+
+Como etapa para realizar a configuração do processo proposto para o desenvolvimento do sistema de software é proposto realizar um método para avaliação da arquitetura de software. Como proposto para esse projeto foi realizada a avaliação da arquitetura do sistema de software utilizando o método do \acrfull{SAAM}.
+
+\subsection{Descrição da arquitetura candidata}
+
+\subsection{Desenvolver cenários}
+
+\subsection{Classificar cenários}
+
+\subsection{Avaliação individual do cenário}
+
+\subsection{Avaliação de interação de cenário}
+
+\subsection{Avaliação geral}
+
+\section{Desenvolvimento}
+
+Seguindo a estruturação de domínio de desenvolvimetno proposto pelo \acrfull{OpenUp}, nesta seção tem-se a seguinte lista de produtos que foram desenvolvidos para este projeto:
 
 \begin{itemize}
-    \item Cidadão;
-    \item Gestor do posto de saúde.
-\end{itemize}
+    \item Implementação.
+  \end{itemize}
 
-Cidadão é usuário que necessita informação sobre medicamento que utiliza ou que precisa utilizar, e que deseja saber se esse medicamento é disponibilizado ou não pelo seu posto de saúde. Quem realiza a atualização de informação acerca de medicamento no posto de saúde é o gestor do posto de saúde, que através desse sistema controla estoque de medicamentos no posto de saúde no qual está alocado. A \refFig{atores} consiste de diagrama que mostra atores e relacionamentos entre os mesmos.
-
-\figuraBib{atores}{Atores e relacionamento entre atores}{}{atores}{width=.45\textwidth}%
-
-A definição da arquitetura do software é realizada após seleção de arquitetura candidata seguindo-se o\acrfull{SAAM}. Esse método explora possíveis cenários que podem resultar em problema no futuro, ao analisar a arquitetura utilizando-se esse método, o problema pode ser evitado desde o início da implementação, além de possibilitar uma documentação que apresente as decisões que foram tomadas. O artefato contendo informação acerca da visão do sistema se encontra no artefato de documento de visão.
-
-\subsection{Funcionalidades do sistema}
-
-As funcionalidades correspondem aos requisitos funcionais do sistema, estes foram determinados no artefato de especificação dos requisitos do sistema. As funcionalidades serão relacionadas a seguir e depois descritas para melhor compreensão. São funcionalidades que o sistema de software deve prover para ambos os atores: Autenticar usuário, Visualizar perfil. São  funcionalidades que o sistema de software deve prover para o cidadão: Consultar medicamentos registrados no sistema, Visualizar o gestor responsável pelo seu posto de saúde. Por fim, são  funcionalidades que o sistema de software deve prover para o gestor do posto de saúde: Realizar controle do estoque de medicamentos no posto de saúde (Cadastrar medicamento; Editar registro do medicamento; Apagar registro do medicamento), Solicitar reposição de medicamentos para o posto de saúde.
-
-\subsection{Autenticar o usuário}
-
-O usuário pode realizar o login no sistema, desde que ele já esteja cadastrado no sistema. Ao se cadastrar, o usuário deve optar por ser cidadão ou gestor de posto de saúde. Dependendo do tipo de usuário, os acessos são distintos, visto que a funcionalidade provida pelo sistema depende do tipo de usuário que acessa o sistema.
-
-\subsection{Visualizar perfil}
-
-O perfil de usuário depende do tipo de usuário cadastrado. Usuário  cadastrado como cidadão possui perfil com acesso ao sistema de consulta de medicamentos, acesso ao seu perfil e a qual posto de saúde está registrado. O cidadão pode acessar lista de medicamentos que usa e consultar se o seu posto de saúde tem esse medicamento. O cidadão pode acessar seu perfil e visualizar dados pessoais, como nome, sobrenome e e-mail. Usuário cadastrado como gestor pode visualizar seu perfil. Seu perfil possibilita acessar sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde pelo qual é responsável. Na \refFig{perfil_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
-
-
-\figuraBib{perfil_usecase}{Diagrama de caso de uso para visualizar perfil}{}{perfil_usecase}{width=.45\textwidth}%
-
-\subsection{Consultar medicamentos registrados no sistema}
-
-O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema, caso esteja ele pode obter informações. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde, caso contrário é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadao_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto dessa funcionalidade do sistema.
-
-\figuraBib{cidadao_usecase}{Diagrama de caso de uso para consultar medicamentos registrados no sistema.}{}{cidadao_usecase}{width=.45\textwidth}%
-
-
-\subsection{Realizar controle do estoque de medicamentos no posto de saúde}
-
-O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos do posto de saúde sob sua responsabilidade. Para isso, o gestor pode cadastrar, editar e apagar o registro de medicamento no sistema. O sistema deve ser atualizado de forma que o sistema promova informações atualizadas para os seus usuários. Na \refFig{gestor_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto desta funcionalidade. A seguir, tem-se descrições dos casos de uso presentes nesse diagrama.
-
-
-\subsubsection{Cadastrar medicamento}
-
-Gestor do posto de saúde pode registrar medicamento, fornecendo as informações que forem solicitadas.
-
-\subsubsection{Atualizar informações de medicamento}
-
-Gestor do posto de saúde pode alterar registro de medicamento e este deve atualizar registro de medicamento. 
-
-\subsubsection{Apagar medicamento}
-
-Caso o medicamento pare de ser disponibilizado pelo posto de saúde, gestor pode apagar registro de medicamento.
-
-\subsubsection{Solicitar reposição de medicamentos}
-Gestor de posto de saúde ao constatar que medicamento está em falta e precisa de reposição, ou quer solicitar novos medicamentos para posto de saúde, deve preencher formulário de solicitação de medicamentos. Isso permite que o posto de saúde controle o estoque de modo a prevenir a falta de medicamento no posto de saúde.
-
-Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque que deve ser realizado pelo gestor do posto de saúde.
-
-\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.45\textwidth}%
-
-\section{Projeto de banco de dados}
+\subsection{Projeto de banco de dados}
 Antes de realizar implementação, foi realizado projeto de banco de dados segundo o paradigma relacional. Esse modelo engloba entidades, atributos de entidades e relacionamentos entre  entidades. Cada entidade é representada por tabela e tem os seus relacionamentos representados por ligações entre tabelas. O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo relacional foi desenvolvido na ferramenta do MySQL Workbench, e se encontra na  \refFig{diagrama_mockup}.
 
 
 \figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.60\textwidth}%
 
 
-\section{Implementação do projeto seguindo configuração proposta}
+\subsection{Implementação do projeto seguindo configuração proposta}
 \label{sec:implementação}
 Para realizar a implementação desde projeto, foram seguidas as etapas apresentadas anteriormente, a fim de determinar uma configuração e uso do processo de desenvolvimento de software.
 Sendo assim, tendo como referência o capítulo  ~\ref{sec:5.1.1} foi realizado um levantamento em relação às atividades e tarefas relevantes para o desenvolvimento da arquitetura de software do \acrfull{OpenUp}. Tendo esse levantamento foi realizada uma configuração do processo e nesta configuração foi elaborada uma descrição prática para a descrição da arquitetura que foi descrito no capítulo ~\ref{sec:5.2.1} e foi sugerida a adoção do método \acrfull{SAAM} com passos a serem incluídos em tarefas do \acrfull{OpenUp} no capítulo ~\ref{sec:5.2.2}. 
@@ -189,7 +154,7 @@ Tendo essas referências como embasamento, neste capítulo ~\ref{sec:implementa�
 
 O \acrfull{OpenUp} possui um artefato que possui um artefato que foi desenvolvido que é o caderno de arquitetura. Este artefato tem como objetivo realizar a descrição lógica, as suposições e a explicação e as implicações das decisões que foram tomadas na projeção da arquitetura\cite{openup}.Para esta configuração é sugerido que seja incluído a prática que é descrita na norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} conforme abordado no capítulo ~\ref{sec:5.2.1}. Dessa forma, a configuração proposta para este trabalho sugere inserir um novo artefato, sendo ele referente a abordagem prática da arquitetura além do caderno de arquitetura. Sendo assim, foi inserido um novo artefato ao projeto.
 
-\section{Abordagem prática}
+\subsection{Abordagem prática}
 No desenvolvimento do artefato de abordagem prática, tem-se em uma das suas análises realizar a especificação em relação aos pontos de vista \emph{(viewpoint)} que devem ser realizados no sistema de software. Para isso, seguindo as especificações realizadas, tem-se que esse sistema terá sua arquitetura baseada no ponto de vista de dois atores, sendo eles possíveis usuários do sistema, o primeiro é o cidadão e em seguida o gestor do posto de saúde, conforme foi evidenciado no capítulo  ~\ref{sec:visão do sistema}.
 
 \subsection{Demandas a serem contempladas pelo ponto de vista}
@@ -238,9 +203,9 @@ Essa arquitetura foi selecionada pois nela é possível identificar a necessidad
 
 Com isso, para realizar a avaliação da arquitetura seguindo o método do \acrfull{SAAM}. Método este que tem suas atividades evidenciadas no capítulo ~\ref{sec:5.2.2}. A fim de seguir o padrão de organização utilizado até o momento foi desenvolvido um artefato para essa avaliação.
 
-\section{Elementos da configuração para implementação do sistema de software}
+\subsection{Elementos da configuração para implementação do sistema de software}
 
-Para realizar o desenvolvimento do sistema de software foi utilizada uma linguagem de programação que é amplamente utilizada, sendo ela realizada em PHP. Justamente com PHP foi utilizada a \acrfull{HTML}, Javascript e \acrfull{CSS} para desenvolver o \emph{frontend} do sistema de software. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code.
+Para realizar o desenvolvimento do sistema de software foi utilizada uma linguagem de programação que é amplamente utilizada, sendo ela realizada em PHP. Justamente com PHP foi utilizada a \acrfull{HTML}, Javascript ,\acrfull{CSS} e para desenvolver o \emph{frontend} do sistema de software.A fim de tornar a interface do sistema mais amigável foi utilizado o framework \emph{Bootstrap}. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code.
 
 O \acrfull{SGBD} utilizado para o desenvolvimento do sistema de software foi o MySQL sendo acessado pela ferramenta do Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o MySQL Workbench. 
 
@@ -299,3 +264,84 @@ A consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma
 Como exemplo de implementação tem-se a tela de cadastro do medicamento.
 
 \subsubsection{Relatório Mensal}
+
+\section{Gerenciamento de projetos}
+
+A fim de realizar o gerenciamento do andamento do projeto durante a sua execução, foram desenvolvidos os artefatos de: 
+\begin{itemize}
+    \item Plano de iteração;
+    \item Plano de projeto.
+\end{itemize}
+
+O artefato de plano de projeto foi densenvolvido inicialmente na fase de iniciação do projeto, conforme apresentado na ~\refFig{iniciarprojeto}. Já o artefato de plano de iteração foi desenvolvido na fase de planejar e gerenciar a iteração conforme apresentado na ~\refFig{plniteracao}.
+
+\section{Requisitos do Sistema}
+\label{sec:visão do sistema}
+
+Seguindo a estruturação de domínio de requisitos proposto pelo \acrfull{OpenUp}, nesta seção tem-se a seguinte lista de produtos que foram desenvolvidos para este projeto:
+\begin{itemize}
+    \item Glossário;
+    \item Documento de visão;
+    \item Requisitos funcionais do sistema;
+    \item Caso de uso.
+\end{itemize}
+
+O sistema de software desenvolvido com o propósito de  exemplificar o uso do processo de desenvolvimento configurado no capítulo anterior, tem como objetivo permitir que sejam realizadas consultas acerca de medicamentos disponibilizados ou não em posto de saúde; além de permitir o controle de estoque dos medicamentos em posto de saúde. A seguir, se encontra relação de nomes de atores que foram identificados:
+
+\begin{itemize}
+    \item Cidadão;
+    \item Gestor do posto de saúde.
+\end{itemize}
+
+Cidadão é usuário que necessita informação sobre medicamento que utiliza ou que precisa utilizar, e que deseja saber se esse medicamento é disponibilizado ou não pelo seu posto de saúde. Quem realiza a atualização de informação acerca de medicamento no posto de saúde é o gestor do posto de saúde, que através desse sistema controla estoque de medicamentos no posto de saúde no qual está alocado. A \refFig{atores} consiste de diagrama que mostra atores e relacionamentos entre os mesmos.
+
+\figuraBib{atores}{Atores e relacionamento entre atores}{}{atores}{width=.45\textwidth}%
+
+A definição da arquitetura do software é realizada após seleção de arquitetura candidata seguindo-se o\acrfull{SAAM}. Esse método explora possíveis cenários que podem resultar em problema no futuro, ao analisar a arquitetura utilizando-se esse método, o problema pode ser evitado desde o início da implementação, além de possibilitar uma documentação que apresente as decisões que foram tomadas. O artefato contendo informação acerca da visão do sistema se encontra no artefato de documento de visão.
+
+\subsection{Caso de uso do sistema}
+
+As funcionalidades correspondem aos requisitos funcionais do sistema, estes foram determinados no artefato de especificação dos requisitos do sistema. As funcionalidades serão relacionadas a seguir e depois descritas para melhor compreensão. São funcionalidades que o sistema de software deve prover para ambos os atores: Autenticar usuário, Visualizar perfil. São  funcionalidades que o sistema de software deve prover para o cidadão: Consultar medicamentos registrados no sistema, Visualizar o gestor responsável pelo seu posto de saúde. Por fim, são  funcionalidades que o sistema de software deve prover para o gestor do posto de saúde: Realizar controle do estoque de medicamentos no posto de saúde (Cadastrar medicamento; Editar registro do medicamento; Apagar registro do medicamento), Solicitar reposição de medicamentos para o posto de saúde.
+
+\subsection{Autenticar o usuário}
+
+O usuário pode realizar o login no sistema, desde que ele já esteja cadastrado no sistema. Ao se cadastrar, o usuário deve optar por ser cidadão ou gestor de posto de saúde. Dependendo do tipo de usuário, os acessos são distintos, visto que a funcionalidade provida pelo sistema depende do tipo de usuário que acessa o sistema.
+
+\subsection{Visualizar perfil}
+
+O perfil de usuário depende do tipo de usuário cadastrado. Usuário  cadastrado como cidadão possui perfil com acesso ao sistema de consulta de medicamentos, acesso ao seu perfil e a qual posto de saúde está registrado. O cidadão pode acessar lista de medicamentos que usa e consultar se o seu posto de saúde tem esse medicamento. O cidadão pode acessar seu perfil e visualizar dados pessoais, como nome, sobrenome e e-mail. Usuário cadastrado como gestor pode visualizar seu perfil. Seu perfil possibilita acessar sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde pelo qual é responsável. Na \refFig{perfil_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
+
+
+\figuraBib{perfil_usecase}{Diagrama de caso de uso para visualizar perfil}{}{perfil_usecase}{width=.45\textwidth}%
+
+\subsection{Consultar medicamentos registrados no sistema}
+
+O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema, caso esteja ele pode obter informações. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde, caso contrário é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadao_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto dessa funcionalidade do sistema.
+
+\figuraBib{cidadao_usecase}{Diagrama de caso de uso para consultar medicamentos registrados no sistema.}{}{cidadao_usecase}{width=.45\textwidth}%
+
+
+\subsection{Realizar controle do estoque de medicamentos no posto de saúde}
+
+O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos do posto de saúde sob sua responsabilidade. Para isso, o gestor pode cadastrar, editar e apagar o registro de medicamento no sistema. O sistema deve ser atualizado de forma que o sistema promova informações atualizadas para os seus usuários. Na \refFig{gestor_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto desta funcionalidade. A seguir, tem-se descrições dos casos de uso presentes nesse diagrama.
+
+
+\subsubsection{Cadastrar medicamento}
+
+Gestor do posto de saúde pode registrar medicamento, fornecendo as informações que forem solicitadas.
+
+\subsubsection{Atualizar informações de medicamento}
+
+Gestor do posto de saúde pode alterar registro de medicamento e este deve atualizar registro de medicamento. 
+
+\subsubsection{Apagar medicamento}
+
+Caso o medicamento pare de ser disponibilizado pelo posto de saúde, gestor pode apagar registro de medicamento.
+
+\subsubsection{Solicitar reposição de medicamentos}
+Gestor de posto de saúde ao constatar que medicamento está em falta e precisa de reposição, ou quer solicitar novos medicamentos para posto de saúde, deve preencher formulário de solicitação de medicamentos. Isso permite que o posto de saúde controle o estoque de modo a prevenir a falta de medicamento no posto de saúde.
+
+Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque que deve ser realizado pelo gestor do posto de saúde.
+
+\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.45\textwidth}%
+
