@@ -149,7 +149,27 @@ Como etapa para realizar a configuração do processo proposto para o desenvolvi
 
 \subsection{Descrição da arquitetura candidata}
 
+A fim de ter a arquitetura candidata de forma que seja de fácil compreensão para as partes interessada \emph{(stakeholders)} nesta descrição foram indicados os componentes integrantes da arquitetura candidata e os seus relacionamentos, sendo assim, a fim de permitir o fácil entedimento a arquitetura cadidata foi esboçada na seguinte ~\refFig{arqcomponentescidadao}.
+
+\figuraBib{arqcomponentescidadao}{Componentes para arquitetura pela visão do cidadão}{}{arqcomponentescidadao}{width=.70\textwidth}%
+
+Ela foi dividida seguindo as funcinalidades que o cidadão deve possuir e as funcionalidades que o gestor deve possuir.A fim de exemplificar as funcionalidades e os seus respectivos componentes, foi utilizado o diagrama de componentes do \acrfull{UML}.
+
+Com isso, para descrever a arquitetura seguindo a visão do cidadão, tem-se que este tem funcionalidades que são especificas apenas se este estiver logado no sistema de software. Sendo assim, tem-se qu, considerando que a parte interessada é o cidadão, tem-se que ele necessita de uma interface, interface esta que é apresentada pelo sistema de software desenvolvido neste trabalho. Este sistema de software fornece alguns componentes, sendo estes funcionalidades do sistema, e alguns destes são dependentes de outros componentes. Sendo assim, conforme apresentado na ~\refFig{arqcomponentescidadao} o sistema de software fornece os componentes de busca de medicamento que é dependente apenas do sistema de software e o componente de área de cadastro. Já o componente de área de login é dependente do componente de área de cadastro, visto que o usuário precisa ser cadastrado para ter acesso ao login e de área do perfil do cidadão é dependente da área de login do cidadão.
+
+
+\figuraBib{arqgestor}{Componentes para arquitetura pela visão do gestor}{}{arqgestor}{width=.70\textwidth}%
+
+Considerando a arquitetura que é necessária, tendo em vista que a parte interessada\emph{(stakeholders)} para essa parte é o gestor do posto de saúde, tem-se conforme apresentado na ~\refFig{arqgestor} que o sistema fornece uma série de funcionalidades, dentre elas tem-se a seção de controle do estoque, que possui as funcionalidades de cadastrar, atualizar,deletar e solicitar medicamento. A seção de área de cadastro do gestor, tendo o cadastro este pode se logar no sistema acessando a área de login e tem acesso a área de perfil do gestor. O sistema também fornece funcionalidades como a área de busca do medicamento, relatório mensal e relatório gerencial referente ao posto de saúde.
+
 \subsection{Desenvolver cenários}
+
+A fim de desenvolver cenários que são relevantes para o sistema de software, tem-se que de acordo com cada ação o sistema de software deve fornecer uma resposta.
+Os cenários apresentados a seguir representam tarefas que são consideradas relevantes no funcionamento do sistema de software em questão. A fim de apresentar esses cenários foi utilizado o diagrama de atividades do \acrfull{UML} a fim de detalhar as ações do usuário. Como ação relevante, tem-se inicialmente o acesso do cidadão a plataforma, no entanto ele irá realizar o cadastro antes de acessar. Essa ação foi referenciada na ~\refFig{cenariologarcid}.
+
+\figuraBib{cenariologarcid}{Cenário de login do cidadão.}{}{cenariologarcid}{width=.70\textwidth}%
+
+Seguindo as ações relevantes para o sistema, tem-se o acesso de login para o gestor, que será semelhante ao acesso de login do cidadão em quesito de ação, no entanto as funcionalidades liberadas para este acesso são diferentes. Diante disso, para esse contexto será também apresentado o fluxo de ações que devem ser feitos para consulta de medicamentos.
 
 \subsection{Classificar cenários}
 
