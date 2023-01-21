@@ -1,23 +1,23 @@
+Este capítulo aborda exemplo de configuração de processo de desenvolvimento. Entre os elementos deste capítulo, é possível destacar os seguintes: open unified process, elementos relacionados à arquitetura de software, configuração do processo de desenvolvimento, prática para descrição de arquitetura, passos para análise de arquitetura e artefatos construídos.
 
 \section{Open Unified Process}
 
-O processo de desenvolvimento de software, a ser configurado no contexto deste trabalho,é denominado \emph{\acrfull{OpenUp}}.O OpenUp sugere que o desenvolvimento de software seja realizado em incrementos, dessa forma unidades pequenas de trabalho podem produzir trabalho contínuo que demonstre métrica que permita mensurar o progresso do projeto. Sendo assim, é possível acompanhar e documentar o desenvolvimento do software de forma incremental, artefatos são construídos na medida que progride o desenvolvimento do software~\cite{openup}. 
+O processo de desenvolvimento de software, a ser configurado no contexto deste trabalho,é denominado \emph{\acrfull{OpenUP}}.O OpenUP sugere que o desenvolvimento de software seja realizado em incrementos, dessa forma unidades pequenas de trabalho podem produzir trabalho contínuo que demonstre métrica que permita mensurar o progresso do projeto. Sendo assim, é possível acompanhar e documentar o desenvolvimento do software de forma incremental, artefatos são construídos na medida que progride o desenvolvimento do software~\cite{openup}. 
 
 Essa forma de trabalho promove realimentação (\emph{feedback}) que permite a adequação do projeto quando necessário, além de prover suporte à tomada de decisão durante o desenvolvimento de software. A partir da interação entre as equipes é possível determinar para qual fase o projeto seguir, visto que a partir da interação entre as equipes tem-se uma estimativa do quanto o projeto teve andamento no período analisado~\cite{openup}. A \refFig{openup} ilustra o ciclo de vida de projeto no OpenUP.
 
-\figuraBib{openup}{Ciclo de vida de projeto segundo o OpenUp}{openup}{openup}{width=.60\textwidth}%
+\figuraBib{openup}{Ciclo de vida de projeto segundo o OpenUp}{openup}{openup}{width=.90\textwidth}%
 
-No processo OpenUp, o ciclo de vida de projeto é composto pelas seguintes fases: iniciação (\emph{Inception}), elaboração (\emph{Elaboration}), construção (\emph{Construction}) e transição (\emph{Transition}). A fase de iniciação tem o propósito de alcançar concordância entre os interessados (\emph{stakeholders}) sobre os objetivos do ciclo de vida do projeto. A fase de elaboração tem o propósito de estabelecer uma arquitetura (\emph{baseline architecture}) e prover uma base estável para o esforço de desenvolvimento a ser realizado. A fase de construção tem o propósito de completar o desenvolvimento do sistema com base na arquitetura (\emph{baseline architecture}) definida. Por fim, a fase de transição tem o propósito de garantir que o software está pronto para entrega aos usuários.
+No processo OpenUP, o ciclo de vida de projeto é composto pelas seguintes fases: Concepção (\emph{Inception}), Elaboração (\emph{Elaboration}), Construção (\emph{Construction}) e Transição (\emph{Transition}). A fase denominada  Concepção tem o propósito de alcançar concordância entre os interessados (\emph{stakeholders}) sobre os objetivos do ciclo de vida do projeto. A fase denominada Elaboração tem o propósito de estabelecer uma arquitetura (\emph{baseline architecture}) e prover uma base estável para o esforço de desenvolvimento a ser realizado. A fase denominada Construção tem o propósito de completar o desenvolvimento do sistema com base na arquitetura (\emph{baseline architecture}) definida. Por fim, a fase denominada Transição tem o propósito de garantir que o software está pronto para entrega aos usuários.
 
-No OpenUp é possível fornecer para as equipes e para as partes interessadas (\emph{stakeholders}) no projeto, os pontos em que são tomadas decisões de projeto a fim de definir qual plano seguir. O plano de projeto permite definir o ciclo de vida do projeto. O OpenUp provê informação acerca de como produto de software pode ser documentado e implementado. A descrição desse processo contém informação acerca de fases integrantes de ciclo de vida de projeto, processos de entrega (\emph{delivery processes}), práticas (\emph{practices}), papéis (\emph{roles}), produtos do trabalho (\emph{work products}), tarefas (\emph{tasks}), orientação (\emph{guidance}) e ferramentas (\emph{tools})~\cite{openup}.
+No OpenUP é possível fornecer para as equipes e para as partes interessadas (\emph{stakeholders}) no projeto, os pontos em que são tomadas decisões de projeto a fim de definir qual plano seguir. O plano de projeto permite definir o ciclo de vida do projeto. O OpenUP provê informação acerca de como produto de software pode ser documentado e implementado. A descrição desse processo contém informação acerca de fases integrantes de ciclo de vida de projeto, processos de entrega (\emph{delivery processes}), práticas (\emph{practices}), papéis (\emph{roles}), produtos do trabalho (\emph{work products}), tarefas (\emph{tasks}), orientação (\emph{guidance}) e ferramentas (\emph{tools})~\cite{openup}.
 
 \subsection{Elementos relacionados à arquitetura de software}
 \label{sec:5.1.1}
 
-No OpenUp, existem atividades (\emph{activity}), tarefas (\emph{task}), artefatos (\emph{work product}) e papéis (\emph{role}) relacionados à arquitetura de software. Entre as atividades, tem-se as atividades Concordar com uma abordagem técnica (\emph{Agree on a Technical Approach}) e Desenvolver a arquitetura (\emph{Develop the Architecture}).A atividade Concordar com uma abordagem técnica visa definir abordagem técnica que suporte requisitos do projeto, considerando restrições impostas ao sistema e à equipe de desenvolvimento. Por sua vez, a atividade Desenvolver a arquitetura visa refinar a arquitetura inicial em software funcional, produzir software estável que contemple os riscos técnicos~\cite{openup}.
+No OpenUP, existem atividades (\emph{activity}), tarefas (\emph{task}), artefatos (\emph{work product}) e papéis (\emph{role}) relacionados à arquitetura de software. Entre as atividades, tem-se as atividades Concordar com uma abordagem técnica (\emph{Agree on a Technical Approach}) e Desenvolver a arquitetura (\emph{Develop the Architecture}).A atividade Concordar com uma abordagem técnica visa definir abordagem técnica que suporte requisitos do projeto, considerando restrições impostas ao sistema e à equipe de desenvolvimento. Por sua vez, a atividade Desenvolver a arquitetura visa refinar a arquitetura inicial em software funcional, produzir software estável que contemple os riscos técnicos~\cite{openup}.
 
-No OpenUP, tarefas têm finalidades como detalhar requisitos, realizar a especificação da interface e da arquitetura do sistema de software. Tarefas são realizadas para concretizar atividade. Para cada tarefa são relacionados passos (\emph{steps}).Para cada atividade existem tarefas a serem realizadas [7]. No OpenUp, arquiteto (\emph{architect}) é responsável por conceber e refinar arquitetura de software, isso inclui tomar decisões que restringem o projeto (\emph{design}) e a implementação do sistema. Na \refFig{arquiteto} tem-se tarefas e artefatos relacionados a arquiteto. A seguir, são relacionadas tarefas realizadas por arquiteto e artefato sob sua responsabilidade~\cite{openup}: 
-
+No OpenUP, tarefas têm finalidades como detalhar requisitos, realizar a especificação da interface e da arquitetura do sistema de software. Tarefas são realizadas para concretizar atividade. Para cada tarefa são relacionados passos (\emph{steps}).Para cada atividade existem tarefas a serem realizadas [7]. No OpenUP, arquiteto (\emph{architect}) é responsável por conceber e refinar arquitetura de software, isso inclui tomar decisões que restringem o projeto (\emph{design}) e a implementação do sistema. Na \refFig{arquiteto} tem-se tarefas e artefatos relacionados a arquiteto. A seguir, são relacionadas tarefas realizadas por arquiteto e artefato sob sua responsabilidade~\cite{openup}: 
 
 \begin{itemize}
     \item Conceber a arquitetura;
@@ -26,10 +26,10 @@ No OpenUP, tarefas têm finalidades como detalhar requisitos, realizar a especif
 \end{itemize} 
 
 
-\figuraBib{arquiteto}{Tarefas e artefatos relacionados a arquiteto}{openup}{arquiteto}{width=.60\textwidth}%
+\figuraBib{arquiteto}{Tarefas e artefatos relacionados a arquiteto}{openup}{arquiteto}{width=.80\textwidth}%
 
 
-A tarefa Conceber a arquitetura (\emph{Envision the Architecture}) integra a atividade Concordar com uma abordagem técnica. A tarefa Conceber a arquitetura enfoca a visualização da arquitetura e a delimitação das decisões acerca da arquitetura de software. Esse detalhamento guiará o desenvolvimento e o teste do sistema de software. Os resultados obtidos são utilizados como referências futuras na comunicação entre equipes. A seguir, são relacionados passos nessa tarefa segundo o OpenUp~\cite{openup}:
+A tarefa Conceber a arquitetura (\emph{Envision the Architecture}) integra a atividade Concordar com uma abordagem técnica. A tarefa Conceber a arquitetura enfoca a visualização da arquitetura e a delimitação das decisões acerca da arquitetura de software. Esse detalhamento guiará o desenvolvimento e o teste do sistema de software. Os resultados obtidos são utilizados como referências futuras na comunicação entre equipes. A seguir, são relacionados passos nessa tarefa segundo o OpenUP~\cite{openup}:
 
 \begin{itemize}
     \item Identificar objetivos arquitetônicos;
@@ -143,7 +143,7 @@ Deve ser analisada a consistência entre visões (\emph{views}) de arquitetura e
 
 \subsection{Passos para análise de arquitetura}
 \label{sec:5.2.2}
-Quanto aos passos (\emph{steps}) a serem incluídos em tarefas integrantes do OpenUp com o propósito de analisar a arquitetura de software por meio do método de análise de arquitetura de software denominado \emph{\acrfull{SAAM}}, são sugeridos os seguintes passos considerando as etapas do método~\cite{survey_methods}~\cite{scenario_methods}:
+Quanto aos passos (\emph{steps}) a serem incluídos em tarefas integrantes do OpenUP com o propósito de analisar a arquitetura de software por meio do método de análise de arquitetura de software denominado \emph{\acrfull{SAAM}}, são sugeridos os seguintes passos considerando as etapas do método~\cite{survey_methods}~\cite{scenario_methods}:
 
 \begin{itemize}
     \item Descrever arquitetura candidata;
@@ -155,3 +155,7 @@ Quanto aos passos (\emph{steps}) a serem incluídos em tarefas integrantes do Op
 
 
 \end{itemize}
+
+\section{Artefatos construídos}
+Diante do que foi abordado até o momento, foram construídos artefatos novos, seguindo como referência a norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems}.
+Sendo assim, nesses artefatos foram abordadas a prática para descrição da arquitetura conforme especificado no capítulo\ref{sec:5.2.1} e os passos para análise de arquitetura, conforme especificado no capítulo \ref{sec:5.2.1}.
