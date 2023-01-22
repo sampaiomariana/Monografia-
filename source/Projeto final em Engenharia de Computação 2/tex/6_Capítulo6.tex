@@ -1,143 +1,157 @@
-Este capítulo aborda exemplo de uso de processo de desenvolvimento anteriormente configurado. Entre os elementos que integram este capítulo, é possível destacar os seguintes: ciclo de vida do projeto, fase de iniciação, fase de elaboração, visão do sistema, funcionalidades do sistema, projeto de banco de dados e descrição de arquitetura de software.
+Este capítulo aborda exemplo de uso de processo de desenvolvimento anteriormente configurado. Entre os elementos que integram este capítulo, é possível destacar os seguintes: ciclo de vida do projeto, requisitos funcionais, cenários funcionais, arquitetura do software, projeto da interface com o usuário, projeto do banco de dados e ferramentas de desenvolvimento.
+
 
 \section{Ciclo de vida do projeto}
-O ciclo de vida adotado no projeto foi embasado no ciclo de vida descrito no processo de desenvolvimento  \emph{OpenUp}~\cite{openup}.Esse ciclo de vida é composto pelas seguintes fases:
+O ciclo de vida adotado no projeto foi embasado no ciclo de vida descrito no processo de desenvolvimento  OpenUp~\cite{openup}.Esse ciclo de vida é composto pelas seguintes fases: Concepção, Elaboração, Construção e Transição. O fluxo de trabalho nesse ciclo de vida é apresentado na \refFig{ciclodevida}. Em cada fase do ciclo de vida existe um processo proposto. Esse projeto seguiu processos da Concepção e  Elaboração.
 
-\begin{itemize}
-    \item Fase de concepção;
-    \item Fase de elaboração;
-    \item Fase de construção;
-    \item Fase de transição.
-\end{itemize}
-
-\figuraBib{ciclodevida}{Fases do ciclo de vida do OpenUp}{openup}{ciclodevida}{width=.70\textwidth}%
-
-O fluxo de trabalho nesse ciclo de vida é apresentado na \refFig{ciclodevida}. Em cada fase do ciclo de vida existe um processo que deve ser executado para seguir a configuração proposta pelo OpenUp. 
-A fim de ter uma estruturação deste capítulo seguindo as atividades, tarefas e artefatos que foram desenvolvidos, este capítulo será apresentado de acordo com a estrutura do \acrfull{OpenUP}.
+\figuraBib{ciclodevida}{Fases de trabalho em ciclo de vida}{openup}{ciclodevida}{width=.90\textwidth}%
 
 \section{Fase de concepção}
 
-A fase de concepção possui uma sequência de atividades que podem ser seguidas no projeto em decorrências dessas atividades existem tarefas e nessas tarefas são gerados artefatos. Esse processo é proposto pelo \acrfull{OpenUP} e através dele permite que seja realizada a configuração do projeto. O fluxo de trabalho do proposto pelo \acrfull{OpenUP} pode ser observado na ~\refFig{diagramaconcep}.
+A fase denominada Concepção é caracterizada por uma sequência de atividades que pode ser seguida no projeto. Em decorrência dessas atividades, são realizadas tarefas e são criados artefatos.O fluxo de trabalho do proposto no OpenUP se encontra na ~\refFig{diagramaconcep}.
 
-\figuraBib{diagramaconcep}{Fluxo de trabalho proposto pelo OpenUp para a fase de concepção}{openup}{diagramaconcep}{width=.60\textwidth}%
+\figuraBib{diagramaconcep}{Fluxo de trabalho fase Concepção}{openup}{diagramaconcep}{width=.90\textwidth}%
 
-Sendo assim, as atividades que foram desenvolvidas na fase de concepção foram:
+As atividades que foram executadas na fase Concepção foram as seguintes:
 \begin{itemize}
-    \item Iniciar o projeto;
-    \item Planejar e gerenciar a iteração;
+    \item Iniciar projeto;
+    \item Planejar e gerenciar iteração;
     \item Identificar e refinar requisitos;
-    \item Concordar com a abordagem técnica.
+    \item Concordar com abordagem técnica.
 \end{itemize}
 
-A atividade de iniciar do projeto tem como objetivo inicializar o projeto e obter um acordo com as partes interessadas do projeto em relação ao escopo do projeto. Dentro dessa atividade foram desenvolvidas tarefas e seus respectivos artefatos que são sugeridos pelo processo do \acrfull{OpenUP}:
+\subsection{Atividade Iniciar Projeto}
+
+A atividade Iniciar projeto tem como objetivo iniciar o projeto e obter um acordo das partes interessadas no projeto em relação ao escopo do projeto. 
+Nessa atividade foram realizadas tarefas e construídos artefatos. Elementos associados a essa atividade são apresentados na ~\refFig{iniciarprojeto}. A seguir, tarefas e artefatos associados à atividade:
 
 \begin{itemize}
-    \item Desenvolver visão técnica;
+    \item Tarefa: Desenvolver visão técnica;
         \begin{itemize}
             \item Artefato: Documento de visão.
         \end{itemize}
-    \item Plano de projeto.
+    \item Tarefa: Planejar projeto.
     \begin{itemize}
             \item Artefato: Plano de projeto.
         \end{itemize}
 \end{itemize}
 
 
-\figuraBib{iniciarprojeto}{Fluxo de trabalho para a atividade de iniciar projeto}{openup}{iniciarprojeto}{width=.70\textwidth}%
+\figuraBib{iniciarprojeto}{Elementos da atividade Iniciar projeto}{openup}{iniciarprojeto}{width=.90\textwidth}%
 
-A tarefa de desenvolver a visão técnica tem como objetivo definir a visão para o futuro do sistema. De forma que são descritos os problemas e os recursos com base nas solicitações das partes interessadas. Nessa tarefa foi desenvolvido o artefato de documento de visão, este artefato define a visão das partes interessadas no sistema da solução técnica a ser desenvolvida. Esta definição é especificada em termos das principais necessidades e características das partes interessadas têm em relação ao sistema de software. O documento de visão contém um esboço dos requisitos básicos previstos para o sistema de software. O documento produzido seguiu o template que é sugerido pelo \acrfull{OpenUP}.
-Já a tarefa de plano de projeto tem como objetivo ser uma tarefa colaborativa que descreve o acordo inicial sobre como o projeto atingirá seus objetivos. O artefato resultante  fornece uma visão geral resumida do projeto, contendo todas as informações necessárias para gerenciar o projeto em um nível estratégico. Como principal parte deste plano de projeto, tem-se um plano detalhado, identificando as iterações do projeto e seus objetivos.~\cite{openup}.Esse fluxo pode ser evidenciado na ~\refFig{iniciarprojeto}.
+A tarefa Desenvolver visão técnica tem como objetivo definir a visão para o sistema.São descritos problemas e recursos com base nas solicitações das partes interessadas. 
+Nessa tarefa foi construído o artefato Documento de visão. Esse artefato define a visão das partes interessadas no sistema e provê informação acerca da solução técnica a ser desenvolvida. Essa definição é especificada em termos das principais necessidades e características requeridas por partes interessadas em relação ao sistema de software. O artefato Documento de visão contém um esboço dos requisitos básicos do sistema de software. O documento produzido adotou modelo \emph{(template)} sugerido no OpenUP.
+Já a tarefa Planejar projeto é uma tarefa colaborativa que descreve o acordo inicial sobre como o projeto atingirá seus objetivos. O artefato resultante  fornece uma visão geral resumida do planejamento do projeto, contém  informações necessárias para gerenciar o projeto.Como parte desse plano, tem-se informação acerca de iterações do projeto e dos seus objetivos~\cite{openup}.
 
-A atividade de planejar e gerenciar a iteração permite que os membros da equipe se inscrevam nas tarefas de desenvolvimento. De forma que pode ser realizado o monitoramento e a comunicação referente ao status do projeto às partes interessadas. Nessa atividade tem-se como objetivo identificar e tratar exceções e problemas. Dentro dessa atividade foram desenvolvidas tarefas e seus respectivos artefatos que são sugeridos pelo processo do \acrfull{OpenUP}:
+\subsection{Atividade Planejar e gerenciar iteração}
+
+A atividade Planejar e gerenciar iteração permite que os membros da equipe se inscrevam em tarefas de desenvolvimento. De forma que pode ser realizado o monitoramento e a comunicação referente ao estado do projeto às partes interessadas.Essa atividade tem como objetivo identificar e tratar exceções e problemas.Nessa atividade foi realizada tarefa e construído artefato. 
+
+\figuraBib{planejariteracao}{Elementos da atividade Planejar e gerenciar iteração}{openup}{planejariteracao}{width=.90\textwidth}%
+
+Elementos dessa atividade são apresentados na ~\refFig{planejariteracao}.A seguir, tarefa e artefato associados à atividade:
 
 \begin{itemize}
-    \item Plano de iteração;
+    \item Tarefa: Planejar iteração.
         \begin{itemize}
             \item Artefato: Plano de iteração.
         \end{itemize}
 \end{itemize}
 
-\figuraBib{plniteracao}{Fluxo de trabalho para a atividade de planejar e gerenciar a iteração}{openup}{plniteracao}{width=.70\textwidth}%
+A tarefa Planejar iteração tem como objetivo identificar o próximo incremento da capacidade do sistema de software e criar um plano refinado a fim de atingir essa capacidade em uma iteração. Essa tarefa é repetida para cada iteração em uma entrega.Isso permite que a equipe aumente a precisão das estimativas para uma iteração, pois mais detalhes são conhecidos ao longo do projeto. Como artefato construído, tem-se  o Plano de iteração. Esse artefato descreve objetivos, atribuições de trabalho e critérios de avaliação para a iteração~\cite{openup}.
 
-A tarefa de plano de iteração tem como objetivo identificar o próximo incremento da capacidade do sistema de software e criar um plano refinado a fim de atingir essa capacidade em uma única iteração. Essa tarefa é repetida para cada iteração em uma entrega. Ele permite que a equipe aumente a precisão das estimativas para uma iteração, pois mais detalhes são conhecidos ao longo do projeto. Como artefato produzido tem-se  o plano de iteração que descreve os objetivos, atribuições de trabalho e critérios de avaliação para a iteração~\cite{openup}. Esse fluxo pode ser evidenciado na ~\refFig{plniteracao}.
+\subsection{Atividade Identificar e refinar requisitos}
 
-
-A atividade de Identificar e refinar requisitos tem como objetivo realizar o detalhamento de um conjunto de requisitos do sistema, ou seja, realizar o detalhamento dos serviços que o sistema de software deve possuir fazendo a sua especificação através do caso de uso ou cenários referente ao sistema de software. Dentro dessa atividade foram desenvolvidas tarefas e seus respectivos artefatos que são sugeridos pelo processo do \acrfull{OpenUP}:
+A atividade Identificar e refinar requisitos tem como objetivo detalhar um conjunto de requisitos do sistema,detalhar serviços que o sistema de software deve prover,especificando-os por meio de casos de uso ou de cenários referentes ao sistema de software. Nessa atividade foi realizada tarefa e construídos artefatos. Elementos dessa atividade são apresentados na ~\refFig{identificarrefinarrequisitos}. A seguir, tarefa e artefatos associados à atividade:
 
 \begin{itemize}
-    \item Identificar e identificar requisitos;
+    \item Tarefar: Identificar e esboçar requisitos;
         \begin{itemize}
-            \item Artefato: Requisitos de todo o sistema;
-            \item Artefato: Caso de uso.
+            \item Artefato: Glossário;
+            \item Artefato: Requisitos com abrangência de sistema;
+            \item Artefato: Caso de uso;
+            \item Artefato: Modelo de caso de uso.
         \end{itemize}
 \end{itemize}
 
-\figuraBib{atvrequisitos}{Fluxo de trabalho para a atividade de identificar e refinar requisitos}{openup}{atvrequisitos}{width=.70\textwidth}%
+\figuraBib{identificarrefinarrequisitos}{Elementos da atividade Identificar e refinar requisitos}{openup}{identificarrefinarrequisitos}{width=.90\textwidth}%
 
-A tarefa de identificar e refinar requisitos descreve como deve ser identificado e delineado os requisitos do sistema para que o escopo do trabalho possa ser definido. O principal objetivo dessa tarefa é identificar os requisitos funcionais e não funcionais para o sistema de software. Esses requisitos formam a base da comunicação e do acordo entre as partes interessadas e a equipe de desenvolvimento sobre o que o sistema deve fazer para satisfazer as partes interessadas. O artefato de requisitos de todo o sistema captura os atributos de qualidade e as restrições que têm escopo em todo o sistema. Já o artefato de caso de uso tem como objetivo capturar o comportamento que o sistema produz de acordo com uma ação do usuário do sistema~\cite{openup}.Esse fluxo pode ser evidenciado na ~\refFig{atvrequisitos}.
+A tarefa Identificar e esboçar requisitos descreve como identificar e delinear os requisitos do sistema para que o escopo do trabalho possa ser definido. Um objetivo dessa tarefa é identificar os requisitos funcionais e não funcionais do sistema de software. Esses requisitos formam a base da comunicação e do acordo entre as partes interessadas e a equipe de desenvolvimento sobre o que o sistema deve fazer para satisfazer às partes interessadas. O artefato Glossário define termos usados no projeto. O artefato Requisitos com abrangência de sistema captura atributos de qualidade e restrições que têm escopo de todo o sistema. Os artefatos Modelo de caso de uso e Caso de uso têm como objetivo capturar comportamentos do sistema de acordo com ações dos usuários do sistema~\cite{openup}.
 
+\subsection{Atividade Concordar com abordagem técnica}
 
-Por fim, tem-se a atividade de concordar com a abordagem técnica, essa atividade tem como objetivo chegar a um acordo sobre uma abordagem técnica que seja viável para o desenvolvedor. Dentro dessa atividade foram desenvolvidas tarefas que são sugeridas pelo processo do \acrfull{OpenUP}. Sendo essas tarefas as seguintes:
+A atividade Concordar com abordagem técnica tem como objetivo chegar a um acordo sobre uma abordagem técnica que seja viável para o desenvolvimento do software. Nessa atividade foi realizada tarefa e construído artefato. Elementos dessa atividade são apresentados na ~\refFig{concordarabordagemtecnica}. A seguir, tarefa e artefato associados à atividade:
+
 \begin{itemize}
-    \item Visualizar a arquitetura.
+    \item Tarefa: Visualizar arquitetura.
     \begin{itemize}
-        \item Artefato: Caderno de arquitetura;
-        \item Artefato proposto: Abordagem prática para descrição da arquitetura;
-        \item Artefato proposto: Passos para análise de arquitetura.
+        \item Artefato: Caderno de arquitetura.
     \end{itemize}
 \end{itemize}
 
-A tarefa de visualizar a arquitetura tem como objetivo realizar o desenvolvimento da visão da arquitetura por meio da análise dos requisitos que são significativos para o sistema de software, analisando assim os requisitos funcionais e não funcionais do sistema a fim de identificar as restrições, decisões e objetivos da arquitetura. Ao identificar esses pontos é possível fornecer uma orientação e direcionamento para a equipe para começar o desenvolvimento. Como artefato produzido tem-se o caderno de arquitetura, esse artefato descreve a lógica, as suposições, a explicação e as implicações das decisões que foram tomadas ao projetar a arquitetura~\cite{openup}.
+A tarefa Visualizar arquitetura tem como objetivo desenvolver a visão da arquitetura por meio da análise dos requisitos que são significativos para o sistema de software, analisando assim os requisitos funcionais e não funcionais do sistema a fim de identificar restrições, decisões e objetivos da arquitetura. Ao identificar esses elementos é possível fornecer uma orientação e direcionamento para a equipe iniciar o desenvolvimento. O artefato Caderno de arquitetura descreve lógica, suposições, explicações e implicações de decisões tomadas ao projetar a arquitetura~\cite{openup}.
 
-No contexto deste trabalho, que visa apresentar um processo de definição de arquitetura de software, foi desenvolvido um novo artefato para apresentar a parte prática para descrição da arquitetura, este segue sugestões apresentadas pela norma do \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems}, conforme apresentado na seção ~\ref{sec:5.2.1} e um novo artefato para apresentar os passos para análise de arquitetura, para realizar a análise da arquitetura que foi projetada foi realizada uma avaliação da arquitetura selecionada seguindo o método do \acrfull{SAAM}, método este apresentado na seção ~\ref{sec:SAAM}.Esse artefato foi apresentado na seção~\ref{sec:5.2.2}.
-Esse fluxo pode ser evidenciado na ~\refFig{atvarquitetura}.
-
-\figuraBib{fluxogeral}{Fluxo de atividades para fase de concepção aplicado.}{openup}{fluxogeral}{width=.70\textwidth}%
-
-\figuraBib{atvarquitetura}{Fluxo de trabalho para a atividade de concordar com a abordagem prática}{openup}{atvarquitetura}{width=.70\textwidth}%
-
-Dessa forma, pode ser observado na ~\refFig{fluxogeral} que na fase de concepção foram seguidas uma série de atividades, tarefas e artefatos a fim de seguir implementar um processo de configuração para o sistema de software.
+\figuraBib{concordarabordagemtecnica}{Elementos da atividade Concordar com abordagem técnica}{openup}{concordarabordagemtecnica}{width=.90\textwidth}%
 
 \section{Fase de elaboração}
-Na fase de elaboração foram executadas atividades descritas no \acrfull{OpenUP}. Seguindo dessa forma o ciclo de vida do projeto. O fluxo de trabalho que é proposto pelo \acrfull{OpenUP} pode ser observado na ~\refFig{elaboracao}.
 
-\figuraBib{elaboracao}{Fluxo de trabalho proposto pelo OpenUp para fase de elaboração.}{openup}{elaboracao}{width=.70\textwidth}%
+A fase denominada Elaboração é caracterizada por uma sequência de atividades que pode ser seguida no projeto. Em decorrência dessas atividades, são realizadas tarefas e são criados artefatos. O fluxo de trabalho proposto no OpenUP se encontra na ~\refFig{elaboracao}.
 
-A seguir, relação de atividades executadas ~\cite{openup}:
+
+\figuraBib{elaboracao}{Fluxo de trabalho da fase Elaboração.}{openup}{elaboracao}{width=.90\textwidth}%
+
+As seguintes atividades da fase Elaboração foram executadas nesse projeto:
 
 \begin{itemize}
-    \item Desenvolvimento de arquitetura;
-    \item Desenvolvimento da solução incremental;
-    \item Planejamento e gerenciamento de iteração.
+    \item Desenvolver a arquitetura;
+    \item Desenvolver incremento da solução;
+    \item Planejar e gerenciar iteração.
 \end{itemize}
 
-Para realizar o desenvolvimento dessa fase, tem-se uma série de atividades e tarefas que são executadas e que geram um artefato ao final. 
-A atividade de desenvolvimento da arquitetura tem como objetivo desenvolver os requisitos que são considerados significativos mediante a arquitetura do sistema de software. Como tarefa executada dessa atividade, tem-se o refinamento da arquitetura.
-Essa tarefa permite que a arquitetura seja refinada a um nível apropriado de detalhe para dar suporte ao desenvolvimento. Como artefato dessa tarefa tem-se o caderno de arquitetura.
+\subsection{Atividade Desenvolver a arquitetura}
 
-No desenvolvimento da arquitetura foi adotado o método \acrfull{SAAM} para realizar a avaliação da arquitetura escolhida para a implementação. O caderno de arquitetura desenvolvido na fase de concepção foi refinado na fase de elaboração aplicando-se proposta presente neste trabalho. Na fase de elaboração ocorreu o refino do artefato caderno de arquitetura e consequentemente dos artefatos propostos neste trabalho, o artefato de abordagem prática para a descrição da arquitetura e  do artefato de passos para análise da arquitetura. Esse fluxo de trabalho pode ser evidenciado na ~\refFig{devarq}.
+A atividade Desenvolver a arquitetura tem como objetivo desenvolver os requisitos que são considerados significativos mediante a arquitetura do sistema de software. Nessa atividade foi realizada tarefa e construído artefato. Elementos dessa atividade são apresentados na ~\refFig{devarq}. A seguir, tarefa e artefato associados à atividade:
 
-\figuraBib{devarq}{Fluxo de trabalho para atividade de desenvolver a arquitetura}{openup}{devarq}{width=.70\textwidth}%
-
-
-\figuraBib{devsolucao}{Fluxo de trabalho para atividade de desenvolver a solução incremental.}{openup}{devsolucao}{width=.70\textwidth}%
-
-A atividade de desenvolver a solução incremental consiste em realizar a projeção, implementação, teste e integração da solução para os requisitos do sistema de software de acordo com o projeto. Como tarefa desenvolvida tem-se a implementação da solução, essa tarefa tem como finalidade implementar o código fonte a fim de fornecer novas funcionalidades para o sistema de software ou corrigir defeitos que foram encontrados no sistema de software. Como artefato produzido, tem-se os códigos desenvolvidos, arquivos de dados e arquivos de suporte que foram utilizados no desenvolvimento do sistema de software. Esse fluxo de trabalho pode ser evidenciado na ~\refFig{devsolucao}.
-
-
-\figuraBib{plngerenciar}{Fluxo de trabalho para atividade de planejar e gerenciar a iteração.}{openup}{plngerenciar}{width=.70\textwidth}%
-
-A atividade de planejar e gerenciar a iteração consiste em uma atividade que permite que exista uma comunicação em relação as atividades que estão sendo executadas. Além de permitir que o status do projeto seja atualizado para as partes interessadas do sistema. Como tarefa dessa atividade tem-se o plano de iteração que permite identificar o que será incrementado no sistema de software. Como produto desta atividade tem o artefato de plano de iteração que foi criado na fase de concepção e que conforme foi a implementação do projeto foi evoluindo ele foi sendo implementado. Esse fluxo de trabalho deve ser evidenciado na ~\refFig{plngerenciar}.
-
-\section{Gerenciamento de projetos}
-
-A fim de realizar o gerenciamento do andamento do projeto durante a sua execução, foram desenvolvidos os artefatos de: 
 \begin{itemize}
-    \item Plano de iteração;
-    \item Plano de projeto.
+    \item Tarefa: Refinar a arquitetura.
+    \begin{itemize}
+        \item Artefato: Caderno de arquitetura.
+    \end{itemize}
 \end{itemize}
 
-O artefato de plano de projeto foi desenvolvido inicialmente na fase de iniciação do projeto, conforme apresentado na ~\refFig{iniciarprojeto}. Já o artefato de plano de iteração foi desenvolvido na fase de planejar e gerenciar a iteração conforme apresentado na ~\refFig{plniteracao}.
+\figuraBib{devarq}{Elementos da atividade Desenvolver a arquitetura }{openup}{devarq}{width=.90\textwidth}%
+
+A tarefa Refinar a arquitetura permite que a arquitetura seja refinada a um nível apropriado de detalhe para dar suporte ao desenvolvimento. O Caderno de arquitetura desenvolvido na fase Concepção foi refinado na fase Elaboração aplicando-se proposta presente neste trabalho.
+
+\subsection{Atividade Desenvolver incremento da solução}
+
+\figuraBib{devsolucao}{Elementos da atividade Desenvolver incremento da solução}{openup}{devsolucao}{width=.90\textwidth}%
+
+A atividade Desenvolver incremento da solução consiste em realizar projeto \emph{(design)}, implementação, teste e integração da solução para os requisitos do sistema do software.  Nessa atividade foi realizada tarefa e construído artefato. Elementos dessa atividade são apresentados na Figura 6.10. A seguir, tarefa e artefato associados à atividade:
+
+\begin{itemize}
+    \item Tarefa: Implementar solução.
+    \begin{itemize}
+        \item Artefato: Implementação.
+    \end{itemize}
+\end{itemize}
+
+A tarefa Implementar solução tem como propósito implementar o código fonte a fim de prover novas funcionalidades para o sistema de software ou corrigir defeitos que foram encontrados. Como artefato construído, tem-se a Implementação composta por códigos desenvolvidos, arquivos de dados e arquivos de suporte utilizados no desenvolvimento.
+
+\subsection{Atividade Planejar e gerenciar iteração}
+
+\figuraBib{plngerenciar}{Elementos da atividade Planejar e gerenciar iteração }{openup}{plngerenciar}{width=.90\textwidth}%
+
+A atividade Planejar e gerenciar iteração consiste de atividade que promove comunicação em relação às atividades que estão sendo executadas. Além de permitir que o estado do projeto seja atualizado para as partes interessadas. Como produto dessa atividade tem-se o artefato Plano de iteração, que foi criado na fase Concepção e que, conforme evoluiu o projeto, foi implementado. Elementos dessa atividade são apresentados na ~\refFig{plngerenciar}. A seguir, tarefa e artefato associados à atividade:
+
+\begin{itemize}
+    \item Tarefa: Planejar iteração.
+    \begin{itemize}
+        \item Artefato: Plano de iteração.
+    \end{itemize}
+\end{itemize}
+
+
 \section{Arquitetura}
 \label{sec:arquitetura}
 
