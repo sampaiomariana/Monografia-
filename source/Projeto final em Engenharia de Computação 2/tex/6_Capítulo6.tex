@@ -218,12 +218,35 @@ Antes de realizar login, o cidadão deve se cadastrar. Uma vez realizado login, 
 \section{Arquitetura do software}
 \label{sec:arquitetura}
 
+A fim de apresentar a arquitetura do software do sistema desenvolvido para este projeto, tem-se como objetivo neste capítulo adotar uma visão\emph{(view)} e representar a arquitetura de software em relação a um ponto de vista\emph{viewpoint} conforme descrito no capítulo ~\ref{sec:viewpoint}.
+
+
+A fim de apresentar a arquitetura do software do sistema desenvolvido para este projeto, tem-se como objetivo neste capítulo adotar uma visão\emph{(view)} e representar a arquitetura de software em relação a um ponto de vista\emph{viewpoint} conforme descrito no capítulo ~\ref{sec:viewpoint}.
+
+Para apresentar essa visão \emph{(view)} tem-se que a arquitetura foi decomposta em componentes. A arquitetura do software possui um conjunto de componentes que são organizados de acordo com as funcionalidades que este componente deve prover no sistema de software. 
+
+\figuraBib{arquitetura01}{Arquitetura decomposta em componentes}{}{arquitetura01}{width=.80\textwidth}%
+
+Apresentando de forma generalizada a arquitetura, tem-se que a partir de um navegador o usuário, seja ele cidadão ou gestor do posto pode acessar os serviços providos para o usuário acessando a interface da aplicação. Ao ter acesso, tem-se o acesso para usuários especifico, sendo assim para o cidadão ou para o gestor. No entanto ambos têm acesso aos medicamentos que estão registrados na aplicação, conforme evidenciado na  ~\refFig{arquitetura01}.
+
+Nessa arquitetura pode ser adotada uma visão \emph{view} sob perspectiva dos interesses relacionados ao catálogo de medicamentos, pode ser adotado o ponto de vista apenas para o cidadão, visto que este tem a aplicação com menos funcionalidades em relação ao gestor. Sendo assim, pode ser apontado que a partir do navegador o usuário pode acessar a interface do sistema a fim de acessar a aplicação. Essa aplicação fornece componentes referentes ao catálogo de medicamentos, conforme evidenciado na ~\refFig{arquitetura01}.
+
+
+Sendo assim, para demonstrar a arquitetura deste sistema adotando uma visão \emph{view}, inicialmente, será considerado uma visão  representando a arquitetura sob perspectiva dos interesses relacionados ao controle do estoque do medicamento no posto de saúde, visto que essa arquitetura tem como ponto de vista o gestor do posto de saúde. Tendo o ponto de vista considerado para o gestor do posto de saúde, tem-se definida a audiência e o propósito de visão de arquitetura.
+
+Dessa forma, a partir do uso do navegador o usuário pode acessar a interface do sistema a fim de acessar a aplicação. Essa aplicação fornece componentes referentes aos usuários do sistema e aos medicamentos que estão registrados na aplicação conforme evidenciado na ~\refFig{arquitetura_2}.
+
+\figuraBib{arquitetura_2}{Arquitetura decomposta em componentes sob ponto de vista do gestor do posto de saúde}{}{arquitetura_2}{width=.80\textwidth}%
+
+
+
+
 \section{Projeto da interface com o usuário}
 
-\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.80\textwidth}%
 
 Para realizar login no sistema de software é necessário informar e-mail e senha. O login ocorrerá se o endereço de e-mail e a senha estiverem cadastrados. Para isso, foi construído código que realiza a validação do e-mail e da senha no banco de dados, vide ~\refFig{validation}. Caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema. Caso contrário, o usuário recebe mensagem alertando que foi encontrado erro. Dessa forma, apenas usuário cadastrado pode acessar determinadas informações no sistema de software. Para dar sequência ao desenvolvimento, após a integração com o banco de dados, foi desenvolvido  modelo (template) para a tela acessada em seguida pelo usuário. Foi desenvolvido código em HyperText Markup Language (HTML) para a tela na ~\refFig{login} e para o layout foi construído código em Cascading Style Sheets (CSS) utilizando o framework Bootstrap. 
 
+\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.70\textwidth}%
 
 \figuraBib{login}{Tela de login implementada}{}{login}{width=.80\textwidth}%
 
