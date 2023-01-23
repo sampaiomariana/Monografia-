@@ -2,7 +2,7 @@ Este capítulo aborda exemplo de uso de processo de desenvolvimento anteriorment
 
 
 \section{Ciclo de vida do projeto}
-O ciclo de vida adotado no projeto foi embasado no ciclo de vida descrito no processo de desenvolvimento  OpenUp~\cite{openup}.Esse ciclo de vida é composto pelas seguintes fases: Concepção, Elaboração, Construção e Transição. O fluxo de trabalho nesse ciclo de vida é apresentado na \refFig{ciclodevida}. Em cada fase do ciclo de vida existe um processo proposto. Esse projeto seguiu processos da Concepção e  Elaboração.
+O ciclo de vida adotado no projeto foi embasado no ciclo de vida descrito no processo de desenvolvimento  OpenUP~\cite{openup}.Esse ciclo de vida é composto pelas seguintes fases: Concepção, Elaboração, Construção e Transição. O fluxo de trabalho nesse ciclo de vida é apresentado na \refFig{ciclodevida}. Em cada fase do ciclo de vida existe um processo proposto. Esse projeto seguiu processos da Concepção e  Elaboração.
 
 \figuraBib{ciclodevida}{Fases de trabalho em ciclo de vida}{openup}{ciclodevida}{width=.90\textwidth}%
 
@@ -176,16 +176,16 @@ O usuário pode realizar login no sistema, desde que ele já esteja cadastrado n
 
 \subsection{Funcionalidade: Visualizar perfil}
 
-O perfil de usuário depende do tipo de usuário cadastrado. Usuário  cadastrado como cidadão possui perfil com acesso ao sistema de consulta de medicamentos, acesso ao seu perfil e a qual posto de saúde está registrado. O cidadão pode acessar lista de medicamentos que usa e consultar se o seu posto de saúde tem esse medicamento. O cidadão pode acessar seu perfil e visualizar dados pessoais, como nome, sobrenome e e-mail. Usuário cadastrado como gestor pode visualizar seu perfil. Seu perfil possibilita acessar sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde pelo qual é responsável. Na \refFig{perfil_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
+O perfil de usuário depende do tipo de usuário cadastrado. Usuário  cadastrado como cidadão possui perfil com acesso ao sistema de consulta de medicamentos, acesso ao seu perfil e a qual posto de saúde está registrado. O cidadão pode acessar lista de medicamentos que usa e consultar se o seu posto de saúde tem esse medicamento. O cidadão pode acessar seu perfil e visualizar dados pessoais, como nome, sobrenome e e-mail. Usuário cadastrado como gestor pode visualizar seu perfil. Seu perfil possibilita acessar sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde pelo qual é responsável. Na \refFig{perfilcasodeuso} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
 
 
-\figuraBib{perfil_usecase}{Diagrama de caso de uso para visualizar perfil}{}{perfil_usecase}{width=.90\textwidth}%
+\figuraBib{perfilcasodeuso}{Diagrama de caso de uso para visualizar perfil}{}{perfilcasodeuso}{width=.98\textwidth}%
 
 \subsection{Funcionalidade: Consultar medicamentos registrados no sistema}
 
-O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema. Em caso afirmativo,  pode obter informação acerca do medicamento. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde. Caso contrário, é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadao_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
+O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema. Em caso afirmativo,  pode obter informação acerca do medicamento. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde. Caso contrário, é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadaocasodeuso} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
 
-\figuraBib{cidadao_usecase}{Diagrama de caso de uso para consultar medicamentos registrados no sistema.}{}{cidadao_usecase}{width=.90\textwidth}%
+\figuraBib{cidadaocasodeuso}{Diagrama de caso de uso para consultar medicamentos registrados no sistema}{}{cidadaocasodeuso}{width=.90\textwidth}%
 
 
 \subsection{Funcionalidade: Realizar controle do estoque de medicamentos}
@@ -209,7 +209,7 @@ Gestor de posto de saúde ao constatar que medicamento está em falta e precisa 
 
 Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque que deve ser realizado pelo gestor do posto de saúde.
 
-\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.45\textwidth}%
+\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.90\textwidth}%
 
 \section{Cenários Funcionais}
 
