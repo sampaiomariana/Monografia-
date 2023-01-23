@@ -153,65 +153,9 @@ Elementos dessa atividade são apresentados na ~\refFig{planejariteracao}. A seg
     \end{itemize}
 \end{itemize}
 
-\section{Arquitetura}
-\label{sec:arquitetura}
 
-Seguindo a estrutura do \acrfull{OpenUP} para este domínio tem-se  o produto que foi gerado para obter a arquitetura deste projeto. Para este domínio foi desenvolvido o artefato de caderno de arquitetura, artefato este do \acrfull{OpenUP} e também foram desenvolvidos dois artefatos que foram propostos na seção ~\ref{sec:5.2.1} e na seção ~\ref{sec:5.2.2}, artefatos estes relacionados a abordagem prática e aos passos de avaliação da arquitetura utilizada.
-
-\subsection{Avaliação do projeto prático}
-
-Como etapa para realizar a configuração do processo proposto para o desenvolvimento do sistema de software é proposto realizar um método para avaliação da arquitetura de software. Como proposto para esse projeto foi realizada a avaliação da arquitetura do sistema de software utilizando o método do \acrfull{SAAM}.
-
-\subsection{Descrição da arquitetura candidata}
-
-A fim de ter a arquitetura candidata de forma que seja de fácil compreensão para as partes interessada \emph{(stakeholders)} nesta descrição foram indicados os componentes integrantes da arquitetura candidata e os seus relacionamentos, sendo assim, a fim de permitir o fácil entendimento a arquitetura candidata foi esboçada na seguinte ~\refFig{arqcomponentescidadao}.
-
-\figuraBib{arqcomponentescidadao}{Componentes para arquitetura pela visão do cidadão}{}{arqcomponentescidadao}{width=.70\textwidth}%
-
-Ela foi dividida seguindo as funcionalidades que o cidadão deve possuir e as funcionalidades que o gestor deve possuir. A fim de exemplificar as funcionalidades e os seus respectivos componentes, foi utilizado o diagrama de componentes do \acrfull{UML}.
-
-Com isso, para descrever a arquitetura seguindo a visão do cidadão, tem-se que este tem funcionalidades que são especificas apenas se este estiver logado no sistema de software. Sendo assim, tem-se que, considerando que a parte interessada é o cidadão, tem-se que ele necessita de uma interface, interface esta que é apresentada pelo sistema de software desenvolvido neste trabalho. Este sistema de software fornece alguns componentes, sendo estas funcionalidades do sistema, e alguns destes são dependentes de outros componentes. Sendo assim, conforme apresentado na ~\refFig{arqcomponentescidadao} o sistema de software fornece os componentes de busca de medicamento que é dependente apenas do sistema de software e o componente de área de cadastro. Já o componente de área de login é dependente do componente de área de cadastro, visto que o usuário precisa ser cadastrado para ter acesso ao login e de área do perfil do cidadão é dependente da área de login do cidadão.
-
-
-\figuraBib{arqgestor}{Componentes para arquitetura pela visão do gestor}{}{arqgestor}{width=.70\textwidth}%
-
-Considerando a arquitetura que é necessária, tendo em vista que a parte interessada\emph{(stakeholders)} para essa parte é o gestor do posto de saúde, tem-se conforme apresentado na ~\refFig{arqgestor} que o sistema fornece uma série de funcionalidades, dentre elas tem-se a seção de controle do estoque, que possui as funcionalidades de cadastrar, atualizar, deletar e solicitar medicamento. A seção de área de cadastro do gestor, tendo o cadastro este pode se logar no sistema acessando a área de login e tem acesso a área de perfil do gestor. O sistema também fornece funcionalidades como a área de busca do medicamento, relatório mensal e relatório gerencial referente ao posto de saúde.
-
-\subsection{Desenvolver cenários}
-
-A fim de desenvolver cenários que são relevantes para o sistema de software, tem-se que de acordo com cada ação o sistema de software deve fornecer uma resposta.
-Os cenários apresentados a seguir representam tarefas que são consideradas relevantes no funcionamento do sistema de software em questão. A fim de apresentar esses cenários foi utilizado o diagrama de atividades do \acrfull{UML} a fim de detalhar as ações do usuário. Como ação relevante, tem-se inicialmente o acesso do cidadão a plataforma, no entanto ele irá realizar o cadastro antes de acessar. Essa ação foi referenciada na ~\refFig{cenariologarcid}.
-
-\figuraBib{cenariologarcid}{Cenário de login do cidadão.}{}{cenariologarcid}{width=.70\textwidth}%
-
-
-\figuraBib{cenariomedicamento}{Cenário de login para o gestor e consulta de medicamentos}{}{cenariomedicamento}{width=.60\textwidth}%
-
-Seguindo as ações relevantes para o sistema, tem-se o acesso de login para o gestor, que será semelhante ao acesso de login do cidadão relacionado a  ação de logar no sistema, no entanto as funcionalidades liberadas para este acesso são diferentes. Diante disso, para esse contexto será também apresentado o fluxo de ações que devem ser feitos para consulta de medicamentos. Esse fluxo foi apresentado na ~\refFig{cenariomedicamento}.
-
-
-\subsection{Avaliação do cenário}
-A fim de realizar a avaliação do cenário, foram considerados se os cenários em caso de erro foram considerados e consequentemente caso não estivem evidenciados eles deveriam ser alterados. Essa avaliação é necessária pois ela permite identificar os possíveis erros na arquitetura antes da implementação. O método \acrfull{SAAM} reforça a necessidade de analisar e avaliar os cenários antes da implementação com essa finalidade. Além da avaliação do cenário também foi avaliada a interação do cenário, a fim de verificar se ele permite uma fluidez para o sistema.
-
-Com isso, pode ser observado que o cenário apresentado na ~\refFig{cenariologarcid} permite realizar o login do cidadão e para esse cenário não foi necessária realizar nenhuma modificação em relação ao seu fluxo e na interação entre os componentes.
-
-Já o cenário apresentado na ~\refFig{cenariomedicamento} apresenta uma visão mais complexa do sistema, em que se tem a consulta aos medicamentos, especificando a etapa de cadastrar o medicamento. Esse cenário teve em suas alterações evidenciar os erros caso o campo preenchido pelo gestor ao cadastrar o medicamento estive errado.
-A necessidade dessa informação foi necessária pois assim o usuário saberia qual foi o campo que ele digitou de forma errada ao realizar a etapa de cadastro do medicamento.
-Outra complexidade que pode ser observada é que as áreas liberadas para o gestor são diferentes das áreas do cidadão, sendo assim, foi necessário avaliar a interação entre os componentes do sistema apresentado a fim de demonstrar apenas as áreas que são liberadas para cada usuário.
-
-Sendo assim, considerando que o método do \acrfull{SAAM} visa avaliar a arquitetura e realizar a classificação dos cenários de acordo com a sua relevância, pode ser observado que o cenário que envolve o gestor por ter mais funcionalidades exige uma complexidade maior na programação e na interação entre os componentes da arquitetura, conforme foi evidenciado na ~\refFig{cenariomedicamento} e no diagrama de componentes para arquitetura do gestor também evidenciado no ~\refFig{arqgestor}.
-
-
-\section{Requisitos do Sistema}
+\section{Requisitos funcionais}
 \label{sec:visão do sistema}
-
-Seguindo a estruturação de domínio de requisitos proposto pelo \acrfull{OpenUP}, nesta seção tem-se a seguinte lista de produtos que foram desenvolvidos para este projeto:
-\begin{itemize}
-    \item Glossário;
-    \item Documento de visão;
-    \item Requisitos funcionais do sistema;
-    \item Caso de uso.
-\end{itemize}
 
 O sistema de software desenvolvido com o propósito de  exemplificar o uso do processo de desenvolvimento configurado no capítulo anterior, tem como objetivo permitir que sejam realizadas consultas acerca de medicamentos disponibilizados ou não em posto de saúde; além de permitir o controle de estoque dos medicamentos em posto de saúde. A seguir, se encontra relação de nomes de atores que foram identificados:
 
@@ -220,40 +164,35 @@ O sistema de software desenvolvido com o propósito de  exemplificar o uso do pr
     \item Gestor do posto de saúde.
 \end{itemize}
 
+\figuraBib{atores}{Atores e relacionamento entre atores}{}{atores}{width=.90\textwidth}%
+
 Cidadão é usuário que necessita informação sobre medicamento que utiliza ou que precisa utilizar, e que deseja saber se esse medicamento é disponibilizado ou não pelo seu posto de saúde. Quem realiza a atualização de informação acerca de medicamento no posto de saúde é o gestor do posto de saúde, que através desse sistema controla estoque de medicamentos no posto de saúde no qual está alocado. A \refFig{atores} consiste de diagrama que mostra atores e relacionamentos entre os mesmos.
 
-\figuraBib{atores}{Atores e relacionamento entre atores}{}{atores}{width=.45\textwidth}%
+As funcionalidades correspondem aos requisitos funcionais do sistema. As funcionalidades serão relacionadas a seguir e depois descritas para melhor compreensão. As seguintes funcionalidades devem ser providas pelo sistema de software para ambos os atores: Autenticar usuário, Visualizar perfil. As seguintes  funcionalidades devem ser providas pelo sistema de software para o ator Cidadão: Consultar medicamentos registrados no sistema, Visualizar o gestor responsável pelo seu posto de saúde. Por fim, as seguintes funcionalidades devem ser providas pelo sistema de software para o ator Gestor do posto de saúde: Realizar controle do estoque de medicamentos no posto de saúde (Cadastrar medicamento; Editar registro do medicamento; Apagar registro do medicamento), Solicitar reposição de medicamentos para o posto de saúde.
 
-A definição da arquitetura do software é realizada após seleção de arquitetura candidata seguindo-se o\acrfull{SAAM}. Esse método explora possíveis cenários que podem resultar em problema no futuro, ao analisar a arquitetura utilizando-se esse método, o problema pode ser evitado desde o início da implementação, além de possibilitar uma documentação que apresente as decisões que foram tomadas. O artefato contendo informação acerca da visão do sistema se encontra no artefato de documento de visão.
+\subsection{Funcionalidade: Autenticar usuário}
 
-\subsection{Caso de uso do sistema}
+O usuário pode realizar login no sistema, desde que ele já esteja cadastrado no sistema. Ao se cadastrar, o usuário deve optar por ser cidadão ou gestor de posto de saúde. Dependendo do tipo de usuário, os acessos são distintos, visto que as funcionalidades providas pelo sistema dependem do tipo de usuário que acessa o sistema.
 
-As funcionalidades correspondem aos requisitos funcionais do sistema, estes foram determinados no artefato de especificação dos requisitos do sistema. As funcionalidades serão relacionadas a seguir e depois descritas para melhor compreensão. São funcionalidades que o sistema de software deve prover para ambos os atores: Autenticar usuário, Visualizar perfil. São  funcionalidades que o sistema de software deve prover para o cidadão: Consultar medicamentos registrados no sistema, Visualizar o gestor responsável pelo seu posto de saúde. Por fim, são  funcionalidades que o sistema de software deve prover para o gestor do posto de saúde: Realizar controle do estoque de medicamentos no posto de saúde (Cadastrar medicamento; Editar registro do medicamento; Apagar registro do medicamento), Solicitar reposição de medicamentos para o posto de saúde.
-
-\subsection{Autenticar o usuário}
-
-O usuário pode realizar o login no sistema, desde que ele já esteja cadastrado no sistema. Ao se cadastrar, o usuário deve optar por ser cidadão ou gestor de posto de saúde. Dependendo do tipo de usuário, os acessos são distintos, visto que a funcionalidade provida pelo sistema depende do tipo de usuário que acessa o sistema.
-
-\subsection{Visualizar perfil}
+\subsection{Funcionalidade: Visualizar perfil}
 
 O perfil de usuário depende do tipo de usuário cadastrado. Usuário  cadastrado como cidadão possui perfil com acesso ao sistema de consulta de medicamentos, acesso ao seu perfil e a qual posto de saúde está registrado. O cidadão pode acessar lista de medicamentos que usa e consultar se o seu posto de saúde tem esse medicamento. O cidadão pode acessar seu perfil e visualizar dados pessoais, como nome, sobrenome e e-mail. Usuário cadastrado como gestor pode visualizar seu perfil. Seu perfil possibilita acessar sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde pelo qual é responsável. Na \refFig{perfil_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
 
 
-\figuraBib{perfil_usecase}{Diagrama de caso de uso para visualizar perfil}{}{perfil_usecase}{width=.45\textwidth}%
+\figuraBib{perfil_usecase}{Diagrama de caso de uso para visualizar perfil}{}{perfil_usecase}{width=.90\textwidth}%
 
-\subsection{Consultar medicamentos registrados no sistema}
+\subsection{Funcionalidade: Consultar medicamentos registrados no sistema}
 
-O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema, caso esteja ele pode obter informações. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde, caso contrário é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadao_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto dessa funcionalidade do sistema.
+O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema. Em caso afirmativo,  pode obter informação acerca do medicamento. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde. Caso contrário, é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadao_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
 
-\figuraBib{cidadao_usecase}{Diagrama de caso de uso para consultar medicamentos registrados no sistema.}{}{cidadao_usecase}{width=.45\textwidth}%
-
-
-\subsection{Realizar controle do estoque de medicamentos no posto de saúde}
-
-O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos do posto de saúde sob sua responsabilidade. Para isso, o gestor pode cadastrar, editar e apagar o registro de medicamento no sistema. O sistema deve ser atualizado de forma que o sistema promova informações atualizadas para os seus usuários. Na \refFig{gestor_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto desta funcionalidade. A seguir, tem-se descrições dos casos de uso presentes nesse diagrama.
+\figuraBib{cidadao_usecase}{Diagrama de caso de uso para consultar medicamentos registrados no sistema.}{}{cidadao_usecase}{width=.90\textwidth}%
 
 
-\subsubsection{Cadastrar medicamento}
+\subsection{Funcionalidade: Realizar controle do estoque de medicamentos}
+
+O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos do posto de saúde sob sua responsabilidade. Para isso, o gestor pode cadastrar, editar e apagar o registro de medicamento no sistema. O sistema deve ser atualizado de forma que o sistema disponibilize informações atualizadas para os seus usuários. Na \refFig{gestor_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto dessa funcionalidade. A seguir, tem-se descrições resumidas dos casos de uso.
+
+\subsubsection{Caso de uso: Cadastrar medicamento}
 
 Gestor do posto de saúde pode registrar medicamento, fornecendo as informações que forem solicitadas.
 
@@ -272,140 +211,46 @@ Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque 
 
 \figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.45\textwidth}%
 
+\section{Cenários Funcionais}
+
+Antes de realizar login, o cidadão deve se cadastrar. Uma vez realizado login, o cidadão tem acesso ao seu perfil e à consulta de medicamentos. A seguir, relação de áreas às quais o cidadão tem acesso ao usar o sistema de software: área de login, área de cadastro, área do perfil e área de busca dos medicamentos. A visão do gestor é diferente da visão do usuário, visto que ele controla o estoque de medicamentos do posto de saúde. Após realizar login, o gestor tem acesso à busca por medicamentos. Esse usuário também possui acesso ao controle de medicamentos. No controle de medicamentos, pode cadastrar, editar ou excluir medicamento. Cada ação tem uma tela e uma configuração a ser feita. Caso o estoque de medicamentos esteja com uma quantidade de medicamentos abaixo do necessário, ele pode solicitar medicamentos para o posto a fim de evitar que o posto fique com estoque abaixo do necessário. O gestor tem acesso a relatório mensal referente aos medicamentos do posto de saúde. Além desse relatório mensal, também possui acesso a relatório gerencial do posto de saúde. A seguir, relação de áreas às quais o gestor tem acesso ao usar o sistema de software: área de login, área de cadastro, área do perfil, área de busca dos medicamentos, área de cadastro do medicamento, área de atualização do medicamento, área de deleção do medicamento, área de solicitação do medicamento, área de relatório mensal e área de relatório gerencial.
+
+\section{Arquitetura do software}
+\label{sec:arquitetura}
+
+\section{Projeto da interface com o usuário}
+
+\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.80\textwidth}%
+
+Para realizar login no sistema de software é necessário informar e-mail e senha. O login ocorrerá se o endereço de e-mail e a senha estiverem cadastrados. Para isso, foi construído código que realiza a validação do e-mail e da senha no banco de dados, vide ~\refFig{validation}. Caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema. Caso contrário, o usuário recebe mensagem alertando que foi encontrado erro. Dessa forma, apenas usuário cadastrado pode acessar determinadas informações no sistema de software. Para dar sequência ao desenvolvimento, após a integração com o banco de dados, foi desenvolvido  modelo (template) para a tela acessada em seguida pelo usuário. Foi desenvolvido código em HyperText Markup Language (HTML) para a tela na ~\refFig{login} e para o layout foi construído código em Cascading Style Sheets (CSS) utilizando o framework Bootstrap. 
 
 
-\section{Desenvolvimento}
+\figuraBib{login}{Tela de login implementada}{}{login}{width=.80\textwidth}%
 
-Seguindo a estruturação de domínio de desenvolvimento proposto pelo \acrfull{OpenUP}, nesta seção tem-se a seguinte lista de produtos que foram desenvolvidos para este projeto:
+\figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.80\textwidth}%
 
-\begin{itemize}
-    \item Implementação.
-  \end{itemize}
+\figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.80\textwidth}%
 
-\subsection{Projeto de banco de dados}
-Antes de realizar implementação, foi realizado projeto de banco de dados segundo o paradigma relacional. Esse modelo engloba entidades, atributos de entidades e relacionamentos entre  entidades. Cada entidade é representada por tabela e tem os seus relacionamentos representados por ligações entre tabelas. O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo relacional foi desenvolvido na ferramenta do MySQL Workbench, e se encontra na  \refFig{diagrama_mockup}.
+De acordo com a permissão que o usuário tenha, o mesmo pode acessar determinadas funcionalidades. Caso o usuário seja um cidadão, as funcionalidades providas para ele são diferentes das funcionalidades providas para o gestor. Sendo assim, para o cidadão tem-se a tela apresentada na ~\refFig{dashcidadao}. Já para o gestor, como são providas diferentes funcionalidades, tem-se a tela apresentada na ~\refFig{dashgestor}.
 
+\figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.80\textwidth}%
 
-\figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.60\textwidth}%
+Consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma, para que o gestor tenha acesso a essa área, o gestor precisa estar cadastro. O gestor pode realizar as seguintes ações: cadastramento de medicamento, atualização de medicamento e exclusão de medicamento, conforme ilustrado na ~\refFig{estoque}.
 
 
-\subsection{Implementação do projeto seguindo configuração proposta}
-\label{sec:implementação}
-Para realizar a implementação desde projeto, foram seguidas as etapas apresentadas anteriormente, a fim de determinar uma configuração e uso do processo de desenvolvimento de software.
-Sendo assim, tendo como referência o capítulo  ~\ref{sec:5.1.1} foi realizado um levantamento em relação às atividades e tarefas relevantes para o desenvolvimento da arquitetura de software do \acrfull{OpenUP}. Tendo esse levantamento foi realizada uma configuração do processo e nesta configuração foi elaborada uma descrição prática para a descrição da arquitetura que foi descrito no capítulo ~\ref{sec:5.2.1} e foi sugerida a adoção do método \acrfull{SAAM} com passos a serem incluídos em tarefas do \acrfull{OpenUP} no capítulo ~\ref{sec:5.2.2}. 
+\figuraBib{cadastromed}{Tela de cadastro de medicamentos}{}{cadastromed}{width=.80\textwidth}%
 
-Tendo essas referências como embasamento, neste capítulo ~\ref{sec:implementação} será apresentado como foi realizada a configuração apresentada durante a implementação deste sistema de software.
+Na ~\refFig{cadastromed} é apresentada tela para cadastramento de medicamento. Essa funcionalidade só é disponibilizada para o gestor do posto de saúde, logo a tela correspondente só aparece para usuário com permissão de gestor conforme ilustrado na ~\refFig{dashgestor}. 
 
-O \acrfull{OpenUP} possui um artefato que possui um artefato que foi desenvolvido que é o caderno de arquitetura. Este artefato tem como objetivo realizar a descrição lógica, as suposições e a explicação e as implicações das decisões que foram tomadas na projeção da arquitetura\cite{openup}.Para esta configuração é sugerido que seja incluído a prática que é descrita na norma \emph{IEEE 1471-2000 - IEEE Recommended Practice for Architectural Description of Software-Intensive Systems} conforme abordado no capítulo ~\ref{sec:5.2.1}. Dessa forma, a configuração proposta para este trabalho sugere inserir um novo artefato, sendo ele referente a abordagem prática da arquitetura além do caderno de arquitetura. Sendo assim, foi inserido um novo artefato ao projeto.
+\section{Projeto de banco de dados}
 
-\subsection{Abordagem prática}
-No desenvolvimento do artefato de abordagem prática, tem-se em uma das suas análises realizar a especificação em relação aos pontos de vista \emph{(viewpoint)} que devem ser realizados no sistema de software. Para isso, seguindo as especificações realizadas, tem-se que esse sistema terá sua arquitetura baseada no ponto de vista de dois atores, sendo eles possíveis usuários do sistema, o primeiro é o cidadão e em seguida o gestor do posto de saúde, conforme foi evidenciado no capítulo  ~\ref{sec:visão do sistema}.
-
-\subsection{Demandas a serem contempladas pelo ponto de vista}
-
-Tendo essa abordagem como embasamento, o sistema tem como objetivo abordar cenários de acordo com cada ponto de vista a ser estabelecido. Sendo assim, para a visão do cidadão, foram ser desenvolvidos os seguintes cenários:
-\begin{itemize}
-    \item Área de login;
-    \item Área de cadastro;
-    \item Área do perfil;
-    \item Área de busca dos medicamentos.
-\end{itemize}
-
-Para a visão do gestor do posto de saúde, foram desenvolvidos os seguintes cenários:
-
-\begin{itemize}
-    \item Área de login;
-    \item Área de cadastro;
-    \item Área do perfil;
-    \item Área de busca dos medicamentos;
-    \item Área de cadastro do medicamento;
-    \item Área de atualização do medicamento;
-    \item Área de deleção do medicamento;
-    \item Área de solicitação do medicamento;
-    \item Área de Relatório Mensal;
-    \item Área de Relatório Gerencial.
-\end{itemize}
-
-\subsection{Representação do sistema construído segundo as recomendações do ponto de vista associado}
-
-Para realizar essa representação foram desenvolvido um modelo de navegação a fim de apresentar o que contém em cada cenário e a partir dele é possível determinar um fluxo de ações que o usuário pode realizar no sistema. 
-
-Sendo assim, seguindo a visão do cidadão, tem-se que levando em consideração as sessões e como o usuário deve navegar pelo sistema, o usuário ao acessar tem acesso direto a tela com a consulta pelos medicamentos.
-O cidadão tem a opção de realizar o cadastro caso queira se registrar no sistema, para isso ele tem acesso a tela de cadastro e ao ter o seu cadastro realizado ele pode seguir para o login.
-A sessão do login do sistema pode ser feita apenas por usuários cadastrados no sistema. 
-O usuário que tem cadastro no sistema, pode acessar diretamente o seu perfil. Funcionalidade apenas para aqueles usuários cadastrados.
-
-Já para a visão do gestor, tem-se que a visão do gestor é diferente da visão do usuário visto que ele tem um controle em relação ao estoque de medicamentos do posto de saúde. Para ter acesso esse usuário precisa estar cadastrado no sistema. O gestor estando cadastrado pode realizar login no sistema, tendo esse login realizado o gestor tem acesso a tela de busca de medicamentos. A diferença é que esse usuário também possui acesso ao controle destes medicamentos.
-Na sessão de controle dos medicamentos ele pode cadastrar um novo medicamento, editar ou excluir esse registro. Como essas ações são ações distintas, cada ação tem uma tela e uma configuração a ser feita.
-Caso o estoque de medicamentos esteja com uma quantidade de medicamentos abaixo do necessário ele pode solicitar medicamentos para o posto a fim de evitar que o posto fique com estoque abaixo do necessário.
-Além disso o gestor tem acesso à sessão de relatório mensal referente aos medicamentos do posto de saúde em questão.
-Além desse relatório mensal ele possui um relatório gerencial para manter os registros do posto de saúde.
-
-\subsection{Razão para seleção da arquitetura}
-
-Essa arquitetura foi selecionada pois nela é possível identificar a necessidade de cada cenário a ser tratado. Visto que para cada ação o sistema tem uma ação associada e em diversos casos a consulta ao banco de dados está associada. Sendo assim, a arquitetura apresentada para essa configuração se torna interessante na descrição do sistema. 
-
-Com isso, para realizar a avaliação da arquitetura foi seguido o método do \acrfull{SAAM}. Método este que tem suas atividades evidenciadas no capítulo ~\ref{sec:5.2.2}. A fim de seguir o padrão de organização utilizado até o momento foi desenvolvido um artefato para essa avaliação.
-
-\subsection{Elementos da configuração para implementação do sistema de software}
-
-Para realizar o desenvolvimento do sistema de software foi utilizada uma linguagem de programação que é amplamente utilizada, sendo ela realizada em PHP. Justamente com PHP foi utilizada a \acrfull{HTML}, Javascript ,\acrfull{CSS} e para desenvolver o \emph{frontend} do sistema de software. A fim de tornar a interface do sistema mais amigável foi utilizado o framework \emph{Bootstrap}. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code.
-
-O \acrfull{SGBD} utilizado para o desenvolvimento do sistema de software foi o MySQL sendo acessado pela ferramenta do Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o MySQL Workbench. 
-
-Para realizar o acesso dessas tecnologias foi configurado um servidor local, sendo ele o XAMPP. O XAMPP possui um pacote que permite realizar a integração das tecnologias que foram necessárias para desenvolver o sistema de software.
-Ao iniciar o XAMPP são iniciados os serviços do Apache e do MySQL. Tendo esses serviços iniciados para acessar o sistema de software desenvolvido ele é acessado por meio do endereço http://localhost:8080/GSUS. O navegador web utilizado para realizar a navegação no sistema de software foi o Google Chrome.
-
-O projeto foi desenvolvido e executado em um notebook com sistema operacional Windows 10, contendo processador \newcommand{\azinho}{$^{\mathrm a}$} 5$^{\mathrm a}$ geração Intel Core i5 com 8 GB de memória RAM.
-
-\subsection{Elementos da implementação do sistema de software}
-
-Para realizar o desenvolvimento desse sistema de software foi necessário realizar a integração entre o Phpmyadmin com o sistema de software. Para isso, foi necessário primeiro realizar a configuração do banco de dados no Phpmyadmin e posteriormente foi criado um código em PHP a fim de realizar a conexão do banco com o sistema ~\refFig{connection}.
-
-\figuraBib{connection}{Código para realizar conexão com banco de dados}{}{connection}{width=.60\textwidth}%
-
-Para realizar o login no sistema de software é necessário informar o e-mail e a senha, para ser realizado o login no sistema, esse login só vai acontecer caso o e-mail e a senha estejam cadastrados no sistema de software. Para isso, foi desenvolvido um código que realiza a validação do e-mail e da senha no banco de dados, caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema, caso contrário o usuário recebe uma mensagem alertando que foi encontrado um erro ~\refFig{validation}.
+Antes de realizar implementação, foi realizado projeto de banco de dados segundo o paradigma relacional. O modelo desenvolvido engloba entidades, atributos de entidades e relacionamentos entre entidades. Cada entidade é representada por tabela e tem os seus relacionamentos representados por ligações entre tabelas. O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo de banco de dados foi desenvolvido usando-se a ferramenta do MySQL Workbench, e se encontra na\refFig{diagrama_mockup}.
 
 
-\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.60\textwidth}%
+\figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.90\textwidth}%
 
-Dessa forma, apenas o usuário que tem cadastro pode acessar informações mais sensíveis do sistema de software.
-Para dar sequência ao desenvolvimento da aplicação para as demais telas, após a integração com o banco foi desenvolvido o template para tela que seria acessada em seguida pelo usuário. Dessa forma , foi desenvolvido um código em \acrfull{HTML} para o \emph{frontend} ~\refFig{login} e para o desenvolvimento do layout foi desenvolvido um código em \acrfull{CSS} utilizando o framework do Bootstrap.
-
-\figuraBib{login}{Tela de login implementada}{}{login}{width=.50\textwidth}%
+\section{Ferramentas de desenvolvimento}
+Para desenvolver o sistema de software, foi utilizada uma linguagem de programação popular, a linguagem PHP. As seguintes tecnologias foram também utilizadas: \acrfull{HTML}, Javascript e \acrfull{CSS} para desenvolver o frontend do sistema de software. Na construção da interface com o usuário, foi utilizado o framework Bootstrap. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code. O sistema gerenciador de banco de dados (SGBD) utilizado foi o MySQL, acessado pela ferramenta Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o MySQL Workbench. Para realizar o acesso dessas tecnologias foi configurado um servidor local, sendo ele o XAMPP. O XAMPP possui um pacote que permite realizar a integração das tecnologias que foram necessárias para desenvolver o sistema de software. Ao iniciar o XAMPP são iniciados os serviços do Apache e do MySQL. Tendo esses serviços iniciados para acessar o sistema de software desenvolvido, ele é acessado por meio do endereço http://localhost:8080/GSUS. O navegador web utilizado para realizar a navegação no sistema de software foi o Google Chrome. O projeto foi desenvolvido e executado em um notebook com sistema operacional Windows 10, contendo processador 5a geração Intel Core i5 com 8 GB de memória RAM. Para realizar o desenvolvimento desse sistema de software, foi necessário realizar a integração entre o Phpmyadmin e o sistema de software. Para isso, foi necessário primeiro realizar a configuração do banco de dados no Phpmyadmin e posteriormente foi criado um código em PHP a fim de realizar a conexão do banco com o sistema. Código para conexão com o banco de dados se encontra na ~\refFig{connection}.
 
 
-
-\subsection{Elementos para interface do sistema de software}
-
-Para realizar o teste de funcionalidade entre o banco de dados e o sistema de software foi necessário realizar testes no sistema de software. Sendo assim, de acordo com a funcionalidade que o usuário queira acessar existe um \emph{layout} que deve ser exibido. Este \emph{layout} varia de acordo com a funcionalidade que é selecionada pelo usuário.
-
-\subsubsection{Login}
-
-Para realizar o login no sistema, foi realizado o teste com o usuário caso ele já tivesse cadastrado no banco de dados, dessa forma, tem-se que foi utilizado para esta implementação o ~\refFig{connection} para realizar a integração com o banco de dados, como \emph{frontend} tem-se o ~\refFig{validation} que está implementado na tela de ~\refFig{login}. Tendo essas funcionalidades implementadas e integradas é possível se conectar a interface do sistema de software.
-
-
-\subsubsection{Visualização da tela do usuário implementada}
-
-De acordo com a permissão que o usuário tenha ele pode acessar o seu sistema correspondente, sendo assim, caso o usuário seja um cidadão as funcionalidades apresentadas para ele são diferentes das funcionalidades apresentadas para o gestor.
-
-
-\figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.70\textwidth}%
-
-Sendo assim, para o cidadão tem-se a tela conforme apresentada na ~\refFig{dashcidadao}.
-
-
-\figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.70\textwidth}%
-
-Já para o gestor, como são apresentadas diferentes funcionalidades, a sua tela principal é também diferente, sendo está tela apresentada na ~\refFig{dashgestor}.
-
-
-\subsubsection{Consulta de estoque}
-
-A consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma para que o gestor tenha acesso à essa área o gestor precisa estar cadastro. Dentre as funcionalidades que o gestor  tem-se que ele pode realizar as ações de cadastro do medicamento, atualização do medicamento e deleção do medicamento conforme evidenciado na ~\refFig{estoque}. 
-
-\figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.70\textwidth}%
-
-\figuraBib{cadastromed}{Tela de cadastro de medicamentos}{}{cadastromed}{width=.70\textwidth}%
-
-Já na ~\refFig{cadastromed} é apresentada a tela de cadastro de medicamentos. Esta funcionalidade só é disponibilizada para o gestor do posto de saúde, logo ela só aparece para usuário com permissão de gestor conforme foi evidenciado na ~\refFig{dashgestor}.
+\figuraBib{connection}{Código para realizar conexão com banco de dados}{}{connection}{width=.90\textwidth}%
