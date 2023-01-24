@@ -194,22 +194,34 @@ O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos
 
 \subsubsection{Caso de uso: Cadastrar medicamento}
 
-Gestor do posto de saúde pode registrar medicamento, fornecendo as informações que forem solicitadas.
+Gestor do posto de saúde pode cadastrar medicamento, fornecendo as informações que forem solicitadas.
 
-\subsubsection{Atualizar informações de medicamento}
+\subsubsection{Caso de uso: Atualizar informações de medicamento}
 
-Gestor do posto de saúde pode alterar registro de medicamento e este deve atualizar registro de medicamento. 
+Gestor do posto de saúde pode atualizar registro de medicamento.
 
-\subsubsection{Apagar medicamento}
+\subsubsection{Caso de uso: Excluir medicamento}
 
-Caso o medicamento pare de ser disponibilizado pelo posto de saúde, gestor pode apagar registro de medicamento.
+Caso o medicamento pare de ser disponibilizado pelo posto de saúde, gestor pode excluir registro de medicamento.
 
-\subsubsection{Solicitar reposição de medicamentos}
-Gestor de posto de saúde ao constatar que medicamento está em falta e precisa de reposição, ou quer solicitar novos medicamentos para posto de saúde, deve preencher formulário de solicitação de medicamentos. Isso permite que o posto de saúde controle o estoque de modo a prevenir a falta de medicamento no posto de saúde.
+\subsubsection{Caso de uso: Solicitar reposição de medicamento}
+Gestor de posto de saúde ao constatar que medicamento está em falta e precisa de reposição, ou quer solicitar novos medicamentos para posto de saúde, deve preencher formulário de solicitação de medicamento. Isso permite que o posto de saúde controle o estoque de modo a prevenir a falta de medicamento no posto de saúde.
 
 Na \refFig{gestor_usecase} tem o diagrama de caso de uso do controle de estoque que deve ser realizado pelo gestor do posto de saúde.
 
 \figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.90\textwidth}%
+
+
+\subsubsection{Caso de uso: Acessar lista de medicamento registrado no sistema}
+
+Ao acessar a lista de medicamento o usuário pode verificar a quantidade de medicamento disponíveis, a descrição do medicamento e em que posto de saúde o medicamento está disponibilizado.
+
+\subsubsection{Caso de uso: Solicitar reposição de medicamento}
+
+O gestor ao avessar a lista de medicamentos e verificar a quantidade de medicamentos ele pode optar por solicitar a reposição de medicamento ou não.
+
+
+
 
 \section{Cenários Funcionais}
 
