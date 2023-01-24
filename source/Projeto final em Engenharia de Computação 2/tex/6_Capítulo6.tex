@@ -179,18 +179,18 @@ O usuário pode realizar login no sistema, desde que ele já esteja cadastrado n
 O perfil de usuário depende do tipo de usuário cadastrado. Usuário  cadastrado como cidadão possui perfil com acesso ao sistema de consulta de medicamentos, acesso ao seu perfil e a qual posto de saúde está registrado. O cidadão pode acessar lista de medicamentos que usa e consultar se o seu posto de saúde tem esse medicamento. O cidadão pode acessar seu perfil e visualizar dados pessoais, como nome, sobrenome e e-mail. Usuário cadastrado como gestor pode visualizar seu perfil. Seu perfil possibilita acessar sistema de gestão de estoque de medicamentos, sendo assim, ele pode atualizar o sistema de estoque do posto de saúde pelo qual é responsável. Na \refFig{perfilcasodeuso} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
 
 
-\figuraBib{perfilcasodeuso}{Diagrama de caso de uso para visualizar perfil}{}{perfilcasodeuso}{width=.98\textwidth}%
+\figuraBib{perfilcasodeuso}{Diagrama de caso de uso para visualizar perfil}{}{perfilcasodeuso}{width=.90\textwidth}%
 
 \subsection{Funcionalidade: Consultar medicamentos registrados no sistema}
 
 O cidadão pode consultar no sistema, se o medicamento que ele precisa está registrado no sistema. Em caso afirmativo,  pode obter informação acerca do medicamento. Por exemplo, para que é destinado o seu uso, e como deve ser feito o seu uso. Além disso, também é possível verificar se esse medicamento é disponibilizado pelo seu posto de saúde. Caso contrário, é listado se esse medicamento está disponibilizado na farmácia. Na \refFig{cidadaocasodeuso} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso.
 
-\figuraBib{cidadaocasodeuso}{Diagrama de caso de uso para consultar medicamentos registrados no sistema}{}{cidadaocasodeuso}{width=.90\textwidth}%
+\figuraBib{cidadaocasodeuso}{Diagrama de caso de uso para consultar medicamentos registrados no sistema}{}{cidadaocasodeuso}{width=.70\textwidth}%
 
 
 \subsection{Funcionalidade: Realizar controle do estoque de medicamentos}
 
-\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.90\textwidth}%
+\figuraBib{gestor_usecase}{Diagrama de caso de uso para controle de estoque do medicamento}{}{gestor_usecase}{width=.80\textwidth}%
 
 O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos do posto de saúde sob sua responsabilidade. Para isso, o gestor pode cadastrar, editar e apagar o registro de medicamento no sistema. O sistema deve ser atualizado de forma que o sistema disponibilize informações atualizadas para os seus usuários. Na \refFig{gestor_usecase} tem-se diagrama de caso de uso contendo representações de atores e de relacionamentos entre atores e casos de uso, no contexto dessa funcionalidade. A seguir, tem-se descrições resumidas dos casos de uso.
 
@@ -237,18 +237,19 @@ A fim de apresentar a arquitetura do software do sistema desenvolvido para este 
 
 Para apresentar essa visão \emph{(view)} tem-se que a arquitetura foi decomposta em componentes. A arquitetura do software possui um conjunto de componentes que são organizados de acordo com as funcionalidades que este componente deve prover no sistema de software. 
 
-\figuraBib{arquitetura01}{Arquitetura decomposta em componentes}{}{arquitetura01}{width=.80\textwidth}%
+\figuraBib{arquitetura01}{Arquitetura decomposta em componentes}{}{arquitetura01}{width=.70\textwidth}%
 
 Apresentando de forma generalizada a arquitetura, tem-se que a partir de um navegador o usuário, seja ele cidadão ou gestor do posto pode acessar os serviços providos para o usuário acessando a interface da aplicação. Ao ter acesso, tem-se o acesso para usuários especifico, sendo assim para o cidadão ou para o gestor. No entanto ambos têm acesso aos medicamentos que estão registrados na aplicação, conforme evidenciado na  ~\refFig{arquitetura01}.
 
 Nessa arquitetura pode ser adotada uma visão \emph{view} sob perspectiva dos interesses relacionados ao catálogo de medicamentos, pode ser adotado o ponto de vista apenas para o cidadão, visto que este tem a aplicação com menos funcionalidades em relação ao gestor. Sendo assim, pode ser apontado que a partir do navegador o usuário pode acessar a interface do sistema a fim de acessar a aplicação. Essa aplicação fornece componentes referentes ao catálogo de medicamentos, conforme evidenciado na ~\refFig{arquitetura01}.
 
 
+\figuraBib{arquitetura_2}{Arquitetura decomposta em componentes sob ponto de vista do gestor do posto de saúde}{}{arquitetura_2}{width=.70\textwidth}%
+
 Sendo assim, para demonstrar a arquitetura deste sistema adotando uma visão \emph{view}, inicialmente, será considerado uma visão  representando a arquitetura sob perspectiva dos interesses relacionados ao controle do estoque do medicamento no posto de saúde, visto que essa arquitetura tem como ponto de vista o gestor do posto de saúde. Tendo o ponto de vista considerado para o gestor do posto de saúde, tem-se definida a audiência e o propósito de visão de arquitetura.
 
 Dessa forma, a partir do uso do navegador o usuário pode acessar a interface do sistema a fim de acessar a aplicação. Essa aplicação fornece componentes referentes aos usuários do sistema e aos medicamentos que estão registrados na aplicação conforme evidenciado na ~\refFig{arquitetura_2}.
 
-\figuraBib{arquitetura_2}{Arquitetura decomposta em componentes sob ponto de vista do gestor do posto de saúde}{}{arquitetura_2}{width=.80\textwidth}%
 
 
 
@@ -256,19 +257,23 @@ Dessa forma, a partir do uso do navegador o usuário pode acessar a interface do
 \section{Projeto da interface com o usuário}
 
 
-Para realizar login no sistema de software é necessário informar e-mail e senha. O login ocorrerá se o endereço de e-mail e a senha estiverem cadastrados. Para isso, foi construído código que realiza a validação do e-mail e da senha no banco de dados, vide ~\refFig{validation}. Caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema. Caso contrário, o usuário recebe mensagem alertando que foi encontrado erro. Dessa forma, apenas usuário cadastrado pode acessar determinadas informações no sistema de software. Para dar sequência ao desenvolvimento, após a integração com o banco de dados, foi desenvolvido  modelo (template) para a tela acessada em seguida pelo usuário. Foi desenvolvido código em HyperText Markup Language (HTML) para a tela na ~\refFig{login} e para o layout foi construído código em Cascading Style Sheets (CSS) utilizando o framework Bootstrap. 
+
+Para realizar login no sistema de software é necessário informar e-mail e senha. O login ocorrerá se o endereço de e-mail e a senha estiverem cadastrados. Para isso, foi construído código que realiza a validação do e-mail e da senha no banco de dados, vide ~\refFig{validation}. Caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema. Caso contrário, o usuário recebe mensagem alertando que foi encontrado erro. Dessa forma, apenas usuário cadastrado pode acessar determinadas informações no sistema de software. 
 
 \figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.70\textwidth}%
 
-\figuraBib{login}{Tela de login implementada}{}{login}{width=.80\textwidth}%
+Para dar sequência ao desenvolvimento, após a integração com o banco de dados, foi desenvolvido  modelo (template) para a tela acessada em seguida pelo usuário. Foi desenvolvido código em HyperText Markup Language (HTML) para a tela na ~\refFig{login} e para o layout foi construído código em Cascading Style Sheets (CSS) utilizando o framework Bootstrap. 
 
-\figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.80\textwidth}%
 
-\figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.80\textwidth}%
+\figuraBib{login}{Tela de login implementada}{}{login}{width=.60\textwidth}%
+
+\figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.70\textwidth}%
+
+\figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.70\textwidth}%
 
 De acordo com a permissão que o usuário tenha, o mesmo pode acessar determinadas funcionalidades. Caso o usuário seja um cidadão, as funcionalidades providas para ele são diferentes das funcionalidades providas para o gestor. Sendo assim, para o cidadão tem-se a tela apresentada na ~\refFig{dashcidadao}. Já para o gestor, como são providas diferentes funcionalidades, tem-se a tela apresentada na ~\refFig{dashgestor}.
 
-\figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.80\textwidth}%
+\figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.70\textwidth}%
 
 Consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma, para que o gestor tenha acesso a essa área, o gestor precisa estar cadastro. O gestor pode realizar as seguintes ações: cadastramento de medicamento, atualização de medicamento e exclusão de medicamento, conforme ilustrado na ~\refFig{estoque}.
 
@@ -277,15 +282,16 @@ Consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma, 
 
 Na ~\refFig{cadastromed} é apresentada tela para cadastramento de medicamento. Essa funcionalidade só é disponibilizada para o gestor do posto de saúde, logo a tela correspondente só aparece para usuário com permissão de gestor conforme ilustrado na ~\refFig{dashgestor}. 
 
+
 \section{Projeto de banco de dados}
 
-Antes de realizar implementação, foi realizado projeto de banco de dados segundo o paradigma relacional. O modelo desenvolvido engloba entidades, atributos de entidades e relacionamentos entre entidades. Cada entidade é representada por tabela e tem os seus relacionamentos representados por ligações entre tabelas. O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo de banco de dados foi desenvolvido usando-se a ferramenta do MySQL Workbench, e se encontra na\refFig{diagrama_mockup}.
 
+Antes de realizar implementação, foi realizado projeto de banco de dados segundo o paradigma relacional. O modelo desenvolvido engloba entidades, atributos de entidades e relacionamentos entre entidades. Cada entidade é representada por tabela e tem os seus relacionamentos representados por ligações entre tabelas. 
+O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo de banco de dados foi desenvolvido usando-se a ferramenta do MySQL Workbench, e se encontra na\refFig{diagrama_mockup}.
 
-\figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.90\textwidth}%
-
+\figuraBib{diagrama_mockup}{Modelo relacional do GSUS }{}{diagrama_mockup}{width=.80\textwidth}%
 \section{Ferramentas de desenvolvimento}
 Para desenvolver o sistema de software, foi utilizada uma linguagem de programação popular, a linguagem PHP. As seguintes tecnologias foram também utilizadas: \acrfull{HTML}, Javascript e \acrfull{CSS} para desenvolver o frontend do sistema de software. Na construção da interface com o usuário, foi utilizado o framework Bootstrap. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code. O sistema gerenciador de banco de dados (SGBD) utilizado foi o MySQL, acessado pela ferramenta Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o MySQL Workbench. Para realizar o acesso dessas tecnologias foi configurado um servidor local, sendo ele o XAMPP. O XAMPP possui um pacote que permite realizar a integração das tecnologias que foram necessárias para desenvolver o sistema de software. Ao iniciar o XAMPP são iniciados os serviços do Apache e do MySQL. Tendo esses serviços iniciados para acessar o sistema de software desenvolvido, ele é acessado por meio do endereço http://localhost:8080/GSUS. O navegador web utilizado para realizar a navegação no sistema de software foi o Google Chrome. O projeto foi desenvolvido e executado em um notebook com sistema operacional Windows 10, contendo processador 5a geração Intel Core i5 com 8 GB de memória RAM. Para realizar o desenvolvimento desse sistema de software, foi necessário realizar a integração entre o Phpmyadmin e o sistema de software. Para isso, foi necessário primeiro realizar a configuração do banco de dados no Phpmyadmin e posteriormente foi criado um código em PHP a fim de realizar a conexão do banco com o sistema. Código para conexão com o banco de dados se encontra na ~\refFig{connection}.
 
 
-\figuraBib{connection}{Código para realizar conexão com banco de dados}{}{connection}{width=.90\textwidth}%
+\figuraBib{connection}{Código para realizar conexão com banco de dados}{}{connection}{width=.70\textwidth}%
