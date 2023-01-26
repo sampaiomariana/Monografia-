@@ -231,68 +231,56 @@ Antes de realizar login, o cidadão deve se cadastrar. Uma vez realizado login, 
 \section{Arquitetura do software}
 \label{sec:arquitetura}
 
-A fim de apresentar a arquitetura do software do sistema desenvolvido para este projeto, tem-se como objetivo neste capítulo adotar uma visão\emph{(view)} e representar a arquitetura de software em relação a um ponto de vista\emph{viewpoint} conforme descrito no capítulo ~\ref{sec:viewpoint}.
+Nesta seção é apresentada a arquitetura do software segundo uma visão\emph{(view)} e a mesma é representada segundo um ponto de vista \emph{viewpoint}. O sistema de software é inicialmente decomposto em componentes, considerando as responsabilidades do mesmo. Nessa arquitetura, tem-se que usando um navegador, o usuário, seja ele cidadão ou gestor do posto, pode acessar os serviços providos para o usuário acessando a interface da aplicação. Ao ter acesso, tem-se o acesso para usuário especifico, sendo assim para o cidadão ou para o gestor. Ambos têm acesso aos medicamentos que estão registrados na aplicação, conforme evidenciado na ~\refFig{arquitetura01}.
 
+\figuraBib{arquitetura01}{Sistema de software decomposto em componentes}{}{arquitetura01}{width=.60\textwidth}%
 
-A fim de apresentar a arquitetura do software do sistema desenvolvido para este projeto, tem-se como objetivo neste capítulo adotar uma visão\emph{(view)} e representar a arquitetura de software em relação a um ponto de vista\emph{viewpoint} conforme descrito no capítulo ~\ref{sec:viewpoint}.
+\figuraBib{arquitetura_2}{Sistema de software segundo uma visão de subsistemas}{}{arquitetura_2}{width=.60\textwidth}%
 
-Para apresentar essa visão \emph{(view)} tem-se que a arquitetura foi decomposta em componentes. A arquitetura do software possui um conjunto de componentes que são organizados de acordo com as funcionalidades que este componente deve prover no sistema de software. 
-
-\figuraBib{arquitetura01}{Arquitetura decomposta em componentes}{}{arquitetura01}{width=.70\textwidth}%
-
-Apresentando de forma generalizada a arquitetura, tem-se que a partir de um navegador o usuário, seja ele cidadão ou gestor do posto pode acessar os serviços providos para o usuário acessando a interface da aplicação. Ao ter acesso, tem-se o acesso para usuários especifico, sendo assim para o cidadão ou para o gestor. No entanto ambos têm acesso aos medicamentos que estão registrados na aplicação, conforme evidenciado na  ~\refFig{arquitetura01}.
-
-Nessa arquitetura pode ser adotada uma visão \emph{view} sob perspectiva dos interesses relacionados ao catálogo de medicamentos, pode ser adotado o ponto de vista apenas para o cidadão, visto que este tem a aplicação com menos funcionalidades em relação ao gestor. Sendo assim, pode ser apontado que a partir do navegador o usuário pode acessar a interface do sistema a fim de acessar a aplicação. Essa aplicação fornece componentes referentes ao catálogo de medicamentos, conforme evidenciado na ~\refFig{arquitetura01}.
-
-
-\figuraBib{arquitetura_2}{Arquitetura decomposta em componentes sob ponto de vista do gestor do posto de saúde}{}{arquitetura_2}{width=.70\textwidth}%
-
-Sendo assim, para demonstrar a arquitetura deste sistema adotando uma visão \emph{view}, inicialmente, será considerado uma visão  representando a arquitetura sob perspectiva dos interesses relacionados ao controle do estoque do medicamento no posto de saúde, visto que essa arquitetura tem como ponto de vista o gestor do posto de saúde. Tendo o ponto de vista considerado para o gestor do posto de saúde, tem-se definida a audiência e o propósito de visão de arquitetura.
-
-Dessa forma, a partir do uso do navegador o usuário pode acessar a interface do sistema a fim de acessar a aplicação. Essa aplicação fornece componentes referentes aos usuários do sistema e aos medicamentos que estão registrados na aplicação conforme evidenciado na ~\refFig{arquitetura_2}.
-
-
+Analisando a arquitetura seguindo uma visão \emph{(view)} de subsistemas, tem-se que o subsistema de autenticação. Esse subsistema tem como objetivo permitir que o usuário ao logar no sistema tenha acesso ao sistema que é disponibilizado de acordo com a sua permissão de acesso. O subsistema seguinte é referente ao usuário, isso ocorre pois, caso o usuário autenticado seja o cidadão, ele tem funcionalidades como acesso a lista de medicamentos disponibilizadas. Enquanto caso o usuário autenticado seja o gestor do posto de saúde, as funcionalidades disponibilizadas são distintas, como exemplo, a funcionalidade de controle de estoque. Por fim, o subsistema de medicamentos é responsável pelo acesso aos medicamentos que serão registrados no sistema. Sendo assim, pode ser observado na ~\refFig{arquitetura_2} que o sistema é composto por três subsistemas, cada um contendo a sua respectiva responsabilidades para o sistema de software deste projeto.
 
 
 
 \section{Projeto da interface com o usuário}
 
-
-
 Para realizar login no sistema de software é necessário informar e-mail e senha. O login ocorrerá se o endereço de e-mail e a senha estiverem cadastrados. Para isso, foi construído código que realiza a validação do e-mail e da senha no banco de dados, vide ~\refFig{validation}. Caso seja encontrado um registro no banco de dados, o usuário tem acesso ao sistema. Caso contrário, o usuário recebe mensagem alertando que foi encontrado erro. Dessa forma, apenas usuário cadastrado pode acessar determinadas informações no sistema de software. 
 
-\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.70\textwidth}%
+\figuraBib{validation}{Código para realizar validação de login}{}{validation}{width=.60\textwidth}%
 
-Para dar sequência ao desenvolvimento, após a integração com o banco de dados, foi desenvolvido  modelo (template) para a tela acessada em seguida pelo usuário. Foi desenvolvido código em HyperText Markup Language (HTML) para a tela na ~\refFig{login} e para o layout foi construído código em Cascading Style Sheets (CSS) utilizando o framework Bootstrap. 
+Para dar sequência ao desenvolvimento, após a integração com o banco de dados, foi desenvolvido  modelo (template) para a tela acessada em seguida pelo usuário. Foi desenvolvido código em \emph{\acrfull{HTML}} para a tela na ~\refFig{login} e para o \emph{layout} foi construído código em \emph{\acrfull{CSS}} utilizando o \emph{framework} Bootstrap. 
 
 
-\figuraBib{login}{Tela de login implementada}{}{login}{width=.60\textwidth}%
+\figuraBib{login}{Tela de login implementada}{}{login}{width=.50\textwidth}%
 
-\figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.70\textwidth}%
+\figuraBib{dashgestor}{Tela principal para o gestor implementada}{}{dashgestor}{width=.65\textwidth}%
 
-\figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.70\textwidth}%
+\figuraBib{dashcidadao}{Tela principal para o cidadão implementada}{}{dashcidadao}{width=.65\textwidth}%
 
 De acordo com a permissão que o usuário tenha, o mesmo pode acessar determinadas funcionalidades. Caso o usuário seja um cidadão, as funcionalidades providas para ele são diferentes das funcionalidades providas para o gestor. Sendo assim, para o cidadão tem-se a tela apresentada na ~\refFig{dashcidadao}. Já para o gestor, como são providas diferentes funcionalidades, tem-se a tela apresentada na ~\refFig{dashgestor}.
 
-\figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.70\textwidth}%
+\figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.65\textwidth}%
 
-Consulta ao estoque só pode ser realizada pelo gestor do projeto, dessa forma, para que o gestor tenha acesso a essa área, o gestor precisa estar cadastro. O gestor pode realizar as seguintes ações: cadastramento de medicamento, atualização de medicamento e exclusão de medicamento, conforme ilustrado na ~\refFig{estoque}.
+Consulta ao estoque só pode ser realizada pelo gestor, dessa forma, para que o gestor tenha acesso a essa área, o gestor precisa estar cadastro. O gestor pode realizar as seguintes ações: cadastramento de medicamento, atualização de medicamento e exclusão de medicamento, conforme ilustrado na ~\refFig{estoque}.
 
 
-\figuraBib{cadastromed}{Tela de cadastro de medicamentos}{}{cadastromed}{width=.80\textwidth}%
+\figuraBib{cadastromed}{Tela de cadastro de medicamentos}{}{cadastromed}{width=.65\textwidth}%
 
 Na ~\refFig{cadastromed} é apresentada tela para cadastramento de medicamento. Essa funcionalidade só é disponibilizada para o gestor do posto de saúde, logo a tela correspondente só aparece para usuário com permissão de gestor conforme ilustrado na ~\refFig{dashgestor}. 
 
 
-\section{Projeto de banco de dados}
+\section{Projeto do banco de dados}
 
+\figuraBib{diagramabd}{Modelo relacional desenvolvido para o projeto}{}{diagramabd}{width=.82\textwidth}%
 
 Antes de realizar implementação, foi realizado projeto de banco de dados segundo o paradigma relacional. O modelo desenvolvido engloba entidades, atributos de entidades e relacionamentos entre entidades. Cada entidade é representada por tabela e tem os seus relacionamentos representados por ligações entre tabelas. 
-O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo de banco de dados foi desenvolvido usando-se a ferramenta do Astah, e se encontra na \refFig{diagramabd}.
+O modelo desenvolvido auxiliou na implementação do sistema de software. Esse modelo de banco de dados foi desenvolvido usando-se a ferramenta Astah, e se encontra na \refFig{diagramabd}.
 
-\figuraBib{diagramabd}{Modelo relacional do GSUS }{}{diagramabd}{width=.999\textwidth}%
 \section{Ferramentas de desenvolvimento}
-Para desenvolver o sistema de software, foi utilizada uma linguagem de programação popular, a linguagem PHP. As seguintes tecnologias foram também utilizadas: \acrfull{HTML}, Javascript e \acrfull{CSS} para desenvolver o frontend do sistema de software. Na construção da interface com o usuário, foi utilizado o framework Bootstrap. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code. O sistema gerenciador de banco de dados (SGBD) utilizado foi o MySQL, acessado pela ferramenta Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o Astah. Para realizar o acesso dessas tecnologias foi configurado um servidor local, sendo ele o XAMPP. O XAMPP possui um pacote que permite realizar a integração das tecnologias que foram necessárias para desenvolver o sistema de software. Ao iniciar o XAMPP são iniciados os serviços do Apache e do MySQL. Tendo esses serviços iniciados para acessar o sistema de software desenvolvido, ele é acessado por meio do endereço http://localhost:8080/GSUS. O navegador web utilizado para realizar a navegação no sistema de software foi o Google Chrome. O projeto foi desenvolvido e executado em um notebook com sistema operacional Windows 10, contendo processador 5a geração Intel Core i5 com 8 GB de memória RAM. Para realizar o desenvolvimento desse sistema de software, foi necessário realizar a integração entre o Phpmyadmin e o sistema de software. Para isso, foi necessário primeiro realizar a configuração do banco de dados no Phpmyadmin e posteriormente foi criado um código em PHP a fim de realizar a conexão do banco com o sistema. Código para conexão com o banco de dados se encontra na ~\refFig{connection}.
 
+Para desenvolver o sistema de software, foi utilizada uma linguagem de programação popular, a linguagem PHP. As seguintes tecnologias foram também utilizadas: \emph{\acrfull{HTML}}, Javascript e \emph{\acrfull{CSS}} para desenvolver o frontend do sistema de software. Na construção da interface com o usuário, foi utilizado o framework Bootstrap. O desenvolvimento do sistema de software foi realizado utilizando o editor de texto Visual Studio Code. O sistema gerenciador de banco de dados (SGBD) utilizado foi o MySQL, acessado pela ferramenta Phpmyadmin. Para desenvolver o modelo relacional foi utilizado o Astah. Para realizar o acesso dessas tecnologias foi configurado um servidor local, sendo ele o XAMPP. O XAMPP possui um pacote que permite realizar a integração das tecnologias que foram necessárias para desenvolver o sistema de software. Ao iniciar o XAMPP são iniciados os serviços do Apache e do MySQL. Tendo esses serviços iniciados para acessar o sistema de software desenvolvido, ele é acessado por meio do endereço http://localhost:8080/GSUS. O navegador web utilizado para realizar a navegação no sistema de software foi o Google Chrome. O projeto foi desenvolvido e executado em um notebook com sistema operacional Windows 10, contendo processador 5a geração Intel Core i5 com 8 GB de memória RAM. 
 
 \figuraBib{connection}{Código para realizar conexão com banco de dados}{}{connection}{width=.70\textwidth}%
+
+Para realizar o desenvolvimento desse sistema de software, foi necessário realizar a integração entre o Phpmyadmin e o sistema de software. Para isso, foi necessário primeiro realizar a configuração do banco de dados no Phpmyadmin e posteriormente foi criado um código em PHP a fim de realizar a conexão do banco com o sistema. Código para conexão com o banco de dados se encontra na ~\refFig{connection}.
+
+
