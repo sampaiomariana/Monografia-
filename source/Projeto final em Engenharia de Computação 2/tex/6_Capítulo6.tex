@@ -2,7 +2,7 @@ Este capítulo aborda exemplo de uso de processo de desenvolvimento anteriorment
 
 
 \section{Ciclo de vida do projeto}
-O ciclo de vida adotado no projeto foi embasado no ciclo de vida descrito no processo de desenvolvimento  OpenUP~\cite{openup}.Esse ciclo de vida é composto pelas seguintes fases: Concepção, Elaboração, Construção e Transição. As fases nesse ciclo de vida são representadas na \refFig{ciclodevida}. Em cada fase do ciclo de vida existe um processo proposto. Esse projeto seguiu processos da Concepção e  Elaboração.
+O ciclo de vida adotado no projeto foi embasado no ciclo de vida descrito no processo de desenvolvimento  OpenUP~\cite{openup}. Esse ciclo de vida é composto pelas seguintes fases: Concepção, Elaboração, Construção e Transição. As fases nesse ciclo de vida são representadas na \refFig{ciclodevida}. Em cada fase do ciclo de vida existe um processo proposto. Esse projeto seguiu as fases de Concepção e Elaboração.
 
 \figuraBib{ciclodevida}{Fases em ciclo de vida}{openup}{ciclodevida}{width=.80\textwidth}%
 
@@ -49,7 +49,7 @@ A atividade Planejar e gerenciar iteração permite que os membros da equipe se 
 
 \figuraBib{planejariteracao}{Elementos da atividade Planejar e gerenciar iteração}{openup}{planejariteracao}{width=.80\textwidth}%
 
-Elementos dessa atividade são apresentados na ~\refFig{planejariteracao}.A seguir, tarefa e artefato associados à atividade:
+Elementos dessa atividade são apresentados na ~\refFig{planejariteracao}. A seguir, tarefa e artefato associados à atividade:
 
 \begin{itemize}
     \item Tarefa: Planejar iteração.
@@ -65,7 +65,7 @@ A tarefa Planejar iteração tem como objetivo identificar o próximo incremento
 A atividade Identificar e refinar requisitos tem como objetivo detalhar um conjunto de requisitos do sistema, detalhar serviços que o sistema de software deve prover, especificando-os por meio de casos de uso ou de cenários referentes ao sistema de software. Nessa atividade foi realizada tarefa e construídos artefatos. Elementos dessa atividade são apresentados na ~\refFig{identificarrefinarrequisitos}. A seguir, tarefa e artefatos associados à atividade:
 
 \begin{itemize}
-    \item Tarefar: Identificar e esboçar requisitos;
+    \item Tarefa: Identificar e esboçar requisitos;
         \begin{itemize}
             \item Artefato: Glossário;
             \item Artefato: Requisitos com abrangência de sistema;
@@ -169,7 +169,7 @@ O sistema de software desenvolvido com o propósito de  exemplificar o uso do pr
 
 Cidadão é usuário que necessita informação sobre medicamento que utiliza ou que precisa utilizar, e que deseja saber se esse medicamento é disponibilizado ou não pelo seu posto de saúde. Quem realiza a atualização de informação acerca de medicamento no posto de saúde é o gestor do posto de saúde, que através desse sistema controla estoque de medicamentos no posto de saúde no qual está alocado. A \refFig{atores} consiste de diagrama que mostra atores e relacionamentos entre os mesmos.
 
-As funcionalidades correspondem aos requisitos funcionais do sistema. As funcionalidades serão relacionadas a seguir e depois descritas para melhor compreensão. As seguintes funcionalidades devem ser providas pelo sistema de software para ambos os atores: Autenticar usuário, Visualizar perfil. As seguintes  funcionalidades devem ser providas pelo sistema de software para o ator Cidadão: Consultar medicamentos registrados no sistema, Visualizar o gestor responsável pelo seu posto de saúde. Por fim, as seguintes funcionalidades devem ser providas pelo sistema de software para o ator Gestor do posto de saúde: Realizar controle do estoque de medicamentos no posto de saúde (Cadastrar medicamento; Editar registro do medicamento; Apagar registro do medicamento), Solicitar reposição de medicamentos para o posto de saúde.
+As funcionalidades correspondem aos requisitos funcionais do sistema. Elas serão relacionadas a seguir e depois descritas para melhor compreensão. As seguintes funções devem ser providas pelo sistema de software para ambos os atores: Autenticar usuário, Visualizar perfil. Os serviços que devem ser providos pelo sistema de software para o ator Cidadão: Consultar medicamentos registrados no sistema, Visualizar o gestor responsável pelo seu posto de saúde. Por fim, os serviços que devem ser providos pelo sistema de software para o ator Gestor do posto de saúde: Realizar controle do estoque de medicamentos no posto de saúde (Cadastrar medicamento; Editar registro do medicamento; Remover registro do medicamento), Solicitar reposição de medicamentos para o posto de saúde.
 
 \subsection{Funcionalidade: Autenticar usuário}
 
@@ -197,18 +197,18 @@ O gestor do posto de saúde deve realizar o controle do estoque dos medicamentos
 
 \subsubsection{Caso de uso: Cadastrar medicamento}
 
-Gestor do posto de saúde pode cadastrar medicamento, fornecendo as informações que forem solicitadas.
+O gestor do posto de saúde pode cadastrar medicamento, fornecendo as informações que forem solicitadas.
 
 \subsubsection{Caso de uso: Atualizar informações de medicamento}
 
-Gestor do posto de saúde pode atualizar registro de medicamento.
+O gestor do posto de saúde pode atualizar registro de medicamento.
 
 \subsubsection{Caso de uso: Excluir medicamento}
 
 Caso o medicamento pare de ser disponibilizado pelo posto de saúde, gestor pode excluir registro de medicamento.
 
 \subsubsection{Caso de uso: Solicitar reposição de medicamento}
-Gestor de posto de saúde ao constatar que medicamento está em falta e precisa de reposição, ou quer solicitar novos medicamentos para posto de saúde, deve preencher formulário de solicitação de medicamento. Isso permite que o posto de saúde controle o estoque de modo a prevenir a falta de medicamento no posto de saúde.
+O gestor de posto de saúde ao constatar que medicamento está em falta e precisa de reposição, ou quer solicitar novos medicamentos para posto de saúde, deve preencher formulário de solicitação de medicamento. Isso permite que o posto de saúde controle o estoque de modo a prevenir a falta de medicamento no posto de saúde.
 
 Na \refFig{gestor_usecase} tem-se o diagrama de caso de uso do controle de estoque que deve ser realizado pelo gestor do posto de saúde.
 
@@ -258,7 +258,7 @@ De acordo com a permissão que o usuário tenha, o mesmo pode acessar determinad
 
 \figuraBib{estoque}{Tela de estoque de medicamentos}{}{estoque}{width=.65\textwidth}%
 
-Consulta ao estoque só pode ser realizada pelo gestor, dessa forma, para que o gestor tenha acesso a essa área, o gestor precisa estar cadastro. O gestor pode realizar as seguintes ações: cadastramento de medicamento, atualização de medicamento e exclusão de medicamento, conforme ilustrado na ~\refFig{estoque}.
+Consulta ao estoque só pode ser realizada pelo gestor, dessa forma, para que ele tenha acesso a essa área é necessário ter cadastro no sistema. O gestor pode realizar as seguintes ações: cadastramento de medicamento, atualização de medicamento e exclusão de medicamento, conforme ilustrado na ~\refFig{estoque}.
 
 
 \figuraBib{cadastromed}{Tela de cadastro de medicamentos}{}{cadastromed}{width=.65\textwidth}%
